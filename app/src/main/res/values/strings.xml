@@ -1,5 +1,17 @@
 <resources>
-    <string name="app_name">UniRate</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="app_name">UniRate 3.0</string>
+    <string name="Überschrift1">Welcome to UniRate</string>
+    <string name="Weiterbutton1">Weiterbutton1</string>
+    <string name="Überschrift2">UniRatings</string>
+    <string name="WeitrButton2">WeiterButton2</string>
+    <string name="TechnikumButton">FH Technikum Wien</string>
+    <string name="technischeButton">Technische Universität Wien</string>
+    <string name="uniwienButton">Universität Wien</string>
+    <string name="campusButton">FH Campus Wien</string>
+    <string name="bokuButton">BOKU</string>
+    <string name="rating1">Rating in %</string>
+    <string name="rating2">Rating in %</string>
+    <string name="rating3">Rating in %</string>
+    <string name="rating4">Rating in %</string>
+    <string name="rating5">Rating in %</string>
 </resources>

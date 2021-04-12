@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent" android:background="#03A9F4">
+
+    <Button
+            android:text="@string/TechnikumButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button"
+            android:background="#03A9F4"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="@+id/textView7"
+            app:layout_constraintHorizontal_bias="0.206" app:layout_constraintVertical_bias="0.319"
+            tools:text="FH Technikum Wien"/>
+    <Button
+            android:text="@string/technischeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button2"
+            android:background="#03A9F4"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.287" app:layout_constraintVertical_bias="0.39"
+            tools:text="Technische Universität Wien"/>
+    <Button
+            android:text="@string/uniwienButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button3"
+            android:background="#03A9F4"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.196" app:layout_constraintVertical_bias="0.292"
+            tools:text="Universität Wien"/>
+    <Button
+            android:text="@string/campusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button4"
+            android:background="#03A9F4"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.19" app:layout_constraintVertical_bias="0.489"
+            tools:text="FH Campus Wien"/>
+    <Button
+            android:text="@string/bokuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button5"
+            android:background="#03A9F4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.59" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.173" tools:text="BOKU"/>
+    <TextView
+            android:text="@string/rating1"
+            android:layout_width="71dp"
+            android:layout_height="17dp" android:id="@+id/textView3"
+            tools:text="Rating in %" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.164"
+            app:layout_constraintVertical_bias="0.256"/>
+    <TextView
+            android:text="@string/rating2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView4"
+            tools:text="Rating in %" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.169"
+            app:layout_constraintVertical_bias="0.348"/>
+    <TextView
+            android:text="@string/rating3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView5"
+            tools:text="Rating in %" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.169"
+            app:layout_constraintVertical_bias="0.442"/>
+    <TextView
+            android:text="@string/rating4"
+            android:layout_width="80dp"
+            android:layout_height="21dp" android:id="@+id/textView6"
+            tools:text="Rating in %" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.168"
+            app:layout_constraintVertical_bias="0.538"/>
+    <TextView
+            android:text="@string/rating5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView7"
+            tools:text="Rating in %" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.163"
+            app:layout_constraintVertical_bias="0.633"/>
+    <TextView
+            android:text="@string/Überschrift2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView8"
+            android:textSize="24sp" android:textColorLink="#ED0707"
+            tools:text="University Ratings"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.434" app:layout_constraintVertical_bias="0.082"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_send"
+            android:id="@+id/imageButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:background="#03A9F4"
+            android:contentDescription="@string/WeitrButton2" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.87"
+            app:layout_constraintVertical_bias="0.947"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
