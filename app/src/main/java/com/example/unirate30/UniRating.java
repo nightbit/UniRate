@@ -3,7 +3,7 @@ package com.example.unirate30;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class UniRating extends AppCompatActivity {
+public class  UniRating extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
