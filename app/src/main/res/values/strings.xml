@@ -14,4 +14,7 @@
     <string name="rating3">Rating in %</string>
     <string name="rating4">Rating in %</string>
     <string name="rating5">Rating in %</string>
+    <string name="button8">FH Campus Wien</string>
+    <string name="button9">Wirtschaftsuniversität Wien</string>
+    <string name="Überschrift">University Ratings</string>
 </resources>
