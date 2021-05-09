@@ -17,4 +17,12 @@
     <string name="button8">FH Campus Wien</string>
     <string name="button9">Wirtschaftsuniversität Wien</string>
     <string name="Überschrift">University Ratings</string>
+    <string name="Biomedical_Engineering">Biomedical Engineering</string>
+    <string name="electronics">Electronics and Business</string>
+    <string name="elektronik">Elektronik</string>
+    <string name="wirtschaft">Elektronik/Wirtschaft</string>
+    <string name="energie">Erneuerbare Energie</string>
+    <string name="act_BsC">act_BsC</string>
+    <string name="bachelorstudieng_nge">Bachelorstudiengänge</string>
+    <string name="biomedical_engineering">Biomedical Engineering</string>
 </resources>

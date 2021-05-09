@@ -28,13 +28,17 @@
             <Button
                     android:text="@string/TechnikumButton"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/button"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button"
                     android:background="#FFEB3B"
-                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintBottom_toBottomOf="@+id/textView7"
-                    app:layout_constraintHorizontal_bias="0.206" app:layout_constraintVertical_bias="0.319"
-                    tools:text="FH Technikum Wien" android:textColor="#3F51B5"/>
+                    app:layout_constraintHorizontal_bias="0.206"
+                    app:layout_constraintVertical_bias="0.319"
+                    tools:text="FH Technikum Wien"
+                    android:textColor="#3F51B5"/>
             <TextView
                     android:text="@string/rating2"
                     android:layout_width="match_parent"
@@ -52,7 +56,8 @@
             <Button
                     android:text="@string/technischeButton"
                     android:layout_width="match_parent"
-                    android:layout_height="47dp" android:id="@+id/button2"
+                    android:layout_height="47dp"
+                    android:id="@+id/button2"
                     android:background="#FFEB3B"
                     app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
