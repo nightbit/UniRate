@@ -9,14 +9,12 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageButton button;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button = findViewById(R.id.nextButton1);
+        ImageButton button = findViewById(R.id.nextButton1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

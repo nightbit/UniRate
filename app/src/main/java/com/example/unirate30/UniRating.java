@@ -8,21 +8,20 @@ import android.os.Bundle;
 
 public class  UniRating extends AppCompatActivity {
 
-    private Button button1;
+    private Button button11;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uni_rating);
 
-        button1 = findViewById(R.id.button);
-        button1.setOnClickListener(new View.OnClickListener() {
+        button11 = findViewById(R.id.button);
+        button11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openDegree();
             }
         });
-
     }
     // @Override
     // public void onClick(View v) {
