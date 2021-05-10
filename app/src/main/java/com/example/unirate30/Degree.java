@@ -15,7 +15,7 @@ public class Degree extends AppCompatActivity {
     AutoCompleteTextView act_BsC;
 
     ArrayList<Button> buttonList_BsC;
-    ArrayAdapter<Button> buttonArrayAdapter_BsC;
+    ArrayAdapter<Button> buttonAdapter_BsC;
 
 
     @Override
@@ -27,7 +27,12 @@ public class Degree extends AppCompatActivity {
         act_BsC = (AutoCompleteTextView) findViewById(R.id.act_BsC);
 
        buttonList_BsC = new ArrayList<>();
-        buttonList_BsC.add((Button)findViewById(R.id.button6));
+       buttonList_BsC.add((Button)findViewById(R.id.button6));
+
+       buttonAdapter_BsC = new ArrayAdapter<>(getApplicationContext(),R.layout.support_simple_spinner_dropdown_item,buttonList_BsC);
+       act_BsC.setAdapter(buttonAdapter_BsC);
+
+       act_BsC.setThreshold(1);
 
     }
 }
