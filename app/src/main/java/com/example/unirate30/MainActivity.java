@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void openUniRating(){
-        Intent intent = new Intent(this, UniRating.class);
-        startActivity(intent);
+            Intent intent = new Intent(this, UniRating.class);
+            startActivity(intent);
     }
 }

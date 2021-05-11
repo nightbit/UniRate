@@ -5,25 +5,25 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Degree">
+        tools:context=".BBEFach">
 
     <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_BsC"
+            android:id="@+id/til_Semester"
             android:layout_width="match_parent"
             android:layout_height="345dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="196dp"
+            android:layout_marginTop="4dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
-            app:layout_constraintHorizontal_bias="0.0">
+            app:layout_constraintHorizontal_bias="1.0">
 
         <AutoCompleteTextView
-                android:id="@+id/act_BsC"
+                android:id="@+id/act_Semester"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@null"
-                android:hint="@string/bachelorstudieng_nge"
+                android:hint="Semester?"
                 android:textSize="30sp"
                 android:textStyle="italic"
                 android:layout_marginTop="20dp"
@@ -31,20 +31,29 @@
                 android:padding="20dp"/>
 
     </com.google.android.material.textfield.TextInputLayout>
-    <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_menu_send"
-            android:id="@+id/nextButton2"
-            android:tint="#3F51B5"
-            android:background="#FFEB3B"
-
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_Faecher"
+            android:layout_width="match_parent"
+            android:layout_height="345dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.889"
-            app:layout_constraintVertical_bias="0.948" android:contentDescription="@string/nextButton2"/>
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="360dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            app:layout_constraintHorizontal_bias="1.0">
 
+        <AutoCompleteTextView
+                android:id="@+id/act_Faecher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="Fach?"
+                android:textSize="30sp"
+                android:textStyle="italic"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:padding="20dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

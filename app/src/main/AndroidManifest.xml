@@ -9,6 +9,10 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.MaterialComponents">
+        <activity android:name=".EaBFach">
+        </activity>
+        <activity android:name=".BBEFach">
+        </activity>
         <activity android:name=".Degree">
         </activity>
         <activity android:name=".Fachrichtung">
