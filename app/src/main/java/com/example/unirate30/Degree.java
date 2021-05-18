@@ -41,7 +41,7 @@ public class Degree extends AppCompatActivity {
                 }
             }
         });
-
+ 
         til_BsC = (TextInputLayout) findViewById(R.id.til_BsC);
         act_BsC = (AutoCompleteTextView) findViewById(R.id.act_BsC);
 

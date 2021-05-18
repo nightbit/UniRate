@@ -1,8 +1,11 @@
 package com.example.unirate30;
 
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,11 +29,11 @@ public class BBEFach extends AppCompatActivity {
 
     String selceted_Semester;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b_b_e_fach);
-
 
         til_Semester = (TextInputLayout) findViewById(R.id.til_Semester);
         act_Semester = (AutoCompleteTextView) findViewById(R.id.act_Semester);
@@ -41,13 +44,41 @@ public class BBEFach extends AppCompatActivity {
 
         ArrayAdapter_Semester = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, ArrayList_Semester);
         act_Semester.setAdapter(ArrayAdapter_Semester);
-
+       // act_Semester.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
         act_Semester.setThreshold(1);
 
-    }
+        act_Semester.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(parent.getContext(),"Hallo", Toast.LENGTH_SHORT).show();
+                selceted_Semester = act_Semester.getText().toString();
+                if (selceted_Semester.equals("1.Semester")) {
+                    til_Fächer = (TextInputLayout) findViewById(R.id.til_Faecher);
+                    act_Fächer = (AutoCompleteTextView) findViewById(R.id.act_Faecher);
 
+                    ArrayList_Fächer = new ArrayList<>();
+                    ArrayList_Fächer.add("Allgemeine Chemie");
+                    ArrayList_Fächer.add("Allgemeine Chemie Labor");
+
+                    ArrayAdapter_Fächer = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, ArrayList_Fächer);
+                    act_Fächer.setAdapter(ArrayAdapter_Fächer);
+
+                    act_Fächer.setThreshold(1);}
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                Toast.makeText(parent.getContext(),"Hallo", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+        Toast.makeText(parent.getContext(),
+                "OnItemSelectedListener : " + parent.getItemAtPosition(pos).toString(),
+                Toast.LENGTH_SHORT).show();
+    }
     @Override
-    public boolean onContextItemSelected(@NonNull MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) {
         selceted_Semester = act_Semester.getText().toString();
         if (selceted_Semester.equals("1.Semester")) {
             til_Fächer = (TextInputLayout) findViewById(R.id.til_Faecher);
@@ -62,6 +93,12 @@ public class BBEFach extends AppCompatActivity {
 
             act_Fächer.setThreshold(1);
         }
-            return true;
+        return true;
     }
+    public void erstesSemester(){
+
+    }
+
+
 }
+
