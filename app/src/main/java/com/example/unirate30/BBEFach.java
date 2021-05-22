@@ -1,11 +1,9 @@
 package com.example.unirate30;
 
+import android.content.Intent;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.Toast;
+import android.widget.*;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,15 +19,15 @@ public class BBEFach extends AppCompatActivity {
     ArrayList<String> ArrayList_Semester;
     ArrayAdapter<String> ArrayAdapter_Semester;
 
-    TextInputLayout til_Fächer;
-    AutoCompleteTextView act_Fächer;
+    TextInputLayout til_Faecher;
+    AutoCompleteTextView act_Faecher;
 
-    ArrayList<String> ArrayList_Fächer;
-    ArrayAdapter<String> ArrayAdapter_Fächer;
+    ArrayList<String> ArrayList_Faecher;
+    ArrayAdapter<String> ArrayAdapter_Faecher;
 
-    String selceted_Semester;
-
-
+    public String selceted_Semester;
+    ImageButton nextButton3;
+    String selceted_Faecher;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,64 +39,87 @@ public class BBEFach extends AppCompatActivity {
         ArrayList_Semester = new ArrayList<>();
         ArrayList_Semester.add("1.Semester");
         ArrayList_Semester.add("2.Semester");
+        ArrayList_Semester.add("3.Semester");
+        ArrayList_Semester.add("4.Semester");
+        ArrayList_Semester.add("5.Semester");
+        ArrayList_Semester.add("6.Semester");
 
         ArrayAdapter_Semester = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, ArrayList_Semester);
         act_Semester.setAdapter(ArrayAdapter_Semester);
        // act_Semester.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
         act_Semester.setThreshold(1);
 
-        act_Semester.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        act_Semester.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(parent.getContext(),"Hallo", Toast.LENGTH_SHORT).show();
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 selceted_Semester = act_Semester.getText().toString();
-                if (selceted_Semester.equals("1.Semester")) {
-                    til_Fächer = (TextInputLayout) findViewById(R.id.til_Faecher);
-                    act_Fächer = (AutoCompleteTextView) findViewById(R.id.act_Faecher);
 
-                    ArrayList_Fächer = new ArrayList<>();
-                    ArrayList_Fächer.add("Allgemeine Chemie");
-                    ArrayList_Fächer.add("Allgemeine Chemie Labor");
+                if (selceted_Semester.equals("1.Semester")){
 
-                    ArrayAdapter_Fächer = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, ArrayList_Fächer);
-                    act_Fächer.setAdapter(ArrayAdapter_Fächer);
+                    til_Faecher = (TextInputLayout) findViewById(R.id.til_Faecher);
+                    act_Faecher = (AutoCompleteTextView) findViewById(R.id.act_Faecher);
 
-                    act_Fächer.setThreshold(1);}
-            }
+                    ArrayList_Faecher = new ArrayList<>();
+                    ArrayList_Faecher.add("Allgemeine Chemie");
+                    ArrayList_Faecher.add("Allgemeine Chemie Labor");
+                    ArrayList_Faecher.add("Anatomie, Physiologie und Pathophysiologie 1");
+                    ArrayList_Faecher.add("Grundlagen der Anataomie und Physiologie");
+                    ArrayList_Faecher.add("Technical English mit Nutte");
+                    ArrayList_Faecher.add("Kompetenz und Kooperation");
+                    ArrayList_Faecher.add("Mathematik für Engineering Science 1");
+                    ArrayList_Faecher.add("Grundlagen der Physik für Ingenieurswissenschaften");
+                    ArrayList_Faecher.add("Grundlagenlabor Physik");
+                    ArrayList_Faecher.add("Grundlagen der Programmierung");
+                    ArrayList_Faecher.add("Anwendungen der Programmierung in Life Science Engineering");
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                Toast.makeText(parent.getContext(),"Hallo", Toast.LENGTH_SHORT).show();
+
+                    ArrayAdapter_Faecher = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, ArrayList_Faecher);
+                    act_Faecher.setAdapter(ArrayAdapter_Faecher);
+
+                    act_Faecher.setThreshold(1);
+
+                }if (selceted_Semester.equals("2.Semester")){
+                    til_Faecher = (TextInputLayout) findViewById(R.id.til_Faecher);
+                    act_Faecher = (AutoCompleteTextView) findViewById(R.id.act_Faecher);
+
+                    ArrayList_Faecher = new ArrayList<>();
+                    ArrayList_Faecher.add("Angewandte Chemie");
+                    ArrayList_Faecher.add("Angewandte Chemie Labor");
+                    ArrayList_Faecher.add("Anatomie, Physiologie und Pathophysiologie 2");
+                    ArrayList_Faecher.add("Analysemethoden biomedizinischer Daten");
+                    ArrayList_Faecher.add("Grundlagen der Elektronik");
+                    ArrayList_Faecher.add("Business English");
+                    ArrayList_Faecher.add("Mathematik für Engineering Science 2");
+                    ArrayList_Faecher.add("Elektronik in der biomedizinischen Technik");
+                    ArrayList_Faecher.add("Kreativität und Komplexität");
+                    ArrayList_Faecher.add("Medizinische Informatik - Projekt");
+                    ArrayList_Faecher.add("Physiologielabor");
+
+
+                    ArrayAdapter_Faecher = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, ArrayList_Faecher);
+                    act_Faecher.setAdapter(ArrayAdapter_Faecher);
+
+                    act_Faecher.setThreshold(1);
+                }
             }
         });
-    }
-    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-        Toast.makeText(parent.getContext(),
-                "OnItemSelectedListener : " + parent.getItemAtPosition(pos).toString(),
-                Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        selceted_Semester = act_Semester.getText().toString();
-        if (selceted_Semester.equals("1.Semester")) {
-            til_Fächer = (TextInputLayout) findViewById(R.id.til_Faecher);
-            act_Fächer = (AutoCompleteTextView) findViewById(R.id.act_Faecher);
 
-            ArrayList_Fächer = new ArrayList<>();
-            ArrayList_Fächer.add("Allgemeine Chemie");
-            ArrayList_Fächer.add("Allgemeine Chemie Labor");
+        nextButton3 = findViewById(R.id.nextButton3);
+        nextButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selceted_Faecher = act_Faecher.getText().toString();
+                if (selceted_Faecher.equals("Allgemeine Chemie")){
+                    openallgchem();
+                }
+            }
+        });
 
-            ArrayAdapter_Fächer = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, ArrayList_Fächer);
-            act_Fächer.setAdapter(ArrayAdapter_Fächer);
-
-            act_Fächer.setThreshold(1);
         }
-        return true;
+
+
+    public void openallgchem() {
+        Intent intent18 = new Intent(this, allgchem.class);
+        startActivity(intent18);
     }
-    public void erstesSemester(){
-
-    }
-
-
 }
-

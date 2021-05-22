@@ -9,6 +9,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.MaterialComponents">
+        <activity android:name=".allgchem">
+        </activity>
         <activity android:name=".EaBFach">
         </activity>
         <activity android:name=".BBEFach">
