@@ -28,6 +28,7 @@ public class BBEFach extends AppCompatActivity {
     public String selceted_Semester;
     ImageButton nextButton3;
     String selceted_Faecher;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,13 +116,13 @@ public class BBEFach extends AppCompatActivity {
                     openallgchemlab();
                 }if (selceted_Faecher.equals("Anatomie, Physiologie und Pathophysiologie 1")){
                     openanat1();
-                } if (selceted_Faecher.equals("Grundlagen der Anataomie und Physiologie")){
+                }if (selceted_Faecher.equals("Grundlagen der Anataomie und Physiologie")){
                     openaphys();
                 }if (selceted_Faecher.equals("Technical English mit Nutte")){
                     openeng1();
                 }if (selceted_Faecher.equals("Kompetenz und Kooperation")){
                     openkoko();
-                } if (selceted_Faecher.equals("Mathematik für Engineering Science 1")){
+                }if (selceted_Faecher.equals("Mathematik für Engineering Science 1")){
                     openmathe1();
                 }if (selceted_Faecher.equals("Grundlagen der Physik für Ingenieurswissenschaften")){
                     openphysik();
@@ -132,11 +133,33 @@ public class BBEFach extends AppCompatActivity {
                 }if (selceted_Faecher.equals("Anwendungen der Programmierung in Life Science Engineering")){
                     openprogaw1();
                 }
+
+                if (selceted_Faecher.equals("Angewandte Chemie")){
+                    openangchem();
+                }if (selceted_Faecher.equals("Angewandte Chemie Labor")){
+                    openangchemlab();
+                }if (selceted_Faecher.equals("Anatomie, Physiologie und Pathophysiologie 2")){
+                    openanat2();
+                }if (selceted_Faecher.equals("Analysemethoden biomedizinischer Daten")){
+                    openBIODA();
+                }if (selceted_Faecher.equals("Grundlagen der Elektronik")){
+                    openelek();
+                }if (selceted_Faecher.equals("Business English")){
+                    openmathe1();
+                }if (selceted_Faecher.equals("Mathematik für Engineering Science 2")){
+                    openphysik();
+                }if (selceted_Faecher.equals("Elektronik in der biomedizinischen Technik")){
+                    openphysiklab();
+                }if (selceted_Faecher.equals("Kreativität und Komplexität")){
+                    openprog1();
+                }if (selceted_Faecher.equals("Medizinische Informatik - Projekt")){
+                    openprogaw1();
+                }if (selceted_Faecher.equals("Physiologielabor")){
+                    openprogaw1();}
             }
         });
 
         }
-
 
     public void openallgchem() {
         Intent intent18 = new Intent(this, allgchem.class);
@@ -175,11 +198,31 @@ public class BBEFach extends AppCompatActivity {
         startActivity(physik);
     }
     public void openphysiklab() {
-        Intent physiklab = new Intent(this, anat1 .class);
+        Intent physiklab = new Intent(this, physiklab.class);
         startActivity(physiklab);
     }
     public void openanat1() {
         Intent anat1 = new Intent(this, anat1 .class);
         startActivity(anat1);
+    }
+    public void openangchem(){
+        Intent angchem = new Intent(this, angchem.class);
+        startActivity(angchem);
+    }
+    public void openangchemlab(){
+        Intent angchemlab= new Intent(this, angchemlab.class);
+        startActivity(angchemlab);
+    }
+    public void openanat2(){
+        Intent anat2 = new Intent(this, anat2.class);
+        startActivity(anat2);
+    }
+    public void openBIODA(){
+        Intent bioda = new Intent(this, BIODA.class);
+        startActivity(bioda);
+    }
+    public void openelek(){
+        Intent elek = new Intent(this, elek.class);
+        startActivity(elek);
     }
 }

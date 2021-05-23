@@ -9,6 +9,40 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.MaterialComponents">
+        <activity android:name=".Windisch">
+        </activity>
+        <activity android:name=".Votzi">
+        </activity>
+        <activity android:name=".Sauer">
+        </activity>
+        <activity android:name=".elek">
+        </activity>
+        <activity android:name=".pasteka">
+        </activity>
+        <activity android:name=".scheiben">
+        </activity>
+        <activity android:name=".BIODA">
+        </activity>
+        <activity android:name=".Praher">
+        </activity>
+        <activity android:name=".Jesen">
+        </activity>
+        <activity android:name=".anat2">
+        </activity>
+        <activity android:name=".Eitel">
+        </activity>
+        <activity android:name=".Varvara">
+        </activity>
+        <activity android:name=".angchemlab">
+        </activity>
+        <activity android:name=".Teuschel">
+        </activity>
+        <activity android:name=".angchem">
+        </activity>
+        <activity android:name=".AHub">
+        </activity>
+        <activity android:name=".physiklab">
+        </activity>
         <activity android:name=".maierhofer">
         </activity>
         <activity android:name=".physik">
