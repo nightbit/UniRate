@@ -113,6 +113,24 @@ public class BBEFach extends AppCompatActivity {
                     openallgchem();
                 }if (selceted_Faecher.equals("Allgemeine Chemie Labor")){
                     openallgchemlab();
+                }if (selceted_Faecher.equals("Anatomie, Physiologie und Pathophysiologie 1")){
+                    openanat1();
+                } if (selceted_Faecher.equals("Grundlagen der Anataomie und Physiologie")){
+                    openaphys();
+                }if (selceted_Faecher.equals("Technical English mit Nutte")){
+                    openeng1();
+                }if (selceted_Faecher.equals("Kompetenz und Kooperation")){
+                    openkoko();
+                } if (selceted_Faecher.equals("Mathematik für Engineering Science 1")){
+                    openmathe1();
+                }if (selceted_Faecher.equals("Grundlagen der Physik für Ingenieurswissenschaften")){
+                    openphysik();
+                }if (selceted_Faecher.equals("Grundlagenlabor Physik")){
+                    openphysiklab();
+                }if (selceted_Faecher.equals("Grundlagen der Programmierung")){
+                    openprog1();
+                }if (selceted_Faecher.equals("Anwendungen der Programmierung in Life Science Engineering")){
+                    openprogaw1();
                 }
             }
         });
@@ -127,5 +145,41 @@ public class BBEFach extends AppCompatActivity {
     public void openallgchemlab() {
         Intent allglab = new Intent(this, allgchemlab.class);
         startActivity(allglab);
+    }
+    public void openaphys() {
+        Intent aphys = new Intent(this, aphys.class);
+        startActivity(aphys);
+    }
+    public void openmathe1() {
+        Intent mathe1 = new Intent(this, mathe1.class);
+        startActivity(mathe1);
+    }
+    public void openprog1() {
+        Intent prog1 = new Intent(this,  prog1.class);
+        startActivity(prog1);
+    }
+    public void openprogaw1() {
+        Intent progaw1 = new Intent(this, progaw1.class);
+        startActivity(progaw1);
+    }
+    public void openeng1() {
+        Intent eng1 = new Intent(this, eng1.class);
+        startActivity(eng1);
+    }
+    public void openkoko() {
+        Intent koko = new Intent(this, koko.class);
+        startActivity(koko);
+    }
+    public void openphysik() {
+        Intent physik = new Intent(this, physik.class);
+        startActivity(physik);
+    }
+    public void openphysiklab() {
+        Intent physiklab = new Intent(this, anat1 .class);
+        startActivity(physiklab);
+    }
+    public void openanat1() {
+        Intent anat1 = new Intent(this, anat1 .class);
+        startActivity(anat1);
     }
 }
