@@ -145,7 +145,7 @@ public class BBEFach extends AppCompatActivity {
                 }if (selceted_Faecher.equals("Grundlagen der Elektronik")){
                     openelek();
                 }if (selceted_Faecher.equals("Business English")){
-                    openmathe1();
+                    openeng2();
                 }if (selceted_Faecher.equals("Mathematik für Engineering Science 2")){
                     openphysik();
                 }if (selceted_Faecher.equals("Elektronik in der biomedizinischen Technik")){
@@ -224,5 +224,9 @@ public class BBEFach extends AppCompatActivity {
     public void openelek(){
         Intent elek = new Intent(this, elek.class);
         startActivity(elek);
+    }
+    public void openeng2(){
+        Intent eng2 = new Intent(this, eng2.class);
+        startActivity(eng2);
     }
 }
