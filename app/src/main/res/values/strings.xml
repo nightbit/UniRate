@@ -27,5 +27,10 @@
     <string name="biomedical_engineering">Biomedical Engineering</string>
     <string name="nextButton2">nextButton2</string>
     <string name="nextButton3">nextButton3</string>
+    <string name="allgchem">Allgemeine Chemie</string>
+    <string name="Profbut1">Profbut1</string>
+    <string name="Lehrplan">Lehrplan</string>
+    <string name="Unterlagen">Unterlagen</string>
+    <string name="Stoffmenge">Stoffmenge</string>
 
 </resources>

@@ -9,6 +9,18 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.MaterialComponents">
+        <activity android:name=".Simboeck">
+        </activity>
+        <activity android:name=".Knaack">
+        </activity>
+        <activity android:name=".Machacek">
+        </activity>
+        <activity android:name=".allgchemlab">
+        </activity>
+        <activity android:name=".Wiessner">
+        </activity>
+        <activity android:name=".Gepp">
+        </activity>
         <activity android:name=".allgchem">
         </activity>
         <activity android:name=".EaBFach">

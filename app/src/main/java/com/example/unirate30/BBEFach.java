@@ -111,6 +111,8 @@ public class BBEFach extends AppCompatActivity {
                 selceted_Faecher = act_Faecher.getText().toString();
                 if (selceted_Faecher.equals("Allgemeine Chemie")){
                     openallgchem();
+                }if (selceted_Faecher.equals("Allgemeine Chemie Labor")){
+                    openallgchemlab();
                 }
             }
         });
@@ -121,5 +123,9 @@ public class BBEFach extends AppCompatActivity {
     public void openallgchem() {
         Intent intent18 = new Intent(this, allgchem.class);
         startActivity(intent18);
+    }
+    public void openallgchemlab() {
+        Intent allglab = new Intent(this, allgchemlab.class);
+        startActivity(allglab);
     }
 }
