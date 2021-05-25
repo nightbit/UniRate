@@ -4,10 +4,11 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import com.example.unirate30.STUDIENRICHTUNG.BBEFach;
+import com.example.unirate30.STUDIENRICHTUNG.EaBFach;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;

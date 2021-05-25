@@ -9,97 +9,97 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.MaterialComponents">
-        <activity android:name=".Vander">
+        <activity android:name=".PROFESSOR.Vander">
         </activity>
-        <activity android:name=".Schenk">
+        <activity android:name=".PROFESSOR.Schenk">
         </activity>
-        <activity android:name=".eng2">
+        <activity android:name=".BBEFÄCHER.SEMESTER2.eng2">
         </activity>
-        <activity android:name=".Windisch">
+        <activity android:name=".PROFESSOR.Windisch">
         </activity>
-        <activity android:name=".Votzi">
+        <activity android:name=".PROFESSOR.Votzi">
         </activity>
-        <activity android:name=".Sauer">
+        <activity android:name=".PROFESSOR.Sauer">
         </activity>
-        <activity android:name=".elek">
+        <activity android:name=".BBEFÄCHER.SEMESTER2.elek">
         </activity>
-        <activity android:name=".pasteka">
+        <activity android:name=".PROFESSOR.pasteka">
         </activity>
-        <activity android:name=".scheiben">
+        <activity android:name=".PROFESSOR.scheiben">
         </activity>
-        <activity android:name=".BIODA">
+        <activity android:name=".BBEFÄCHER.SEMESTER2.BIODA">
         </activity>
-        <activity android:name=".Praher">
+        <activity android:name=".PROFESSOR.Praher">
         </activity>
-        <activity android:name=".Jesen">
+        <activity android:name=".PROFESSOR.Jesen">
         </activity>
-        <activity android:name=".anat2">
+        <activity android:name=".BBEFÄCHER.SEMESTER2.anat2">
         </activity>
-        <activity android:name=".Eitel">
+        <activity android:name=".PROFESSOR.Eitel">
         </activity>
-        <activity android:name=".Varvara">
+        <activity android:name=".PROFESSOR.Varvara">
         </activity>
-        <activity android:name=".angchemlab">
+        <activity android:name=".BBEFÄCHER.SEMESTER2.angchemlab">
         </activity>
-        <activity android:name=".Teuschel">
+        <activity android:name=".PROFESSOR.Teuschel">
         </activity>
-        <activity android:name=".angchem">
+        <activity android:name=".BBEFÄCHER.SEMESTER2.angchem">
         </activity>
-        <activity android:name=".AHub">
+        <activity android:name=".PROFESSOR.AHub">
         </activity>
-        <activity android:name=".physiklab">
+        <activity android:name=".BBEFÄCHER.SEMESTER1.physiklab">
         </activity>
-        <activity android:name=".maierhofer">
+        <activity android:name=".PROFESSOR.maierhofer">
         </activity>
-        <activity android:name=".physik">
+        <activity android:name=".BBEFÄCHER.SEMESTER1.physik">
         </activity>
-        <activity android:name=".brabetz">
+        <activity android:name=".PROFESSOR.brabetz">
         </activity>
-        <activity android:name=".koko">
+        <activity android:name=".BBEFÄCHER.SEMESTER1.koko">
         </activity>
-        <activity android:name=".patricia">
+        <activity android:name=".PROFESSOR.patricia">
         </activity>
-        <activity android:name=".eng1">
+        <activity android:name=".BBEFÄCHER.SEMESTER1.eng1">
         </activity>
-        <activity android:name=".progaw1">
+        <activity android:name=".BBEFÄCHER.SEMESTER1.progaw1">
         </activity>
-        <activity android:name=".urbauer">
+        <activity android:name=".PROFESSOR.urbauer">
         </activity>
-        <activity android:name=".martinek">
+        <activity android:name=".PROFESSOR.martinek">
         </activity>
-        <activity android:name=".frohner">
+        <activity android:name=".PROFESSOR.frohner">
         </activity>
-        <activity android:name=".prog1">
+        <activity android:name=".BBEFÄCHER.SEMESTER1.prog1">
         </activity>
-        <activity android:name=".reif">
+        <activity android:name=".PROFESSOR.reif">
         </activity>
-        <activity android:name=".mathe1">
+        <activity android:name=".BBEFÄCHER.SEMESTER1.mathe1">
         </activity>
-        <activity android:name=".mohl">
+        <activity android:name=".PROFESSOR.mohl">
         </activity>
-        <activity android:name=".aphys">
+        <activity android:name=".BBEFÄCHER.SEMESTER1.aphys">
         </activity>
-        <activity android:name=".Huber">
+        <activity android:name=".PROFESSOR.Huber">
         </activity>
-        <activity android:name=".anat1">
+        <activity android:name=".BBEFÄCHER.SEMESTER1.anat1">
         </activity>
-        <activity android:name=".Simboeck">
+        <activity android:name=".PROFESSOR.Simboeck">
         </activity>
-        <activity android:name=".Knaack">
+        <activity android:name=".PROFESSOR.Knaack">
         </activity>
-        <activity android:name=".Machacek">
+        <activity android:name=".PROFESSOR.Machacek">
         </activity>
-        <activity android:name=".allgchemlab">
+        <activity android:name=".BBEFÄCHER.SEMESTER1.allgchemlab">
         </activity>
-        <activity android:name=".Wiessner">
+        <activity android:name=".PROFESSOR.Wiessner">
         </activity>
-        <activity android:name=".Gepp">
+        <activity android:name=".PROFESSOR.Gepp">
         </activity>
-        <activity android:name=".allgchem">
+        <activity android:name=".BBEFÄCHER.SEMESTER1.allgchem">
         </activity>
-        <activity android:name=".EaBFach">
+        <activity android:name=".STUDIENRICHTUNG.EaBFach">
         </activity>
-        <activity android:name=".BBEFach">
+        <activity android:name=".STUDIENRICHTUNG.BBEFach">
         </activity>
         <activity android:name=".Degree">
         </activity>

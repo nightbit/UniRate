@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".mathe1">
+        tools:context=".BBEFÄCHER.SEMESTER1.mathe1">
 
     <TextView
             android:text="Mathematik für Engineering Science 1"
