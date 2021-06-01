@@ -9,133 +9,154 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:context=".PROFESSOR.AHub">
-
-    <TextView
-            android:text="Albert Huber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ahub"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.127"
-    />
-    <TextView
-            android:text="Fachwissen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ahub1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.045"
-            app:layout_constraintVertical_bias="0.255"
-    />
-
-    <RatingBar
-            android:layout_width="235dp"
-            android:layout_height="45dp"
-            android:id="@+id/ratingBar"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.948"
-            app:layout_constraintVertical_bias="0.264"
-            android:scaleX=".5"
-            android:scaleY=".5"
-    />
-    <TextView
-            android:text="Zeit für Studenten"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ahub2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.054"
-            app:layout_constraintVertical_bias="0.381"
-    />
-    <TextView
-            android:text="Wissens Vermittlung"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ahub3"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.057"
-    />
-    <TextView
-            android:text="Erreichbarkeit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ahub4"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.043"
-            app:layout_constraintVertical_bias="0.619"
-    />
-
-    <TextView
-            android:text="Fairness"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ahub5"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.044"
-            app:layout_constraintVertical_bias="0.751"
-    />
-    <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/button6"
-            tools:layout_editor_absoluteY="646dp" tools:layout_editor_absoluteX="288dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
     <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="410dp"
-            android:layout_height="1271dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:id="@+id/bewerten" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="1.0">
+            android:layout_width="match_parent"
+            android:layout_height="1276dp"
+            tools:layout_editor_absoluteY="1106dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="118dp"
+            android:layout_marginTop="1dp"
+            android:layout_alignParentTop="true">
 
         <TextView
-                android:text="Bewerten"
+                android:text="Albert Huber"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/textView17"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.781"
-        />
+                android:layout_height="wrap_content"
+                android:id="@+id/ahub"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="28dp" app:layout_constraintHorizontal_bias="0.528"/>
         <TextView
                 android:text="Fachwissen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/ahub6"
+                android:id="@+id/ahub1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.041"
-                app:layout_constraintVertical_bias="0.927"
+                app:layout_constraintHorizontal_bias="0.083"
+                app:layout_constraintVertical_bias="0.107"
+        />
+        <RatingBar
+                android:layout_width="235dp"
+                android:layout_height="45dp"
+                android:id="@+id/ratingBar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintVertical_bias="0.112"
+                android:scaleX=".5"
+                android:scaleY=".5"
+
+        />
+        <RatingBar
+                android:layout_width="235dp"
+                android:layout_height="45dp"
+                android:id="@+id/ratingBar1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintVertical_bias="0.178"
+                android:scaleX=".5"
+                android:scaleY=".5"
+
+        />
+
+        <TextView
+                android:text="Zeit für Studenten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ahub2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.094"
+                app:layout_constraintVertical_bias="0.268"
+        />
+        <RatingBar
+                android:layout_width="235dp"
+                android:layout_height="45dp"
+                android:id="@+id/ratingBar2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintVertical_bias="0.278"
+                android:scaleX=".5"
+                android:scaleY=".5"
+
+        />
+        <RatingBar
+                android:layout_width="235dp"
+                android:layout_height="45dp"
+                android:id="@+id/ratingBar3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintVertical_bias="0.344"
+                android:scaleX=".5"
+                android:scaleY=".5"
+
+        />
+        <TextView
+                android:text="Wissens Vermittlung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ahub3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.104"
+                app:layout_constraintVertical_bias="0.432"/>
+        <RatingBar
+                android:layout_width="235dp"
+                android:layout_height="45dp"
+                android:id="@+id/ratingBar4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintVertical_bias="0.448"
+                android:scaleX=".5"
+                android:scaleY=".5"
+
+        />
+        <RatingBar
+                android:layout_width="235dp"
+                android:layout_height="45dp"
+                android:id="@+id/ratingBar5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintVertical_bias="0.514"
+                android:scaleX=".5"
+                android:scaleY=".5"
+
+        />
+        <TextView
+                android:text="Erreichbarkeit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ahub4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.09"
+                app:layout_constraintVertical_bias="0.6"
         />
         <RatingBar
                 android:layout_width="235dp"
@@ -145,60 +166,76 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.908"
-                app:layout_constraintVertical_bias="0.946"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintVertical_bias="0.623"
                 android:scaleX=".5"
                 android:scaleY=".5"
-        />
-        <TextView
-                android:text="Wissens Vermittlung"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/ahub8"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.057"
-                app:layout_constraintVertical_bias="1.0"/>
 
-        <TextView
-                android:text="Erreichbarkeit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/ahub9"
-                app:layout_constraintBottom_toBottomOf="parent"
+        />
+        <RatingBar
+                android:layout_width="235dp"
+                android:layout_height="45dp"
+                android:id="@+id/ratingBar7"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.049"
-                app:layout_constraintVertical_bias="0.679"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintVertical_bias="0.689"
+                android:scaleX=".5"
+                android:scaleY=".5"
+
         />
         <TextView
                 android:text="Fairness"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/ahub10"
+                android:id="@+id/ahub5"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.044"
-                app:layout_constraintVertical_bias="0.751"
+                app:layout_constraintHorizontal_bias="0.078"
+                app:layout_constraintVertical_bias="0.772"
         />
-        <TextView
-                android:text="Zeit für Studenten"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/ahub7"
+        <RatingBar
+                android:layout_width="235dp"
+                android:layout_height="45dp"
+                android:id="@+id/ratingBar8"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.047"
-                app:layout_constraintVertical_bias="0.977"/>
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintVertical_bias="0.802"
+                android:scaleX=".5"
+                android:scaleY=".5"
+
+        />
+        <RatingBar
+                android:layout_width="235dp"
+                android:layout_height="45dp"
+                android:id="@+id/ratingBar9"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintVertical_bias="0.868"
+                android:scaleX=".5"
+                android:scaleY=".5"
+
+        />
+        <Button
+                android:text="Button"
+                android:layout_width="113dp"
+                android:layout_height="47dp"
+                android:id="@+id/button6"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.013" app:layout_constraintVertical_bias="0.971"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
