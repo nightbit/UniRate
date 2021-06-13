@@ -33,8 +33,6 @@ public class eng1 extends AppCompatActivity {
 
         ArrayList_Prof8 = new ArrayList<>();
         ArrayList_Prof8.add("Patricia Chan Stephenson");
-        ArrayList_Prof8.add("Johannes Martinek");
-        ArrayList_Prof8.add("Philipp Urbauer");
 
 
         ArrayAdapter_Prof8 = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, ArrayList_Prof8);
