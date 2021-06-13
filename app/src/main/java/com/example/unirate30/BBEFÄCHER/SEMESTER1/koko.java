@@ -2,9 +2,7 @@ package com.example.unirate30.BBEFÄCHER.SEMESTER1;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.ImageButton;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.unirate30.R;
@@ -13,6 +11,11 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.util.ArrayList;
 
 public class koko extends AppCompatActivity {
+
+    Button kokobutton20;
+    RatingBar kokobar1;
+    RatingBar kokobar2;
+    RatingBar kokobar3;
 
     TextInputLayout til_Prof9;
     AutoCompleteTextView act_Prof9;
@@ -28,6 +31,13 @@ public class koko extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_koko);
 
+        kokobar1 = findViewById(R.id.kokoratingBar2);
+        kokobar1.setVisibility(View.INVISIBLE);
+        kokobar2 = findViewById(R.id.kokoratingBar4);
+        kokobar2.setVisibility(View.INVISIBLE);
+        kokobar3 = findViewById(R.id.kokoratingBar6);
+        kokobar3.setVisibility(View.INVISIBLE);
+
         til_Prof9 = (TextInputLayout) findViewById(R.id.til_Prof9);
         act_Prof9 = (AutoCompleteTextView) findViewById(R.id.act_Prof9);
 
@@ -41,6 +51,19 @@ public class koko extends AppCompatActivity {
         act_Prof9.setAdapter(ArrayAdapter_Prof9);
 
         act_Prof9.setThreshold(1);
+
+        kokobutton20 = findViewById(R.id.kokobutton6);
+        kokobutton20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (true){
+                    kokobar1.setVisibility(View.VISIBLE);
+                    kokobar2.setVisibility(View.VISIBLE);
+                    kokobar3.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
 
         nextButton12 = findViewById(R.id.nextButton12);
         nextButton12.setOnClickListener(new View.OnClickListener() {
