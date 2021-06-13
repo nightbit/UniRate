@@ -152,7 +152,7 @@ public class BBEFach extends AppCompatActivity {
                 }if (selceted_Faecher.equals("Elektronik in der biomedizinischen Technik")){
                     openphysiklab();
                 }if (selceted_Faecher.equals("Kreativität und Komplexität")){
-                    openprog1();
+                    openkreko();
                 }if (selceted_Faecher.equals("Medizinische Informatik - Projekt")){
                     openprogaw1();
                 }if (selceted_Faecher.equals("Physiologielabor")){
@@ -229,5 +229,9 @@ public class BBEFach extends AppCompatActivity {
     public void openeng2(){
         Intent eng2 = new Intent(this, eng2.class);
         startActivity(eng2);
+    }
+    public void openkreko(){
+        Intent kreko = new Intent(this, kreko.class);
+        startActivity(kreko);
     }
 }

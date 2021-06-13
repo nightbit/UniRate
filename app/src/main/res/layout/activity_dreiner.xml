@@ -7,7 +7,7 @@
         android:layout_height="729dp"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
-        android:fillViewport="true" android:background="#3F51B5">
+        android:fillViewport="true" android:foregroundTint="#2196F3" android:background="#3F51B5">
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -16,13 +16,13 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="118dp"
             android:layout_marginTop="1dp"
-            android:layout_alignParentTop="true">
+            android:layout_alignParentTop="true" android:foregroundTint="#9C27B0">
 
         <TextView
-                android:text="Patricia Chan Stepherson"
+                android:text="Michael Wekerle-Dreier"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/patricia"
+                android:id="@+id/costa"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="28dp" app:layout_constraintHorizontal_bias="0.528"
@@ -31,18 +31,18 @@
                 android:text="Fachwissen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/patricia1"
+                android:id="@+id/dreiner1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintHorizontal_bias="0.083"
                 app:layout_constraintVertical_bias="0.107"
-                android:textColor="#000000" android:textColorHint="#E2FFFFFF"/>
+                android:textColor="#000000"/>
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/patriciaratingBar"
+                android:id="@+id/dreinerratingBar"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +56,7 @@
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/patriciaratingBar1"
+                android:id="@+id/dreinerratingBar1"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +72,7 @@
                 android:text="Zeit für Studenten"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/patricia2"
+                android:id="@+id/dreiner2"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +83,7 @@
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/patriciaratingBar2"
+                android:id="@+id/dreinerratingBar2"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -97,7 +97,7 @@
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/patriciaratingBar3"
+                android:id="@+id/dreinerratingBar3"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -112,17 +112,18 @@
                 android:text="Wissens Vermittlung"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/patricia3"
+                android:id="@+id/dreiner3"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintHorizontal_bias="0.104"
                 app:layout_constraintVertical_bias="0.432" android:textColor="#000000"/>
+
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/patriciaratingBar4"
+                android:id="@+id/dreinerratingBar4"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -136,7 +137,7 @@
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/patriciaratingBar5"
+                android:id="@+id/dreinerratingBar5"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -151,18 +152,18 @@
                 android:text="Erreichbarkeit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/patricia4"
+                android:id="@+id/dreiner4"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintHorizontal_bias="0.09"
                 app:layout_constraintVertical_bias="0.6"
-                android:textColor="#000000" android:textColorHint="#000000"/>
+                android:textColor="#000000"/>
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/patriciaratingBar6"
+                android:id="@+id/dreinerratingBar6"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -176,7 +177,7 @@
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/patriciaratingBar7"
+                android:id="@+id/dreinerratingBar7"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -191,18 +192,18 @@
                 android:text="Fairness"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/patricia5"
+                android:id="@+id/dreiner5"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintHorizontal_bias="0.078"
                 app:layout_constraintVertical_bias="0.772"
-                android:textColor="#000000" android:textColorHint="#000000"/>
+                android:textColor="#000000"/>
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/patriciaratingBar8"
+                android:id="@+id/dreinerratingBar8"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -216,7 +217,7 @@
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/patriciaratingBar9"
+                android:id="@+id/dreinerratingBar9"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -231,7 +232,7 @@
                 android:text="Bewerten"
                 android:layout_width="113dp"
                 android:layout_height="47dp"
-                android:id="@+id/patriciabutton6"
+                android:id="@+id/dreinerbutton6"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"

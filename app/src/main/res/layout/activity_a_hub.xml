@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="409dp"
         android:layout_height="729dp"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
-        android:fillViewport="true"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+        android:fillViewport="true" android:background="#3F51B5">
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -25,7 +25,8 @@
                 android:id="@+id/ahub"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="28dp" app:layout_constraintHorizontal_bias="0.528"/>
+                android:layout_marginTop="28dp" app:layout_constraintHorizontal_bias="0.528"
+                android:textColor="#000000"/>
         <TextView
                 android:text="Fachwissen"
                 android:layout_width="wrap_content"
@@ -37,7 +38,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintHorizontal_bias="0.083"
                 app:layout_constraintVertical_bias="0.107"
-        />
+                android:textColor="#000000" android:textColorHint="#E2FFFFFF"/>
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
@@ -78,7 +79,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintHorizontal_bias="0.094"
                 app:layout_constraintVertical_bias="0.268"
-        />
+                android:textColor="#000000"/>
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
@@ -117,7 +118,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintHorizontal_bias="0.104"
-                app:layout_constraintVertical_bias="0.432"/>
+                app:layout_constraintVertical_bias="0.432" android:textColor="#000000"/>
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
@@ -157,7 +158,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintHorizontal_bias="0.09"
                 app:layout_constraintVertical_bias="0.6"
-        />
+                android:textColor="#000000" android:textColorHint="#000000"/>
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
@@ -197,7 +198,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintHorizontal_bias="0.078"
                 app:layout_constraintVertical_bias="0.772"
-        />
+                android:textColor="#000000" android:textColorHint="#000000"/>
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
@@ -227,14 +228,15 @@
 
         />
         <Button
-                android:text="Button"
+                android:text="Bewerten"
                 android:layout_width="113dp"
                 android:layout_height="47dp"
                 android:id="@+id/button6"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.013" app:layout_constraintVertical_bias="0.971"/>
+                app:layout_constraintHorizontal_bias="0.013" app:layout_constraintVertical_bias="0.971"
+                android:backgroundTint="#3F51B5"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
