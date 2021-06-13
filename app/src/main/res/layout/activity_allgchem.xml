@@ -11,7 +11,7 @@
             android:text="Allgemeine Chemie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/koko"
+            android:id="@+id/textView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -19,159 +19,72 @@
             app:layout_constraintHorizontal_bias="0.464"
             app:layout_constraintVertical_bias="0.071"
             android:contentDescription="@string/allgchem"
-            android:textSize="30sp" android:textColor="#000000"/>
-
-    <RatingBar
-            android:layout_width="235dp"
-            android:layout_height="45dp"
-            android:id="@+id/kokoratingBar1"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintVertical_bias="0.188"
-            android:scaleX=".5"
-            android:scaleY=".5"
-
-    />
-    <RatingBar
-            android:layout_width="235dp"
-            android:layout_height="45dp"
-            android:id="@+id/kokoratingBar2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintVertical_bias="0.253"
-            android:scaleX=".5"
-            android:scaleY=".5"
-
-    />
-
+            android:textSize="30sp"/>
     <TextView
             android:text="Lehrplan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/koko1"
+            android:id="@+id/textView8"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintHorizontal_bias="0.044"
-            app:layout_constraintVertical_bias="0.181"
-            android:contentDescription="@string/Lehrplan" android:textColor="#000000"/>
+            app:layout_constraintVertical_bias="0.2" android:contentDescription="@string/Lehrplan"/>
+
     <TextView
             android:text="Unterlagen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/koko2"
+            android:id="@+id/textView9"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.046"
-            app:layout_constraintVertical_bias="0.327"
-            android:contentDescription="@string/Unterlagen" android:textColor="#000000"/>
-    <RatingBar
-            android:layout_width="235dp"
-            android:layout_height="45dp"
-            android:id="@+id/kokoratingBar4"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintVertical_bias="0.405"
-            android:scaleX=".5"
-            android:scaleY=".5"
-
-    />
-
-    <RatingBar
-            android:layout_width="235dp"
-            android:layout_height="45dp"
-            android:id="@+id/kokobrabratingBar3"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintVertical_bias="0.339"
-            android:scaleX=".5"
-            android:scaleY=".5"
-
-    />
+            app:layout_constraintVertical_bias="0.308" android:contentDescription="@string/Unterlagen"/>
     <TextView
             android:text="Stoffmenge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/koko3"
+            android:id="@+id/textView10"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.047"
-            app:layout_constraintVertical_bias="0.469"
-            android:contentDescription="@string/Stoffmenge" android:textColor="#000000"/>
-    <RatingBar
-            android:layout_width="235dp"
-            android:layout_height="45dp"
-            android:id="@+id/kokoratingBar6"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintVertical_bias="0.552"
-            android:scaleX=".5"
-            android:scaleY=".5"
+            app:layout_constraintVertical_bias="0.424" android:contentDescription="@string/Stoffmenge"/>
 
-    />
-    <RatingBar
-            android:layout_width="235dp"
-            android:layout_height="45dp"
-            android:id="@+id/kokoratingBar5"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintVertical_bias="0.486"
-            android:scaleX=".5"
-            android:scaleY=".5"
-
-    />
     <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/til_Prof9"
+            android:id="@+id/til_Prof1"
             android:layout_width="411dp"
             android:layout_height="320dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="408dp"
+            android:layout_marginTop="384dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
             app:layout_constraintHorizontal_bias="0.0"><![CDATA[>
 
             ]]>
         <AutoCompleteTextView
-                android:id="@+id/act_Prof9"
+                android:id="@+id/act_Prof1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#3F51B5"
+                android:background="@null"
                 android:hint="Professor?"
                 android:textSize="30sp"
                 android:textStyle="italic"
                 android:padding="20dp"/>
     </com.google.android.material.textfield.TextInputLayout>
+
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@android:drawable/ic_menu_send"
-            android:id="@+id/nextButton12"
-            android:tint="#000000"
-            android:background="#3F51B5"
+            android:id="@+id/nextButton4"
+            android:tint="#3F51B5"
+            android:background="#FFEB3B"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -179,18 +92,6 @@
             app:layout_constraintHorizontal_bias="0.889"
             app:layout_constraintVertical_bias="0.948"
             android:contentDescription="@string/Profbut1"/>
-
-    <Button
-            android:text="Bewerten"
-            android:layout_width="113dp"
-            android:layout_height="47dp"
-            android:id="@+id/kokobutton6"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.013" app:layout_constraintVertical_bias="0.971"
-            android:backgroundTint="#3F51B5"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
