@@ -12,22 +12,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 
-public class Regestrierung extends AppCompatActivity   {
+public class Regestrierung extends AppCompatActivity implements View.OnClickListener {
     Button buttonRegist;
     EditText editMailRegist, editPassRegist, editPass2Regist;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_regestrierung);
-    }
 
-    buttonRegist = findViewById(R.id.buttonRegist);
-    editMailRegist = findViewById(R.id.editMailRegist);
-    editPassRegist= findViewById(R.id.editPassRegist);
-    editPass2Regist=findViewById(R.id.editPass2Regist);
+
+        buttonRegist = findViewById(R.id.buttonRegist);
+        editMailRegist = findViewById(R.id.editMailRegist);
+        editPassRegist= findViewById(R.id.editPassRegist);
+        editPass2Regist=findViewById(R.id.editPass2Regist);
 
         buttonRegist.setOnClickListener(this);
+
+    }
     public void registrierung(String username, String passwort, String passwort2){
         if(checkpasswort(passwort2,passwort)&&emailConfirm(username))
         {
@@ -84,5 +85,5 @@ public class Regestrierung extends AppCompatActivity   {
                 break;
         }
     }
-
 }
+
