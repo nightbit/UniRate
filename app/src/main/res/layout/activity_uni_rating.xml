@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Fachrichtung">
+        tools:context=".Fachrichtung" android:background="#3F51B5">
     <TextView
             android:text="@string/Überschrift"
             android:layout_width="411dp"
@@ -14,7 +14,7 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0"
             tools:text="            University Ratings" android:orientation="horizontal" android:textSize="30sp"
-            android:background="#FFEB3B" android:textColor="#3F51B5"/>
+            android:background="#3F51B5" android:textColor="#000000"/>
     <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -22,15 +22,15 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="1.0"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="60dp" android:id="@+id/scrollView2"
-            android:background="#FFEB3B">
+            android:background="#3F51B5">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:orientation="vertical" android:background="#FFEB3B">
+                      android:orientation="vertical" android:background="#3F51B5">
             <Button
                     android:text="@string/TechnikumButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/button"
-                    android:background="#FFEB3B"
+                    android:background="#3F51B5"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +38,7 @@
                     app:layout_constraintHorizontal_bias="0.206"
                     app:layout_constraintVertical_bias="0.319"
                     tools:text="FH Technikum Wien"
-                    android:textColor="#3F51B5"/>
+                    android:textColor="#000000" android:backgroundTint="#3F51B5"/>
             <TextView
                     android:text="@string/rating2"
                     android:layout_width="match_parent"
@@ -46,23 +46,24 @@
                     tools:text="Rating in %" app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.169"
-                    app:layout_constraintVertical_bias="0.348"/>
+                    app:layout_constraintVertical_bias="0.348" android:textColor="#000000"/>
             <View
                     android:id="@+id/divider"
                     android:layout_width="match_parent"
                     android:layout_height="62dp"
                     android:background="?android:attr/listDivider"
-            />
+                    android:backgroundTint="#3F51B5"/>
             <Button
                     android:text="@string/technischeButton"
                     android:layout_width="match_parent"
                     android:layout_height="47dp"
                     android:id="@+id/button2"
-                    android:background="#FFEB3B"
+                    android:background="#3F51B5"
                     app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintHorizontal_bias="0.287" app:layout_constraintVertical_bias="0.39"
-                    tools:text="Technische Universität Wien" android:textColor="#3F51B5"/>
+                    tools:text="Technische Universität Wien" android:textColor="#000000"
+                    android:backgroundTint="#3F51B5"/>
             <TextView
                     android:text="@string/rating1"
                     android:layout_width="71dp"
@@ -70,22 +71,22 @@
                     tools:text="Rating in %" app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.164"
-                    app:layout_constraintVertical_bias="0.256"/>
+                    app:layout_constraintVertical_bias="0.256" android:textColor="#000000"/>
             <View
                     android:id="@+id/divider2"
                     android:layout_width="match_parent"
                     android:layout_height="59dp"
                     android:background="?android:attr/listDivider"
-            />
+                    android:backgroundTint="#3F51B5"/>
             <Button
                     android:text="@string/uniwienButton"
                     android:layout_width="match_parent"
                     android:layout_height="46dp" android:id="@+id/button3"
-                    android:background="#FFEB3B"
+                    android:background="#3F51B5"
                     app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintHorizontal_bias="0.196" app:layout_constraintVertical_bias="0.292"
-                    tools:text="Universität Wien" android:textColor="#3F51B5"/>
+                    tools:text="Universität Wien" android:textColor="#000000" android:backgroundTint="#3F51B5"/>
             <View
                     android:id="@+id/divider3"
                     android:layout_width="match_parent"
@@ -99,22 +100,22 @@
                     tools:text="Rating in %" app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.169"
-                    app:layout_constraintVertical_bias="0.442"/>
+                    app:layout_constraintVertical_bias="0.442" android:textColor="#000000"/>
             <View
                     android:id="@+id/divider4"
                     android:layout_width="match_parent"
                     android:layout_height="58dp"
                     android:background="?android:attr/listDivider"
-            />
+                    android:backgroundTint="#3F51B5"/>
             <Button
                     android:text="@string/campusButton"
                     android:layout_width="match_parent"
                     android:layout_height="47dp" android:id="@+id/button4"
-                    android:background="#FFEB3B"
+                    android:background="#3F51B5"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintHorizontal_bias="0.19" app:layout_constraintVertical_bias="0.489"
-                    tools:text="FH Campus Wien" android:textColor="#3F51B5"/>
+                    tools:text="FH Campus Wien" android:textColor="#000000" android:backgroundTint="#3F51B5"/>
             <TextView
                     android:text="@string/rating4"
                     android:layout_width="80dp"
@@ -122,22 +123,23 @@
                     tools:text="Rating in %" app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.168"
-                    app:layout_constraintVertical_bias="0.538"/>
+                    app:layout_constraintVertical_bias="0.538" android:textColor="#000000"/>
             <View
                     android:id="@+id/divider5"
                     android:layout_width="match_parent"
                     android:layout_height="58dp"
                     android:background="?android:attr/listDivider"
-            />
+                    android:backgroundTint="#3F51B5"/>
             <Button
                     android:text="@string/bokuButton"
                     android:layout_width="match_parent"
                     android:layout_height="48dp" android:id="@+id/button5"
-                    android:background="#FFEB3B"
+                    android:background="#3F51B5"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintVertical_bias="0.59" app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintHorizontal_bias="0.173" tools:text="BOKU" android:textColor="#3F51B5"/>
+                    app:layout_constraintHorizontal_bias="0.173" tools:text="BOKU" android:textColor="#000000"
+                    android:backgroundTint="#3F51B5"/>
             <TextView
                     android:text="@string/rating5"
                     android:layout_width="wrap_content"
@@ -145,24 +147,24 @@
                     tools:text="Rating in %" app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.163"
-                    app:layout_constraintVertical_bias="0.633"/>
+                    app:layout_constraintVertical_bias="0.633" android:textColor="#000000"/>
             <View
                     android:id="@+id/divider6"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:background="?android:attr/listDivider"
-            />
+                    android:backgroundTint="#3F51B5"/>
             <Button
                     android:text="@string/button9"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/button9" android:backgroundTint="#FFEB3B"
-                    android:textColor="#3F51B5"/>
+                    android:layout_height="wrap_content" android:id="@+id/button9" android:backgroundTint="#3F51B5"
+                    android:textColor="#000000"/>
             <View
                     android:id="@+id/divider8"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:background="?android:attr/listDivider"
-            />
+                    android:backgroundTint="#3F51B5"/>
 
         </LinearLayout>
     </ScrollView>

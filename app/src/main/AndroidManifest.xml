@@ -9,6 +9,10 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.MaterialComponents">
+        <activity android:name=".Regestrierung">
+        </activity>
+        <activity android:name=".loggin">
+        </activity>
         <activity android:name=".PROFESSOR.dreiner">
         </activity>
         <activity android:name=".BBEFÄCHER.SEMESTER2.kreko">
