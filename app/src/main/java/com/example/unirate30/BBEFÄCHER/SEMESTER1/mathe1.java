@@ -2,9 +2,7 @@ package com.example.unirate30.BBEFÄCHER.SEMESTER1;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.ImageButton;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.unirate30.R;
@@ -14,22 +12,34 @@ import java.util.ArrayList;
 
 public class mathe1 extends AppCompatActivity {
 
+    Button mathe1button;
+    RatingBar mathe1bar1;
+    RatingBar mathe1bar2;
+    RatingBar mathe1bar3;
+
     TextInputLayout til_Prof5;
     AutoCompleteTextView act_Prof5;
 
     ArrayList<String> ArrayList_Prof5;
     ArrayAdapter<String> ArrayAdapter_Prof5;
 
-    ImageButton nextButton8;
-    String selected_Prof5;
+    ImageButton mathe1nextButton;
+    String selected_Profmathe1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mathe1);
 
-        til_Prof5 = (TextInputLayout) findViewById(R.id.til_Prof5);
-        act_Prof5 = (AutoCompleteTextView) findViewById(R.id.act_Prof5);
+        mathe1bar1 = findViewById(R.id.mathe1ratingBar2);
+        mathe1bar1.setVisibility(View.INVISIBLE);
+        mathe1bar2 = findViewById(R.id.mathe1ratingBar4);
+        mathe1bar2.setVisibility(View.INVISIBLE);
+        mathe1bar3 = findViewById(R.id.mathe1ratingBar6);
+        mathe1bar3.setVisibility(View.INVISIBLE);
+
+        til_Prof5 = (TextInputLayout) findViewById(R.id.til_Profmathe1);
+        act_Prof5 = (AutoCompleteTextView) findViewById(R.id.act_Profmathe1);
 
         ArrayList_Prof5 = new ArrayList<>();
         ArrayList_Prof5.add("Simon Reif");
@@ -40,12 +50,25 @@ public class mathe1 extends AppCompatActivity {
 
         act_Prof5.setThreshold(1);
 
-        nextButton8 = findViewById(R.id.nextButton8);
-        nextButton8.setOnClickListener(new View.OnClickListener() {
+        mathe1button = findViewById(R.id.mathe1button);
+        mathe1button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selected_Prof5 = act_Prof5.getText().toString();
-                if (selected_Prof5.equals("Simon Reif")){
+                if (true){
+                    mathe1bar1.setVisibility(View.VISIBLE);
+                    mathe1bar2.setVisibility(View.VISIBLE);
+                    mathe1bar3.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+        mathe1nextButton = findViewById(R.id.mathe1nextButton);
+        mathe1nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selected_Profmathe1 = act_Prof5.getText().toString();
+                if (selected_Profmathe1.equals("Simon Reif")){
                     openReif();
                 }
             }
