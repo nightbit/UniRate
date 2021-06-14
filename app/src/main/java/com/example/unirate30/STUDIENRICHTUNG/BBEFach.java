@@ -66,7 +66,7 @@ public class BBEFach extends AppCompatActivity {
                     ArrayList_Faecher.add("Allgemeine Chemie Labor");
                     ArrayList_Faecher.add("Anatomie, Physiologie und Pathophysiologie 1");
                     ArrayList_Faecher.add("Grundlagen der Anataomie und Physiologie");
-                    ArrayList_Faecher.add("Technical English mit Nutte");
+                    ArrayList_Faecher.add("Technical English");
                     ArrayList_Faecher.add("Kompetenz und Kooperation");
                     ArrayList_Faecher.add("Mathematik für Engineering Science 1");
                     ArrayList_Faecher.add("Grundlagen der Physik für Ingenieurswissenschaften");
@@ -148,7 +148,7 @@ public class BBEFach extends AppCompatActivity {
                 }if (selceted_Faecher.equals("Business English")){
                     openeng2();
                 }if (selceted_Faecher.equals("Mathematik für Engineering Science 2")){
-                    openphysik();
+                    openmathe2();
                 }if (selceted_Faecher.equals("Elektronik in der biomedizinischen Technik")){
                     openphysiklab();
                 }if (selceted_Faecher.equals("Kreativität und Komplexität")){
@@ -233,5 +233,9 @@ public class BBEFach extends AppCompatActivity {
     public void openkreko(){
         Intent kreko = new Intent(this, kreko.class);
         startActivity(kreko);
+    }
+    public void openmathe2(){
+        Intent mathe2 = new Intent(this, mathe2.class);
+        startActivity(mathe2);
     }
 }

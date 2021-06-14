@@ -1,4 +1,4 @@
-package com.example.unirate30;
+ package com.example.unirate30;
 
 import android.content.Intent;
 import android.view.View;
