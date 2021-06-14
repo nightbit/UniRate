@@ -69,7 +69,7 @@ public class Regestrierung extends AppCompatActivity implements View.OnClickList
     public void creatAccount(String username, String passwort)
     {
         SQLiteDatabase UniRateDB = getBaseContext().openOrCreateDatabase("UniRateDB", MODE_PRIVATE,null);
-        UniRateDB.execSQL("INSERT INTO User VALUES('"+username+"'"+passwort+"')");
+        UniRateDB.execSQL("INSERT INTO User VALUES('"+ username +"','"+ passwort +"')");
         UniRateDB.close();
     }
 
