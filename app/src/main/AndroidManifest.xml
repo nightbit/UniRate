@@ -9,23 +9,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.MaterialComponents">
-        <activity android:name=".PROFESSOR.Scherer">
-        </activity>
-        <activity android:name=".PROFESSOR.Nemec">
-        </activity>
-        <activity android:name=".PROFESSOR.Forjan">
-        </activity>
-        <activity android:name=".PROFESSOR.Balz">
-        </activity>
         <activity android:name=".BBEFÄCHER.SEMESTER2.mathe2">
-        </activity>
-        <activity android:name=".BBEFÄCHER.SEMESTER2.BIODA">
-        </activity>
-        <activity android:name=".BBEFÄCHER.SEMESTER2.elek">
-        </activity>
-        <activity android:name=".BBEFÄCHER.SEMESTER2.etbio">
-        </activity>
-        <activity android:name=".BBEFÄCHER.SEMESTER2.kreko">
         </activity>
         <activity android:name=".PROFESSOR.Vander">
         </activity>
@@ -39,17 +23,23 @@
         </activity>
         <activity android:name=".PROFESSOR.Sauer">
         </activity>
+        <activity android:name=".BBEFÄCHER.SEMESTER2.elek">
+        </activity>
         <activity android:name=".PROFESSOR.pasteka">
         </activity>
         <activity android:name=".PROFESSOR.scheiben">
         </activity>
-        <activity android:name=".PROFESSOR.dreiner">
+        <activity android:name=".BBEFÄCHER.SEMESTER2.BIODA">
         </activity>
         <activity android:name=".PROFESSOR.Praher">
         </activity>
         <activity android:name=".PROFESSOR.Jesen">
         </activity>
         <activity android:name=".BBEFÄCHER.SEMESTER2.anat2">
+        </activity>
+        <activity android:name=".BBEFÄCHER.SEMESTER2.MedPR">
+        </activity>
+        <activity android:name=".BBEFÄCHER.SEMESTER2.physiolab">
         </activity>
         <activity android:name=".PROFESSOR.Eitel">
         </activity>
@@ -92,6 +82,14 @@
         <activity android:name=".BBEFÄCHER.SEMESTER1.mathe1">
         </activity>
         <activity android:name=".PROFESSOR.mohl">
+        </activity>
+        <activity android:name=".PROFESSOR.Balz">
+        </activity>
+        <activity android:name=".PROFESSOR.Scherer">
+        </activity>
+        <activity android:name=".PROFESSOR.Forjan">
+        </activity>
+        <activity android:name=".PROFESSOR.Nemec">
         </activity>
         <activity android:name=".BBEFÄCHER.SEMESTER1.aphys">
         </activity>

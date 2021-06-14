@@ -154,9 +154,9 @@ public class BBEFach extends AppCompatActivity {
                 }if (selceted_Faecher.equals("Kreativität und Komplexität")){
                     openkreko();
                 }if (selceted_Faecher.equals("Medizinische Informatik - Projekt")){
-                    openprogaw1();
+                    openmedpr();
                 }if (selceted_Faecher.equals("Physiologielabor")){
-                    openprogaw1();}
+                    openphysio();}
             }
         });
 
@@ -234,8 +234,16 @@ public class BBEFach extends AppCompatActivity {
         Intent kreko = new Intent(this, com.example.unirate30.BBEFÄCHER.SEMESTER2.kreko.class);
         startActivity(kreko);
     }
-    public void openmathe2(){
+    public void openphysio(){
+        Intent physio = new Intent(this, physiolab.class);
+        startActivity(physio);
+    }
+    public void openmedpr(){
+        Intent medpr = new Intent(this, MedPR.class);
+        startActivity(medpr);
+    }  public void openmathe2(){
         Intent mathe2 = new Intent(this, com.example.unirate30.BBEFÄCHER.SEMESTER2.mathe2.class);
         startActivity(mathe2);
     }
+
 }
