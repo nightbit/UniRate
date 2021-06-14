@@ -35,6 +35,7 @@ public class loggin extends AppCompatActivity implements View.OnClickListener {
         checkLoggin= findViewById((R.id.checkLoggin));
 
         buttonEinloggen.setOnClickListener(this);
+        buttonRegistrieren.setOnClickListener(this);
 
         if(firstStart()){
             creatDB();
@@ -69,11 +70,11 @@ public class loggin extends AppCompatActivity implements View.OnClickListener {
         }
     }
 
-    public boolean checklogin(String username, String passwowrd)
+    public boolean checklogin(String email, String passwowrd)
     {
         boolean okay=false;
         SQLiteDatabase UniRateDB = getBaseContext().openOrCreateDatabase("UniRateDB",MODE_PRIVATE,null);
-        Cursor curserUser = UniRateDB.rawQuery("SELECT password FROM user WHERE username = '"+ username +"'", null );
+        Cursor curserUser = UniRateDB.rawQuery("SELECT password FROM User WHERE username = '"+ email +"'", null );
         curserUser.moveToFirst();
 
         if(curserUser.getCount()>0)
@@ -102,12 +103,13 @@ public class loggin extends AppCompatActivity implements View.OnClickListener {
 
 
     public void loadRegest(){
-        Intent  Registriung = new Intent(this, com.example.unirate30.Regestrierung.class);
+        Intent  Registriung = new Intent(this, Regestrierung.class);
         startActivity(Registriung);
     }
 
     public void loadActivity(){
-
+        Intent  unirate = new Intent(this, UniRating.class);
+        startActivity(unirate);
     }
     // wenn app erstes mal gestartet;
     public boolean firstStart()
