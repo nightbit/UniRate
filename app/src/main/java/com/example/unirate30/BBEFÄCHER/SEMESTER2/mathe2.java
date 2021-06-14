@@ -26,8 +26,6 @@ public class mathe2 extends AppCompatActivity {
     ImageButton mathe2nextButton12;
     String selected_Prof9mathe2;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

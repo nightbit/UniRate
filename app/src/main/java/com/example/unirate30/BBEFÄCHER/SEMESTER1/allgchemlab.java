@@ -2,9 +2,7 @@ package com.example.unirate30.BBEFÄCHER.SEMESTER1;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.ImageButton;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.unirate30.R;
@@ -13,21 +11,35 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.util.ArrayList;
 
 public class allgchemlab extends AppCompatActivity {
+
+    Button allglabbutton;
+    RatingBar allglabbar1;
+    RatingBar allglabbar2;
+    RatingBar allglabbar3;
+
     TextInputLayout til_Prof2;
     AutoCompleteTextView act_Prof2;
 
     ArrayList<String> ArrayList_Prof2;
     ArrayAdapter<String> ArrayAdapter_Prof2;
 
-    ImageButton nextButton5;
-    String selected_Prof2;
+    ImageButton allglabnextButton;
+    String selected_Profallglab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_allgchemlab);
 
-        til_Prof2 = (TextInputLayout) findViewById(R.id.til_Prof2);
-        act_Prof2 = (AutoCompleteTextView) findViewById(R.id.act_Prof2);
+        allglabbar1 = findViewById(R.id.allglabratingBar2);
+        allglabbar1.setVisibility(View.INVISIBLE);
+        allglabbar2 = findViewById(R.id.allglabratingBar4);
+        allglabbar2.setVisibility(View.INVISIBLE);
+        allglabbar3 = findViewById(R.id.allglabratingBar6);
+        allglabbar3.setVisibility(View.INVISIBLE);
+
+        til_Prof2 = (TextInputLayout) findViewById(R.id.til_Profallglab);
+        act_Prof2 = (AutoCompleteTextView) findViewById(R.id.act_Profallglab);
 
         ArrayList_Prof2 = new ArrayList<>();
         ArrayList_Prof2.add("Barbara Gepp");
@@ -41,21 +53,33 @@ public class allgchemlab extends AppCompatActivity {
 
         act_Prof2.setThreshold(1);
 
-
-        nextButton5 = findViewById(R.id.nextButton5);
-        nextButton5.setOnClickListener(new View.OnClickListener() {
+        allglabbutton = findViewById(R.id.allglabbutton);
+        allglabbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selected_Prof2 = act_Prof2.getText().toString();
-                if (selected_Prof2.equals("Barbara Gepp")){
+                if (true){
+                    allglabbar1.setVisibility(View.VISIBLE);
+                    allglabbar2.setVisibility(View.VISIBLE);
+                    allglabbar3.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+        allglabnextButton = findViewById(R.id.allglabnextButton);
+        allglabnextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selected_Profallglab = act_Prof2.getText().toString();
+                if (selected_Profallglab.equals("Barbara Gepp")){
                     openGepp();
-                }if (selected_Prof2.equals("Katharina Wiessner")){
+                }if (selected_Profallglab.equals("Katharina Wiessner")){
                     openWiessner();
-                }if (selected_Prof2.equals("Thomas Machacek")){
+                }if (selected_Profallglab.equals("Thomas Machacek")){
                     openMachacek();
-                }if (selected_Prof2.equals("Elisabeth Simboeck")){
+                }if (selected_Profallglab.equals("Elisabeth Simboeck")){
                     openSimboeck();
-                }if (selected_Prof2.equals("Ursula Knaack")){
+                }if (selected_Profallglab.equals("Ursula Knaack")){
                     openKnaack();
                 }
             }
