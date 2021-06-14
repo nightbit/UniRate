@@ -26,6 +26,7 @@ public class Knoebl extends AppCompatActivity {
         knoeblbar2 = findViewById(R.id.knoeblratingBar3);
         knoeblbar2.setVisibility(View.INVISIBLE);
         knoeblbar3 = findViewById(R.id.knoeblratingBar5);
+        knoeblbar3.setVisibility(View.INVISIBLE);
         knoeblbar4 = findViewById(R.id.knoeblratingBar7);
         knoeblbar4.setVisibility(View.INVISIBLE);
         knoeblbar5 = findViewById(R.id.knoeblratingBar9);

@@ -11,9 +11,19 @@
             android:theme="@style/Theme.MaterialComponents">
         <activity android:name=".BBEFÄCHER.SEMESTER2.mathe2">
         </activity>
+        <activity android:name=".BBEFÄCHER.SEMESTER2.etbio">
+        </activity>
         <activity android:name=".PROFESSOR.Vander">
         </activity>
         <activity android:name=".PROFESSOR.Schenk">
+        </activity>
+        <activity android:name=".PROFESSOR.Costa">
+        </activity>
+        <activity android:name=".PROFESSOR.Knoebl">
+        </activity>
+        <activity android:name=".PROFESSOR.Enghuber">
+        </activity>
+        <activity android:name=".PROFESSOR.Drausch">
         </activity>
         <activity android:name=".BBEFÄCHER.SEMESTER2.eng2">
         </activity>

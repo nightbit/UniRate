@@ -50,9 +50,8 @@ public class etbio extends AppCompatActivity {
         ArrayList_Prof19.add("Floarian Enghuber");
         ArrayList_Prof19.add("Karl Knoebl");
         ArrayList_Prof19.add("Joao Pedro Santos da Costa");
-        ArrayList_Prof19.add("Ursula Knaack");
 
-                ArrayAdapter_Prof19 = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, ArrayList_Prof19);
+        ArrayAdapter_Prof19 = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, ArrayList_Prof19);
         act_Prof19.setAdapter(ArrayAdapter_Prof19);
 
         act_Prof19.setThreshold(1);
