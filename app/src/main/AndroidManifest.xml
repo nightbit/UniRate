@@ -9,7 +9,23 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.MaterialComponents">
+        <activity android:name=".PROFESSOR.Scherer">
+        </activity>
+        <activity android:name=".PROFESSOR.Nemec">
+        </activity>
+        <activity android:name=".PROFESSOR.Forjan">
+        </activity>
+        <activity android:name=".PROFESSOR.Balz">
+        </activity>
         <activity android:name=".BBEFÄCHER.SEMESTER2.mathe2">
+        </activity>
+        <activity android:name=".BBEFÄCHER.SEMESTER2.BIODA">
+        </activity>
+        <activity android:name=".BBEFÄCHER.SEMESTER2.elek">
+        </activity>
+        <activity android:name=".BBEFÄCHER.SEMESTER2.etbio">
+        </activity>
+        <activity android:name=".BBEFÄCHER.SEMESTER2.kreko">
         </activity>
         <activity android:name=".PROFESSOR.Vander">
         </activity>
@@ -23,13 +39,11 @@
         </activity>
         <activity android:name=".PROFESSOR.Sauer">
         </activity>
-        <activity android:name=".BBEFÄCHER.SEMESTER2.elek">
-        </activity>
         <activity android:name=".PROFESSOR.pasteka">
         </activity>
         <activity android:name=".PROFESSOR.scheiben">
         </activity>
-        <activity android:name=".BBEFÄCHER.SEMESTER2.BIODA">
+        <activity android:name=".PROFESSOR.dreiner">
         </activity>
         <activity android:name=".PROFESSOR.Praher">
         </activity>
