@@ -150,7 +150,7 @@ public class BBEFach extends AppCompatActivity {
                 }if (selceted_Faecher.equals("Mathematik für Engineering Science 2")){
                     openmathe2();
                 }if (selceted_Faecher.equals("Elektronik in der biomedizinischen Technik")){
-                    openphysiklab();
+                    openetbio();
                 }if (selceted_Faecher.equals("Kreativität und Komplexität")){
                     openkreko();
                 }if (selceted_Faecher.equals("Medizinische Informatik - Projekt")){
@@ -241,9 +241,14 @@ public class BBEFach extends AppCompatActivity {
     public void openmedpr(){
         Intent medpr = new Intent(this, MedPR.class);
         startActivity(medpr);
-    }  public void openmathe2(){
+    }
+    public void openmathe2(){
         Intent mathe2 = new Intent(this, com.example.unirate30.BBEFÄCHER.SEMESTER2.mathe2.class);
         startActivity(mathe2);
+    }
+    public void openetbio(){
+        Intent etbio = new Intent(this, com.example.unirate30.BBEFÄCHER.SEMESTER2.etbio.class);
+        startActivity(etbio);
     }
 
 }
