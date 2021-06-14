@@ -21,18 +21,18 @@ public class Costa extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_costa);
-        costabar1 = findViewById(R.id.brabratingBar1);
+        costabar1 = findViewById(R.id.costaratingBar1);
         costabar1.setVisibility(View.INVISIBLE);
-        costabar2 = findViewById(R.id.brabratingBar3);
+        costabar2 = findViewById(R.id.costaratingBar3);
         costabar2.setVisibility(View.INVISIBLE);
-        costabar3 = findViewById(R.id.brabratingBar5);
+        costabar3 = findViewById(R.id.costaratingBar5);
         costabar3.setVisibility(View.INVISIBLE);
-        costabar4 = findViewById(R.id.brabratingBar7);
+        costabar4 = findViewById(R.id.costaratingBar7);
         costabar4.setVisibility(View.INVISIBLE);
-        costabar5 = findViewById(R.id.brabratingBar9);
+        costabar5 = findViewById(R.id.costaratingBar9);
         costabar5.setVisibility(View.INVISIBLE);
 
-        costabutton20 = findViewById(R.id.brabbutton6);
+        costabutton20 = findViewById(R.id.costabutton6);
         costabutton20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
