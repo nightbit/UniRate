@@ -163,11 +163,11 @@ public class BBEFach extends AppCompatActivity {
         }
 
     public void openallgchem() {
-        Intent intent18 = new Intent(this, allgchem.class);
+        Intent intent18 = new Intent(this, com.example.unirate30.BBEFÄCHER.SEMESTER1.allgchem.class);
         startActivity(intent18);
     }
     public void openallgchemlab() {
-        Intent allglab = new Intent(this, allgchemlab.class);
+        Intent allglab = new Intent(this, com.example.unirate30.BBEFÄCHER.SEMESTER1.allgchemlab.class);
         startActivity(allglab);
     }
     public void openaphys() {
@@ -175,15 +175,15 @@ public class BBEFach extends AppCompatActivity {
         startActivity(aphys);
     }
     public void openmathe1() {
-        Intent mathe1 = new Intent(this, mathe1.class);
+        Intent mathe1 = new Intent(this, com.example.unirate30.BBEFÄCHER.SEMESTER1.mathe1.class);
         startActivity(mathe1);
     }
     public void openprog1() {
-        Intent prog1 = new Intent(this,  prog1.class);
+        Intent prog1 = new Intent(this,  com.example.unirate30.BBEFÄCHER.SEMESTER1.prog1.class);
         startActivity(prog1);
     }
     public void openprogaw1() {
-        Intent progaw1 = new Intent(this, progaw1.class);
+        Intent progaw1 = new Intent(this, com.example.unirate30.BBEFÄCHER.SEMESTER1.progaw1.class);
         startActivity(progaw1);
     }
     public void openeng1() {
@@ -191,15 +191,15 @@ public class BBEFach extends AppCompatActivity {
         startActivity(eng1);
     }
     public void openkoko() {
-        Intent koko = new Intent(this, koko.class);
+        Intent koko = new Intent(this, com.example.unirate30.BBEFÄCHER.SEMESTER1.koko.class);
         startActivity(koko);
     }
     public void openphysik() {
-        Intent physik = new Intent(this, physik.class);
+        Intent physik = new Intent(this, com.example.unirate30.BBEFÄCHER.SEMESTER1.physik.class);
         startActivity(physik);
     }
     public void openphysiklab() {
-        Intent physiklab = new Intent(this, physiklab.class);
+        Intent physiklab = new Intent(this, com.example.unirate30.BBEFÄCHER.SEMESTER1.physiklab.class);
         startActivity(physiklab);
     }
     public void openanat1() {
@@ -219,7 +219,7 @@ public class BBEFach extends AppCompatActivity {
         startActivity(anat2);
     }
     public void openBIODA(){
-        Intent bioda = new Intent(this, BIODA.class);
+        Intent bioda = new Intent(this, com.example.unirate30.BBEFÄCHER.SEMESTER2.BIODA.class);
         startActivity(bioda);
     }
     public void openelek(){
@@ -227,15 +227,15 @@ public class BBEFach extends AppCompatActivity {
         startActivity(elek);
     }
     public void openeng2(){
-        Intent eng2 = new Intent(this, eng2.class);
+        Intent eng2 = new Intent(this, com.example.unirate30.BBEFÄCHER.SEMESTER2.eng2.class);
         startActivity(eng2);
     }
     public void openkreko(){
-        Intent kreko = new Intent(this, kreko.class);
+        Intent kreko = new Intent(this, com.example.unirate30.BBEFÄCHER.SEMESTER2.kreko.class);
         startActivity(kreko);
     }
     public void openmathe2(){
-        Intent mathe2 = new Intent(this, mathe2.class);
+        Intent mathe2 = new Intent(this, com.example.unirate30.BBEFÄCHER.SEMESTER2.mathe2.class);
         startActivity(mathe2);
     }
 }

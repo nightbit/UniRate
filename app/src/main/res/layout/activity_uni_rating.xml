@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Fachrichtung" android:background="#3F51B5">
+        tools:context=".Fachrichtung" android:background="#3F51B5" android:backgroundTint="#3F51B5">
     <TextView
             android:text="@string/Überschrift"
             android:layout_width="411dp"
@@ -38,7 +38,7 @@
                     app:layout_constraintHorizontal_bias="0.206"
                     app:layout_constraintVertical_bias="0.319"
                     tools:text="FH Technikum Wien"
-                    android:textColor="#000000" android:backgroundTint="#3F51B5"/>
+                    android:textColor="#000000" android:backgroundTint="#3F51B5" android:drawableTint="#3F51B5"/>
             <TextView
                     android:text="@string/rating2"
                     android:layout_width="match_parent"
@@ -63,7 +63,7 @@
                     app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintHorizontal_bias="0.287" app:layout_constraintVertical_bias="0.39"
                     tools:text="Technische Universität Wien" android:textColor="#000000"
-                    android:backgroundTint="#3F51B5"/>
+                    android:backgroundTint="#3F51B5" android:foregroundTint="#3F51B5" android:shadowColor="#3F51B5"/>
             <TextView
                     android:text="@string/rating1"
                     android:layout_width="71dp"
