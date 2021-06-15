@@ -2,9 +2,7 @@ package com.example.unirate30.BBEFÄCHER.SEMESTER2;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.ImageButton;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.unirate30.PROFESSOR.Eitel;
@@ -16,22 +14,35 @@ import java.util.ArrayList;
 
 public class angchemlab extends AppCompatActivity {
 
+    Button anglabbutton;
+    RatingBar anglabbar1;
+    RatingBar anglabbar2;
+    RatingBar anglabbar3;
+
     TextInputLayout til_Prof13;
     AutoCompleteTextView act_Prof13;
 
     ArrayList<String> ArrayList_Prof13;
     ArrayAdapter<String> ArrayAdapter_Prof13;
 
-    ImageButton nextButton16;
-    String selected_Prof13;
+    ImageButton labnextButton;
+    String labselected_Prof;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_angchemlab);
 
-        til_Prof13 = (TextInputLayout) findViewById(R.id.til_Prof13);
-        act_Prof13 = (AutoCompleteTextView) findViewById(R.id.act_Prof13);
+        anglabbar1 = findViewById(R.id.anglabratingBar2);
+        anglabbar1.setVisibility(View.INVISIBLE);
+        anglabbar2 = findViewById(R.id.anglabratingBar4);
+        anglabbar2.setVisibility(View.INVISIBLE);
+        anglabbar3 = findViewById(R.id.anglabratingBar6);
+        anglabbar3.setVisibility(View.INVISIBLE);
+
+
+        til_Prof13 = (TextInputLayout) findViewById(R.id.til_Profanglab);
+        act_Prof13 = (AutoCompleteTextView) findViewById(R.id.act_Profanglab);
 
         ArrayList_Prof13 = new ArrayList<>();
         ArrayList_Prof13.add("Barbara Gepp");
@@ -44,18 +55,31 @@ public class angchemlab extends AppCompatActivity {
 
         act_Prof13.setThreshold(1);
 
-        nextButton16 = findViewById(R.id.nextButton16);
-        nextButton16.setOnClickListener(new View.OnClickListener() {
+        anglabbutton = findViewById(R.id.anglabbutton);
+        anglabbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selected_Prof13 = act_Prof13.getText().toString();
-                if (selected_Prof13.equals("Barbara Gepp")){
+                if (true){
+                    anglabbar1.setVisibility(View.VISIBLE);
+                    anglabbar2.setVisibility(View.VISIBLE);
+                    anglabbar3.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+        labnextButton = findViewById(R.id.anglabnextButton);
+        labnextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                labselected_Prof = act_Prof13.getText().toString();
+                if (labselected_Prof.equals("Barbara Gepp")){
                     openGepp();
-                }if (selected_Prof13.equals("Ursula Knaack")){
+                }if (labselected_Prof.equals("Ursula Knaack")){
                     openKnaack();
-                }if (selected_Prof13.equals("Heidemarie Fuchs-Eitel")){
+                }if (labselected_Prof.equals("Heidemarie Fuchs-Eitel")){
                     openEitel();
-                }if (selected_Prof13.equals("Varvara Liousia")){
+                }if (labselected_Prof.equals("Varvara Liousia")){
                     openVarvara();
                 }
 

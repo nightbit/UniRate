@@ -2,9 +2,7 @@ package com.example.unirate30.BBEFÄCHER.SEMESTER2;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.ImageButton;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.unirate30.R;
@@ -14,22 +12,34 @@ import java.util.ArrayList;
 
 public class BIODA extends AppCompatActivity {
 
+    Button biobutton;
+    RatingBar biobar1;
+    RatingBar biobar2;
+    RatingBar biobar3;
+
     TextInputLayout til_Prof15;
     AutoCompleteTextView act_Prof15;
 
     ArrayList<String> ArrayList_Prof15;
     ArrayAdapter<String> ArrayAdapter_Prof15;
 
-    ImageButton nextButton18;
-    String selected_Prof15;
+    ImageButton bionextButton;
+    String bioselected_Prof;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b_i_o_d);
 
-        til_Prof15 = (TextInputLayout) findViewById(R.id.til_Prof15);
-        act_Prof15 = (AutoCompleteTextView) findViewById(R.id.act_Prof15);
+        biobar1 = findViewById(R.id.bioratingBar2);
+        biobar1.setVisibility(View.INVISIBLE);
+        biobar2 = findViewById(R.id.bioratingBar4);
+        biobar2.setVisibility(View.INVISIBLE);
+        biobar3 = findViewById(R.id.bioratingBar6);
+        biobar3.setVisibility(View.INVISIBLE);
+
+        til_Prof15 = (TextInputLayout) findViewById(R.id.til_Profbio);
+        act_Prof15 = (AutoCompleteTextView) findViewById(R.id.act_Profbio);
 
         ArrayList_Prof15 = new ArrayList<>();
         ArrayList_Prof15.add("Johannes Martinek");
@@ -42,16 +52,29 @@ public class BIODA extends AppCompatActivity {
 
         act_Prof15.setThreshold(1);
 
-        nextButton18 = findViewById(R.id.nextButton18);
-        nextButton18.setOnClickListener(new View.OnClickListener() {
+        biobutton = findViewById(R.id.biobutton);
+        biobutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selected_Prof15 = act_Prof15.getText().toString();
-                if (selected_Prof15.equals("Johannes Martinek")){
+                if (true){
+                    biobar1.setVisibility(View.VISIBLE);
+                    biobar2.setVisibility(View.VISIBLE);
+                    biobar3.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+        bionextButton = findViewById(R.id.bionextButton);
+        bionextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bioselected_Prof = act_Prof15.getText().toString();
+                if (bioselected_Prof.equals("Johannes Martinek")){
                     openMartinek();
-                }if (selected_Prof15.equals("Richard Pasteka")){
+                }if (bioselected_Prof.equals("Richard Pasteka")){
                     openPasteka();
-                }if (selected_Prof15.equals("Agnes Scheibenreif")){
+                }if (bioselected_Prof.equals("Agnes Scheibenreif")){
                     openScheiben();
                 }
             }

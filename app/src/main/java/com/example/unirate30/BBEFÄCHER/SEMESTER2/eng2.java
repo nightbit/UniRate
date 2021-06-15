@@ -2,9 +2,7 @@ package com.example.unirate30.BBEFÄCHER.SEMESTER2;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.ImageButton;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.unirate30.R;
@@ -14,22 +12,34 @@ import java.util.ArrayList;
 
 public class eng2 extends AppCompatActivity {
 
+    Button eng2button;
+    RatingBar eng2bar1;
+    RatingBar eng2bar2;
+    RatingBar eng2bar3;
+
     TextInputLayout til_Prof17;
     AutoCompleteTextView act_Prof17;
 
     ArrayList<String> ArrayList_Prof17;
     ArrayAdapter<String> ArrayAdapter_Prof17;
 
-    ImageButton nextButton20;
-    String selected_Prof17;
+    ImageButton eng2nextButton;
+    String eng2selected_Prof;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eng2);
 
-        til_Prof17 = (TextInputLayout) findViewById(R.id.til_Prof17);
-        act_Prof17 = (AutoCompleteTextView) findViewById(R.id.act_Prof17);
+        eng2bar1 = findViewById(R.id.eng2ratingBar2);
+        eng2bar1.setVisibility(View.INVISIBLE);
+        eng2bar2 = findViewById(R.id.eng2ratingBar4);
+        eng2bar2.setVisibility(View.INVISIBLE);
+        eng2bar3 = findViewById(R.id.eng2ratingBar6);
+        eng2bar3.setVisibility(View.INVISIBLE);
+
+        til_Prof17 = (TextInputLayout) findViewById(R.id.til_Profeng2);
+        act_Prof17 = (AutoCompleteTextView) findViewById(R.id.act_Profeng2);
 
         ArrayList_Prof17 = new ArrayList<>();
         ArrayList_Prof17.add("Ruth Schenk");
@@ -42,15 +52,28 @@ public class eng2 extends AppCompatActivity {
 
         act_Prof17.setThreshold(1);
 
-        nextButton20 = findViewById(R.id.nextButton20);
-        nextButton20.setOnClickListener(new View.OnClickListener() {
+        eng2button = findViewById(R.id.eng2button);
+        eng2button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selected_Prof17 = act_Prof17.getText().toString();
-                if (selected_Prof17.equals("Ruth Schenk")) {
+                if (true){
+                    eng2bar1.setVisibility(View.VISIBLE);
+                    eng2bar2.setVisibility(View.VISIBLE);
+                    eng2bar3.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+        eng2nextButton = findViewById(R.id.eng2nextButton);
+        eng2nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                eng2selected_Prof = act_Prof17.getText().toString();
+                if (eng2selected_Prof.equals("Ruth Schenk")) {
                     openSchenk();
                 }
-                    if (selected_Prof17.equals("Chanda Vanderhart")){
+                    if (eng2selected_Prof.equals("Chanda Vanderhart")){
                         openVander();
                     }
                 }

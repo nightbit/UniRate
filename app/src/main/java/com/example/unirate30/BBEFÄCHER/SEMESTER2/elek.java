@@ -2,9 +2,7 @@ package com.example.unirate30.BBEFÄCHER.SEMESTER2;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.ImageButton;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.unirate30.PROFESSOR.Sauer;
@@ -17,22 +15,34 @@ import java.util.ArrayList;
 
 public class elek extends AppCompatActivity {
 
+    Button elekbutton;
+    RatingBar elekbar1;
+    RatingBar elekbar2;
+    RatingBar elekbar3;
+
     TextInputLayout til_Prof16;
     AutoCompleteTextView act_Prof16;
 
     ArrayList<String> ArrayList_Prof16;
     ArrayAdapter<String> ArrayAdapter_Prof16;
 
-    ImageButton nextButton19;
-    String selected_Prof16;
+    ImageButton eleknextButton;
+    String elekselected_Prof;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elek);
 
-        til_Prof16 = (TextInputLayout) findViewById(R.id.til_Prof16);
-        act_Prof16 = (AutoCompleteTextView) findViewById(R.id.act_Prof16);
+        elekbar1 = findViewById(R.id.elekratingBar2);
+        elekbar1.setVisibility(View.INVISIBLE);
+        elekbar2 = findViewById(R.id.elekratingBar4);
+        elekbar2.setVisibility(View.INVISIBLE);
+        elekbar3 = findViewById(R.id.elekratingBar6);
+        elekbar3.setVisibility(View.INVISIBLE);
+
+        til_Prof16 = (TextInputLayout) findViewById(R.id.til_Profelek);
+        act_Prof16 = (AutoCompleteTextView) findViewById(R.id.act_Profelek);
 
         ArrayList_Prof16 = new ArrayList<>();
         ArrayList_Prof16.add("Stefan Sauermann");
@@ -45,16 +55,29 @@ public class elek extends AppCompatActivity {
 
         act_Prof16.setThreshold(1);
 
-        nextButton19 = findViewById(R.id.nextButton19);
-        nextButton19.setOnClickListener(new View.OnClickListener() {
+        elekbutton = findViewById(R.id.elekbutton);
+        elekbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selected_Prof16 = act_Prof16.getText().toString();
-                if (selected_Prof16.equals("Stefan Sauermann")){
+                if (true){
+                    elekbar1.setVisibility(View.VISIBLE);
+                    elekbar2.setVisibility(View.VISIBLE);
+                    elekbar3.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+        eleknextButton = findViewById(R.id.eleknextButton);
+        eleknextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                elekselected_Prof = act_Prof16.getText().toString();
+                if (elekselected_Prof.equals("Stefan Sauermann")){
                     openSauer();
-                }if (selected_Prof16.equals("Helmut Votzi")){
+                }if (elekselected_Prof.equals("Helmut Votzi")){
                     openVotzi();
-                }if (selected_Prof16.equals("Michael Windisch")){
+                }if (elekselected_Prof.equals("Michael Windisch")){
                     openWindisch();
                 }
             }
