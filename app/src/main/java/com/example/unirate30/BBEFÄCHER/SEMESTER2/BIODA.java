@@ -1,21 +1,26 @@
 package com.example.unirate30.BBEFÄCHER.SEMESTER2;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.View;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import com.example.unirate30.FachBewertDBHelper;
 import com.example.unirate30.R;
+import com.example.unirate30.Username;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class BIODA extends AppCompatActivity {
+public class BIODA extends AppCompatActivity implements View.OnClickListener {
 
-    Button biobutton;
-    RatingBar biobar1;
-    RatingBar biobar2;
-    RatingBar biobar3;
+    Button biodabutton;
+    RatingBar biodabar, biodabar1;
+    RatingBar biodabar2, biodabar4;
+    RatingBar biodabar3, biodabar5;
+    FachBewertDBHelper db;
 
     TextInputLayout til_Prof15;
     AutoCompleteTextView act_Prof15;
@@ -23,20 +28,28 @@ public class BIODA extends AppCompatActivity {
     ArrayList<String> ArrayList_Prof15;
     ArrayAdapter<String> ArrayAdapter_Prof15;
 
-    ImageButton bionextButton;
-    String bioselected_Prof;
+    ImageButton biodanextButton;
+    String selected_Profbioda;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b_i_o_d);
 
-        biobar1 = findViewById(R.id.bioratingBar2);
-        biobar1.setVisibility(View.INVISIBLE);
-        biobar2 = findViewById(R.id.bioratingBar4);
-        biobar2.setVisibility(View.INVISIBLE);
-        biobar3 = findViewById(R.id.bioratingBar6);
-        biobar3.setVisibility(View.INVISIBLE);
+        db = new FachBewertDBHelper(BIODA.this);
+
+        biodabar = findViewById(R.id.bioratingBar1);
+        biodabar.setIsIndicator(true);
+        biodabar1 =findViewById(R.id.bioratingBar2);
+        biodabar1.setVisibility(View.INVISIBLE);
+        biodabar2 = findViewById(R.id.bioratingBar3);
+        biodabar2.setIsIndicator(true);
+        biodabar3 = findViewById(R.id.bioratingBar4);
+        biodabar3.setVisibility(View.INVISIBLE);
+        biodabar4 =findViewById(R.id.bioratingBar5);
+        biodabar4.setIsIndicator(true);
+        biodabar5 =findViewById(R.id.bioratingBar6);
+        biodabar5.setVisibility(View.INVISIBLE);
 
         til_Prof15 = (TextInputLayout) findViewById(R.id.til_Profbio);
         act_Prof15 = (AutoCompleteTextView) findViewById(R.id.act_Profbio);
@@ -52,33 +65,20 @@ public class BIODA extends AppCompatActivity {
 
         act_Prof15.setThreshold(1);
 
-        biobutton = findViewById(R.id.biobutton);
-        biobutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (true){
-                    biobar1.setVisibility(View.VISIBLE);
-                    biobar2.setVisibility(View.VISIBLE);
-                    biobar3.setVisibility(View.VISIBLE);
+        biodabutton = findViewById(R.id.biobutton);
+        biodanextButton = findViewById(R.id.bionextButton);
 
-                }
-            }
-        });
 
-        bionextButton = findViewById(R.id.bionextButton);
-        bionextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                bioselected_Prof = act_Prof15.getText().toString();
-                if (bioselected_Prof.equals("Johannes Martinek")){
-                    openMartinek();
-                }if (bioselected_Prof.equals("Richard Pasteka")){
-                    openPasteka();
-                }if (bioselected_Prof.equals("Agnes Scheibenreif")){
-                    openScheiben();
-                }
-            }
-        });
+        if (firststart()) {
+
+            AddData();
+
+        } else {
+            ergebnisse();
+        }
+
+        biodanextButton.setOnClickListener((View.OnClickListener) this);
+        biodabutton.setOnClickListener((View.OnClickListener) this);
     }
     public void openMartinek(){
         Intent martinek = new Intent(this, com.example.unirate30.PROFESSOR.martinek.class);
@@ -93,4 +93,100 @@ public class BIODA extends AppCompatActivity {
         startActivity(scheiben);
     }
 
+
+    public void update ()
+    {
+
+
+        db = new FachBewertDBHelper(BIODA.this);
+
+
+        boolean wahr = db.updateData("BIODA",
+                Username.getUsername(),
+                Math.round(biodabar1.getRating()),
+                Math.round(biodabar3.getRating()),
+                Math.round(biodabar5.getRating())
+        );
+
+
+        if (wahr) {
+            Toast.makeText(getApplicationContext(), "Die Bewertung wurde gespeichert", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getApplicationContext(), "Die Bewertung wurde nicht gespeichert", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+    public void AddData () {
+        db = new FachBewertDBHelper(BIODA.this);
+        boolean wahr = db.insertData("BIODA",
+                Username.getUsername(),
+                (int) biodabar1.getRating(),
+                (int) biodabar3.getRating(),
+                (int) biodabar5.getRating()
+
+        );
+        if (wahr) {
+            Toast.makeText(getApplicationContext(), "Bewertung wurde gespeichert", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getApplicationContext(), "Bewertung wurde nicht erstellt", Toast.LENGTH_SHORT).show();
+        }
+    }
+    private boolean firststart() {
+        boolean first = false;
+
+        SharedPreferences sharedPreferences = getSharedPreferences("BIODA", MODE_PRIVATE);
+        SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
+        if (sharedPreferences.getBoolean("BIODA", false)) {
+            first = true;
+            sharedPreferencesEditor.putBoolean("BIODA", true);
+            sharedPreferencesEditor.apply();
+        }
+
+        return first;
+    }
+    private void ergebnisse() {
+        db =  new FachBewertDBHelper(BIODA.this);
+        List<Integer> list = db.getData("BIODA");
+        biodabar.setRating((float)list.get(0));
+        biodabar2.setRating((float)list.get(1));
+        biodabar4.setRating((float)list.get(2));
+
+    }
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.biobutton:
+                if(biodabutton.getText().toString().equals("Bewerten")){
+                    biodabar1.setVisibility(View.VISIBLE);
+                    biodabar3.setVisibility(View.VISIBLE);
+                    biodabar5.setVisibility(View.VISIBLE);
+                    biodabutton.setText("Speichern");
+                } else if(biodabutton.getText().toString().equals("Speichern"))
+                {
+                    biodabar1.setVisibility(View.INVISIBLE);
+                    biodabar3.setVisibility(View.INVISIBLE);
+                    biodabar5.setVisibility(View.INVISIBLE);
+
+                    update();
+                    AddData();
+
+                    ergebnisse();
+                    biodabutton.setText("Bewerten");
+                }
+                break;
+            case R.id.angnextButton:
+                selected_Profbioda = act_Prof15.getText().toString();
+                if (selected_Profbioda.equals("Johannes Martinek")){
+                    openMartinek();
+                }if (selected_Profbioda.equals("Richard Pasteka")){
+                openPasteka();
+
+                }if (selected_Profbioda.equals("Agnes Scheibenreif")){
+                openScheiben();
+
+                }
+                break;
+        }
+    }
 }
+

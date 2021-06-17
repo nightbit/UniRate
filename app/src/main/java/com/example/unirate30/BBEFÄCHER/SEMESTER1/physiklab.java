@@ -65,9 +65,6 @@ public class physiklab extends AppCompatActivity implements View.OnClickListener
         act_Prof11.setThreshold(1);
 
         phlabbutton = findViewById(R.id.phlabbutton);
-
-
-
         phlabnextButton = findViewById(R.id.phlabnextButton);
 
 
@@ -79,8 +76,8 @@ public class physiklab extends AppCompatActivity implements View.OnClickListener
             ergebnisse();
         }
 
-        phlabnextButton.setOnClickListener((View.OnClickListener) this);
-        phlabbutton.setOnClickListener((View.OnClickListener) this);
+        phlabnextButton.setOnClickListener(this);
+        phlabbutton.setOnClickListener(this);
     }
 
     public void openAHub(){

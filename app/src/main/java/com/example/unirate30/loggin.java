@@ -49,7 +49,7 @@ public class loggin extends AppCompatActivity implements View.OnClickListener {
     }
     public void creatDB(){
         SQLiteDatabase UniRateDB = getBaseContext().openOrCreateDatabase("UniRateDB",MODE_PRIVATE,null);
-        UniRateDB.execSQL("CREATE TABLE User(username TEXT, password TEXT)");
+        UniRateDB.execSQL("CREATE TABLE User(username TEXT , password TEXT)");
         UniRateDB.close();
 
     }
