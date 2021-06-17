@@ -70,11 +70,11 @@ public class MedPR extends AppCompatActivity {
             public void onClick(View v) {
                 selected_Profmed= act_Profmed.getText().toString();
                 if (selected_Profmed.equals("Johannes Martinek")){
-                    openUrbauer();
-                }if (selected_Profmed.equals("Matthias Scherer")){
                     openMartinek();
-                }if (selected_Profmed.equals("Philipp Urbauer")){
+                }if (selected_Profmed.equals("Matthias Scherer")){
                     openScherer();
+                }if (selected_Profmed.equals("Philipp Urbauer")){
+                    openUrbauer();
                 }
             }
         });
