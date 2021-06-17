@@ -21,6 +21,7 @@ public class BIODA extends AppCompatActivity implements View.OnClickListener {
     RatingBar biodabar2, biodabar4;
     RatingBar biodabar3, biodabar5;
     FachBewertDBHelper db;
+    String db_name = "bioda";
 
     TextInputLayout til_Prof15;
     AutoCompleteTextView act_Prof15;
@@ -36,7 +37,7 @@ public class BIODA extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b_i_o_d);
 
-        db = new FachBewertDBHelper(BIODA.this);
+        db = new FachBewertDBHelper(BIODA.this, db_name);
 
         biodabar = findViewById(R.id.bioratingBar1);
         biodabar.setIsIndicator(true);
@@ -98,7 +99,7 @@ public class BIODA extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new FachBewertDBHelper(BIODA.this);
+        db = new FachBewertDBHelper(BIODA.this, db_name);
 
 
         boolean wahr = db.updateData("BIODA",
@@ -117,7 +118,7 @@ public class BIODA extends AppCompatActivity implements View.OnClickListener {
 
     }
     public void AddData () {
-        db = new FachBewertDBHelper(BIODA.this);
+        db = new FachBewertDBHelper(BIODA.this, db_name);
         boolean wahr = db.insertData("BIODA",
                 Username.getUsername(),
                 (int) biodabar1.getRating(),
@@ -145,7 +146,7 @@ public class BIODA extends AppCompatActivity implements View.OnClickListener {
         return first;
     }
     private void ergebnisse() {
-        db =  new FachBewertDBHelper(BIODA.this);
+        db =  new FachBewertDBHelper(BIODA.this, db_name);
         List<Integer> list = db.getData("BIODA");
         biodabar.setRating((float)list.get(0));
         biodabar2.setRating((float)list.get(1));

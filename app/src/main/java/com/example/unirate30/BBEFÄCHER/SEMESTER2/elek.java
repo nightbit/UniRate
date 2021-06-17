@@ -24,6 +24,7 @@ public class elek extends AppCompatActivity implements View.OnClickListener {
     RatingBar elekbar2, elekbar4;
     RatingBar elekbar3, elekbar5;
     FachBewertDBHelper db;
+    String db_name = "elek";
 
     TextInputLayout til_Prof16;
     AutoCompleteTextView act_Prof16;
@@ -39,7 +40,7 @@ public class elek extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_elek);
 
-        db = new FachBewertDBHelper(elek.this);
+        db = new FachBewertDBHelper(elek.this, db_name);
 
         elekbar = findViewById(R.id.elekratingBar1);
         elekbar.setIsIndicator(true);
@@ -101,7 +102,7 @@ public class elek extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new FachBewertDBHelper(elek.this);
+        db = new FachBewertDBHelper(elek.this, db_name);
 
 
         boolean wahr = db.updateData("elek",
@@ -120,7 +121,7 @@ public class elek extends AppCompatActivity implements View.OnClickListener {
 
     }
     public void AddData () {
-        db = new FachBewertDBHelper(elek.this);
+        db = new FachBewertDBHelper(elek.this, db_name);
         boolean wahr = db.insertData("elek",
                 Username.getUsername(),
                 (int) elekbar1.getRating(),
@@ -148,7 +149,7 @@ public class elek extends AppCompatActivity implements View.OnClickListener {
         return first;
     }
     private void ergebnisse() {
-        db =  new FachBewertDBHelper(elek.this);
+        db =  new FachBewertDBHelper(elek.this, db_name);
         List<Integer> list = db.getData("elek");
         elekbar.setRating((float)list.get(0));
         elekbar2.setRating((float)list.get(1));

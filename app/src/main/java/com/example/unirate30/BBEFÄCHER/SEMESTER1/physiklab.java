@@ -57,8 +57,8 @@ public class physiklab extends AppCompatActivity implements View.OnClickListener
         act_Prof11 = (AutoCompleteTextView) findViewById(R.id.act_Profphlab);
 
         ArrayList_Prof11 = new ArrayList<>();
-        ArrayList_Prof11.add("Katharina Wiessner");
-        ArrayList_Prof11.add("Barbara Gepp");
+        ArrayList_Prof11.add("Albert Huber");
+
 
         ArrayAdapter_Prof11 = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, ArrayList_Prof11);
         act_Prof11.setAdapter(ArrayAdapter_Prof11);

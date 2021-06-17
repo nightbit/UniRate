@@ -23,6 +23,7 @@ public class angchem extends AppCompatActivity implements View.OnClickListener {
     RatingBar angchembar2, angchembar4;
     RatingBar angchembar3, angchembar5;
     FachBewertDBHelper db;
+    String db_name = "angchem";
 
     TextInputLayout til_Prof12;
     AutoCompleteTextView act_Prof12;
@@ -38,7 +39,7 @@ public class angchem extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_angchem);
 
-        db = new FachBewertDBHelper(angchem.this);
+        db = new FachBewertDBHelper(angchem.this, db_name);
 
         angchembar = findViewById(R.id.angratingBar1);
         angchembar.setIsIndicator(true);
@@ -97,7 +98,7 @@ public class angchem extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new FachBewertDBHelper(angchem.this);
+        db = new FachBewertDBHelper(angchem.this, db_name);
 
 
         boolean wahr = db.updateData("physiklab",
@@ -116,7 +117,7 @@ public class angchem extends AppCompatActivity implements View.OnClickListener {
 
     }
     public void AddData () {
-        db = new FachBewertDBHelper(angchem.this);
+        db = new FachBewertDBHelper(angchem.this, db_name);
         boolean wahr = db.insertData("angchem",
                 Username.getUsername(),
                 (int) angchembar1.getRating(),
@@ -144,7 +145,7 @@ public class angchem extends AppCompatActivity implements View.OnClickListener {
         return first;
     }
     private void ergebnisse() {
-        db =  new FachBewertDBHelper(angchem.this);
+        db =  new FachBewertDBHelper(angchem.this, db_name);
         List<Integer> list = db.getData("angchem");
         angchembar.setRating((float)list.get(0));
         angchembar2.setRating((float)list.get(1));
