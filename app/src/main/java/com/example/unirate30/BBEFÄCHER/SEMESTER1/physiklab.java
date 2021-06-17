@@ -65,9 +65,6 @@ public class physiklab extends AppCompatActivity implements View.OnClickListener
         act_Prof11.setThreshold(1);
 
         phlabbutton = findViewById(R.id.phlabbutton);
-
-
-
         phlabnextButton = findViewById(R.id.phlabnextButton);
 
 
