@@ -149,7 +149,6 @@ public class ProfBewertDbHelper extends SQLiteOpenHelper {
     }
 
     public boolean updateData(String ProfName,String Username,int Fachwissen,int Verfuegbarkeit,int Wissensvermittlung,int Erreichbarkeit,int Fairness){
-       // delet(ProfName,Username);
         SQLiteDatabase db= this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
        //contentValues.put(col_1,ProfName);
