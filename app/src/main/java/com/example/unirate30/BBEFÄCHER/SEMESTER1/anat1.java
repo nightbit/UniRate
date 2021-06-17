@@ -25,6 +25,7 @@ public class anat1 extends AppCompatActivity implements View.OnClickListener {
     RatingBar anat1bar5;
     RatingBar anat1bar6;
     FachBewertDBHelper db;
+    String db_name="anat1";
 
     TextInputLayout til_Prof3;
     AutoCompleteTextView act_Prof3;
@@ -39,7 +40,7 @@ public class anat1 extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anat1);
-        db = new FachBewertDBHelper(anat1.this);
+        db = new FachBewertDBHelper(anat1.this,db_name);
 
         anat1bar1 = findViewById(R.id.anat1ratingBar2);
         anat1bar1.setVisibility(View.INVISIBLE);
@@ -91,7 +92,7 @@ public class anat1 extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new FachBewertDBHelper(anat1.this);
+        db = new FachBewertDBHelper(anat1.this,db_name);
 
 
         boolean wahr = db.updateData("anat1",
@@ -110,7 +111,7 @@ public class anat1 extends AppCompatActivity implements View.OnClickListener {
 
     }
     public void AddData () {
-        db = new FachBewertDBHelper(anat1.this);
+        db = new FachBewertDBHelper(anat1.this,db_name);
         boolean wahr = db.insertData("anat1",
                 Username.getUsername(),
                 (int) anat1bar1.getRating(),
@@ -138,7 +139,7 @@ public class anat1 extends AppCompatActivity implements View.OnClickListener {
         return first;
     }
     private void ergebnisse() {
-        db =  new FachBewertDBHelper(anat1.this);
+        db =  new FachBewertDBHelper(anat1.this,db_name);
         List<Integer> list = db.getData("anat1");
         anat1bar4.setRating((float)list.get(0));
         anat1bar5.setRating((float)list.get(1));

@@ -22,6 +22,7 @@ public class etbio extends AppCompatActivity implements View.OnClickListener {
     FachBewertDBHelper db;
     TextInputLayout til_Prof19;
     AutoCompleteTextView act_Prof19;
+    String db_name="etbio";
 
     ArrayList<String> ArrayList_Prof19;
     ArrayAdapter<String> ArrayAdapter_Prof19;
@@ -35,7 +36,7 @@ public class etbio extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_etbio);
 
-        db = new FachBewertDBHelper(etbio.this);
+        db = new FachBewertDBHelper(etbio.this,db_name);
         etbiobar = findViewById(R.id.etbioratingBar1);
         etbiobar.setIsIndicator(true);
         etbiobar1 =findViewById(R.id.etbioratingBar2);
@@ -99,7 +100,7 @@ public class etbio extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new FachBewertDBHelper(etbio.this);
+        db = new FachBewertDBHelper(etbio.this,db_name);
 
 
         boolean wahr = db.updateData("Elektronik in der biomedizinischen Technik",
@@ -118,7 +119,7 @@ public class etbio extends AppCompatActivity implements View.OnClickListener {
 
     }
     public void AddData () {
-        db = new FachBewertDBHelper(etbio.this);
+        db = new FachBewertDBHelper(etbio.this,db_name);
         boolean wahr = db.insertData("Elektronik in der biomedizinischen Technik",
                 Username.getUsername(),
                 (int) etbiobar1.getRating(),
@@ -146,7 +147,7 @@ public class etbio extends AppCompatActivity implements View.OnClickListener {
         return first;
     }
     private void ergebnisse() {
-        db =  new FachBewertDBHelper(etbio.this);
+        db =  new FachBewertDBHelper(etbio.this,db_name);
         List<Integer> list = db.getData("Elektronik in der biomedizinischen Technik");
         etbiobar.setRating((float)list.get(0));
         etbiobar2.setRating((float)list.get(1));

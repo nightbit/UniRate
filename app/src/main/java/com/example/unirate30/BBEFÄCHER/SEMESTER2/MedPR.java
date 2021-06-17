@@ -21,6 +21,7 @@ public class MedPR extends AppCompatActivity implements View.OnClickListener{
     RatingBar medprbar2, medprbar4;
     RatingBar medprbar3, medprbar5;
     FachBewertDBHelper db;
+    String db_name="MedPR";
 
     TextInputLayout til_Profmed;
     AutoCompleteTextView act_Profmed;
@@ -36,7 +37,7 @@ public class MedPR extends AppCompatActivity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_med_p_r);
 
-        db = new FachBewertDBHelper(MedPR.this);
+        db = new FachBewertDBHelper(MedPR.this,db_name);
 
         medprbar = findViewById(R.id.medratingBar1);
         medprbar.setIsIndicator(true);
@@ -97,7 +98,7 @@ public class MedPR extends AppCompatActivity implements View.OnClickListener{
     {
 
 
-        db = new FachBewertDBHelper(MedPR.this);
+        db = new FachBewertDBHelper(MedPR.this,db_name);
 
 
         boolean wahr = db.updateData("Medizininformatisched Projekt",
@@ -116,7 +117,7 @@ public class MedPR extends AppCompatActivity implements View.OnClickListener{
 
     }
     public void AddData () {
-        db = new FachBewertDBHelper(MedPR.this);
+        db = new FachBewertDBHelper(MedPR.this,db_name);
         boolean wahr = db.insertData("Medizininformatisched Projekt",
                 Username.getUsername(),
                 (int) medprbar1.getRating(),
@@ -144,7 +145,7 @@ public class MedPR extends AppCompatActivity implements View.OnClickListener{
         return first;
     }
     private void ergebnisse() {
-        db =  new FachBewertDBHelper(MedPR.this);
+        db =  new FachBewertDBHelper(MedPR.this,db_name);
         List<Integer> list = db.getData("Medizininformatisched Projekt");
         medprbar.setRating((float)list.get(0));
         medprbar2.setRating((float)list.get(1));

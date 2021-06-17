@@ -21,6 +21,7 @@ public class mathe2 extends AppCompatActivity implements View.OnClickListener {
     RatingBar mathe2bar2, mathe2bar4;
     RatingBar mathe2bar3, mathe2bar5;
     FachBewertDBHelper db;
+    String db_name="mathe2";
 
     TextInputLayout til_Prof9mathe2;
     AutoCompleteTextView act_Prof9mathe2;
@@ -36,7 +37,7 @@ public class mathe2 extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mathe2);
 
-        db = new FachBewertDBHelper(mathe2.this);
+        db = new FachBewertDBHelper(mathe2.this,db_name);
         mathe2bar = findViewById(R.id.mathe2ratingBar1);
         mathe2bar.setIsIndicator(true);
         mathe2bar1 =findViewById(R.id.mathe2ratingBar2);
@@ -89,7 +90,7 @@ public class mathe2 extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new FachBewertDBHelper(mathe2.this);
+        db = new FachBewertDBHelper(mathe2.this,db_name);
 
 
         boolean wahr = db.updateData("Mathemathik für Engineering Science 2",
@@ -108,7 +109,7 @@ public class mathe2 extends AppCompatActivity implements View.OnClickListener {
 
     }
     public void AddData () {
-        db = new FachBewertDBHelper(mathe2.this);
+        db = new FachBewertDBHelper(mathe2.this,db_name);
         boolean wahr = db.insertData("Mathemathik für Engineering Science 2",
                 Username.getUsername(),
                 (int) mathe2bar1.getRating(),
@@ -136,7 +137,7 @@ public class mathe2 extends AppCompatActivity implements View.OnClickListener {
         return first;
     }
     private void ergebnisse() {
-        db =  new FachBewertDBHelper(mathe2.this);
+        db =  new FachBewertDBHelper(mathe2.this,db_name);
         List<Integer> list = db.getData("Mathemathik für Engineering Science 2");
         mathe2bar.setRating((float)list.get(0));
         mathe2bar2.setRating((float)list.get(1));

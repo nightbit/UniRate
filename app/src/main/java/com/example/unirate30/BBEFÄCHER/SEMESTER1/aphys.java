@@ -24,6 +24,7 @@ public class aphys extends AppCompatActivity implements View.OnClickListener{
     RatingBar aphysbar5;
     RatingBar aphysbar6;
     FachBewertDBHelper db;
+    String db_name="aphys";
 
     TextInputLayout til_Prof4;
     AutoCompleteTextView act_Prof4;
@@ -38,7 +39,7 @@ public class aphys extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aphys);
-        db = new FachBewertDBHelper(aphys.this);
+        db = new FachBewertDBHelper(aphys.this,db_name);
 
         aphysbar1 = findViewById(R.id.aphysratingBar2);
         aphysbar1.setVisibility(View.INVISIBLE);
@@ -90,7 +91,7 @@ public class aphys extends AppCompatActivity implements View.OnClickListener{
     {
 
 
-        db = new FachBewertDBHelper(aphys.this);
+        db = new FachBewertDBHelper(aphys.this,db_name);
 
 
         boolean wahr = db.updateData("aphys",
@@ -109,7 +110,7 @@ public class aphys extends AppCompatActivity implements View.OnClickListener{
 
     }
     public void AddData () {
-        db = new FachBewertDBHelper(aphys.this);
+        db = new FachBewertDBHelper(aphys.this,db_name);
         boolean wahr = db.insertData("aphys",
                 Username.getUsername(),
                 (int) aphysbar1.getRating(),
@@ -137,7 +138,7 @@ public class aphys extends AppCompatActivity implements View.OnClickListener{
         return first;
     }
     private void ergebnisse() {
-        db =  new FachBewertDBHelper(aphys.this);
+        db =  new FachBewertDBHelper(aphys.this,db_name);
         List<Integer> list = db.getData("aphys");
         aphysbar4.setRating((float)list.get(0));
         aphysbar5.setRating((float)list.get(1));

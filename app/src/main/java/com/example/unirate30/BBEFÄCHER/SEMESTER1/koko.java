@@ -24,6 +24,7 @@ public class koko extends AppCompatActivity implements View.OnClickListener {
     RatingBar kokobar5;
     RatingBar kokobar6;
     FachBewertDBHelper db;
+    String db_name="koko";
 
     TextInputLayout til_Prof9;
     AutoCompleteTextView act_Prof9;
@@ -38,7 +39,7 @@ public class koko extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_koko);
-        db = new FachBewertDBHelper(koko.this);
+        db = new FachBewertDBHelper(koko.this,db_name);
 
         kokobar1 = findViewById(R.id.kokoratingBar2);
         kokobar1.setVisibility(View.INVISIBLE);
@@ -89,7 +90,7 @@ public class koko extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new FachBewertDBHelper(koko.this);
+        db = new FachBewertDBHelper(koko.this,db_name);
 
 
         boolean wahr = db.updateData("koko",
@@ -108,7 +109,7 @@ public class koko extends AppCompatActivity implements View.OnClickListener {
 
     }
     public void AddData () {
-        db = new FachBewertDBHelper(koko.this);
+        db = new FachBewertDBHelper(koko.this,db_name);
         boolean wahr = db.insertData("koko",
                 Username.getUsername(),
                 (int) kokobar1.getRating(),
@@ -136,7 +137,7 @@ public class koko extends AppCompatActivity implements View.OnClickListener {
         return first;
     }
     private void ergebnisse() {
-        db =  new FachBewertDBHelper(koko.this);
+        db =  new FachBewertDBHelper(koko.this,db_name);
         List<Integer> list = db.getData("koko");
         kokobar4.setRating((float)list.get(0));
         kokobar5.setRating((float)list.get(1));
