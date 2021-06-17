@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProfBewertDbHelper extends SQLiteOpenHelper {
-    public static final String database_name = "UniRateDB.db";
+    public static final String database_name = "UniRateDBbewertung.db";
     public static final String table_name="ProfBewertung";
     public static final String col_1= "ProfName";
     public static final String col_2= "Username";
@@ -27,7 +27,7 @@ public class ProfBewertDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE "+ table_name+ "("+col_1+" TEXT ,"+col_2+ " TEXT PRIMARY KEY ,"+ col_3+ " INTEGER ,"+col_4+" INTEGER ,"+col_5+" INTEGER ,"+col_6+" INTEGER ,"+col_7+" INTEGER )");
+        db.execSQL("CREATE TABLE "+ table_name +  "("+col_1+" TEXT ,"+col_2+ " TEXT PRIMARY KEY ,"+ col_3+ " INTEGER ,"+col_4+" INTEGER ,"+col_5+" INTEGER ,"+col_6+" INTEGER ,"+col_7+" INTEGER )");
     }
 
     @Override

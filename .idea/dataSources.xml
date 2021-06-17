@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="UniRateDB" uuid="26f3531c-d646-485b-ac51-dfe01d26cbd5">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\micha\IdeaProjects\UniRate\DB\UniRateDB.db</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.34.0/sqlite-jdbc-3.34.0.jar</url>
-        </library>
-      </libraries>
-    </data-source>
-    <data-source source="LOCAL" name="UniRateDB [2]" uuid="e7a49f49-be6f-48f9-8e9d-6784ed86c78d">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\micha\OneDrive\Documents\AndroidStudio\DeviceExplorer\emulator-5554\data\data\com.example.unirate30\databases\UniRateDB.db</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.34.0/sqlite-jdbc-3.34.0.jar</url>
-        </library>
-      </libraries>
-    </data-source>
-    <data-source source="LOCAL" name="UniRateDB [3]" uuid="74c6b393-f842-4940-99e6-cfb1a4bbc4b8">
+    <data-source source="LOCAL" name="UniRateDB" uuid="2952b98f-af67-45ff-9f53-ec7dcb9d7e64">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
@@ -37,7 +13,7 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="UniRateDbFach" uuid="be28e4d2-b816-4d8f-a40e-0cee3c798974">
+    <data-source source="LOCAL" name="UniRateDbFach" uuid="8d3ac9fb-7253-4fff-b0d9-e5d7c24d7c4a">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>

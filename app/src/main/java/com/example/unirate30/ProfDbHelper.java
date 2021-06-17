@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProfDbHelper extends SQLiteOpenHelper {
-    public static final String database_name = "UniRateDB.db";
+    public static final String database_name = "UniRateDB";
     public static final String table_name="Prof";
     public static final String col_1= "idProf";
     public static final String col_2= "Name";
