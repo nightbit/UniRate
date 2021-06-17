@@ -28,33 +28,33 @@ public class brabetz extends AppCompatActivity implements View.OnClickListener {
 
 
 
-        barbbar = findViewById(R.id.barbratingBar);
+        barbbar = findViewById(R.id.brabratingBar);
         barbbar.setVisibility(View.VISIBLE);
         barbbar.setIsIndicator(true);
-        barbbar1 = findViewById(R.id.barbratingBar1);
+        barbbar1 = findViewById(R.id.brabratingBar1);
         barbbar1.setVisibility(View.INVISIBLE);
-        barbbar2 = findViewById(R.id.barbratingBar2);
+        barbbar2 = findViewById(R.id.brabratingBar2);
         barbbar2.setVisibility(View.VISIBLE);
         barbbar2.setIsIndicator(true);
-        barbbar3 = findViewById(R.id.barbratingBar3);
+        barbbar3 = findViewById(R.id.brabratingBar3);
         barbbar3.setVisibility(View.INVISIBLE);
-        barbbar4 = findViewById(R.id.barbratingBar4);
+        barbbar4 = findViewById(R.id.brabratingBar4);
         barbbar4.setVisibility(View.VISIBLE);
         barbbar4.setIsIndicator(true);
-        barbbar5 = findViewById(R.id.barbratingBar5);
+        barbbar5 = findViewById(R.id.brabratingBar5);
         barbbar5.setVisibility(View.INVISIBLE);
-        barbbar6 = findViewById(R.id.barbratingBar6);
+        barbbar6 = findViewById(R.id.brabratingBar6);
         barbbar6.setVisibility(View.VISIBLE);
         barbbar6.setIsIndicator(true);
-        barbbar7 = findViewById(R.id.barbratingBar7);
+        barbbar7 = findViewById(R.id.brabratingBar7);
         barbbar7.setVisibility(View.INVISIBLE);
-        barbbar8 = findViewById(R.id.barbratingBar8);
+        barbbar8 = findViewById(R.id.brabratingBar8);
         barbbar8.setVisibility(View.VISIBLE);
         barbbar8.setIsIndicator(true);
-        barbbar9 = findViewById(R.id.barbratingBar9);
+        barbbar9 = findViewById(R.id.brabratingBar9);
         barbbar9.setVisibility(View.INVISIBLE);
 
-        barbbutton20 = findViewById(R.id.barbbutton6);
+        barbbutton20 = findViewById(R.id.brabbutton6);
 
 
         if (firststart()) {
@@ -75,7 +75,7 @@ public class brabetz extends AppCompatActivity implements View.OnClickListener {
         db = new ProfBewertDbHelper(brabetz.this);
 
 
-        boolean wahr = db.updateData("barb",
+        boolean wahr = db.updateData("brab",
                 Username.getUsername(),
                 Math.round(barbbar1.getRating()),
                 Math.round(barbbar3.getRating()),
@@ -96,7 +96,7 @@ public class brabetz extends AppCompatActivity implements View.OnClickListener {
 
     public void AddData () {
         db=new ProfBewertDbHelper(brabetz.this);
-        boolean wahr = db.insertData("barb",
+        boolean wahr = db.insertData("brab",
                 Username.getUsername(),
                 (int) barbbar.getRating(),
                 (int) barbbar2.getRating(),
@@ -121,11 +121,11 @@ public class brabetz extends AppCompatActivity implements View.OnClickListener {
     private boolean firststart() {
         boolean first = false;
 
-        SharedPreferences sharedPreferences = getSharedPreferences("barb", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("brab", MODE_PRIVATE);
         SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
-        if (sharedPreferences.getBoolean("barb", false)) {
+        if (sharedPreferences.getBoolean("brab", false)) {
             first = true;
-            sharedPreferencesEditor.putBoolean("barb", true);
+            sharedPreferencesEditor.putBoolean("brab", true);
             sharedPreferencesEditor.apply();
         }
 
@@ -134,7 +134,7 @@ public class brabetz extends AppCompatActivity implements View.OnClickListener {
 
     private void ergebnisse() {
         db =  new ProfBewertDbHelper(brabetz.this);
-        List<Integer> list = db.getData("barb");
+        List<Integer> list = db.getData("brab");
         barbbar.setRating((float)list.get(0));
         barbbar2.setRating((float)list.get(1));
         barbbar4.setRating((float)list.get(2));
