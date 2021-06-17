@@ -21,6 +21,7 @@ public class eng2 extends AppCompatActivity implements View.OnClickListener {
     RatingBar eng2bar2, eng2bar4;
     RatingBar eng2bar3, eng2bar5;
     FachBewertDBHelper db;
+    String db_name = "eng2";
 
     TextInputLayout til_Prof17;
     AutoCompleteTextView act_Prof17;
@@ -37,7 +38,7 @@ public class eng2 extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_eng2);
 
 
-        db = new FachBewertDBHelper(eng2.this);
+        db = new FachBewertDBHelper(eng2.this, db_name);
         eng2bar = findViewById(R.id.eng2ratingBar1);
         eng2bar.setIsIndicator(true);
         eng2bar1 =findViewById(R.id.eng2ratingBar2);
@@ -95,7 +96,7 @@ public class eng2 extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new FachBewertDBHelper(eng2.this);
+        db = new FachBewertDBHelper(eng2.this, db_name);
 
 
         boolean wahr = db.updateData("Englisch 2",
@@ -114,7 +115,7 @@ public class eng2 extends AppCompatActivity implements View.OnClickListener {
 
     }
     public void AddData () {
-        db = new FachBewertDBHelper(eng2.this);
+        db = new FachBewertDBHelper(eng2.this, db_name);
         boolean wahr = db.insertData("Englisch 2",
                 Username.getUsername(),
                 (int) eng2bar1.getRating(),
@@ -142,7 +143,7 @@ public class eng2 extends AppCompatActivity implements View.OnClickListener {
         return first;
     }
     private void ergebnisse() {
-        db =  new FachBewertDBHelper(eng2.this);
+        db =  new FachBewertDBHelper(eng2.this, db_name);
         List<Integer> list = db.getData("Englisch 2");
         eng2bar.setRating((float)list.get(0));
         eng2bar2.setRating((float)list.get(1));
