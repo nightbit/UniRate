@@ -42,7 +42,7 @@
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/ratingBar"
+                android:id="@+id/barbratingBar"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +56,7 @@
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/ratingBar1"
+                android:id="@+id/barbratingBar1"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +83,7 @@
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/ratingBar2"
+                android:id="@+id/barbratingBar2"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -97,7 +97,7 @@
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/ratingBar3"
+                android:id="@+id/barbratingBar3"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -122,7 +122,7 @@
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/ratingBar4"
+                android:id="@+id/barbratingBar4"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -136,7 +136,7 @@
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/ratingBar5"
+                android:id="@+id/barbratingBar5"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -162,7 +162,7 @@
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/ratingBar6"
+                android:id="@+id/barbratingBar6"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -176,7 +176,7 @@
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/ratingBar7"
+                android:id="@+id/barbratingBar7"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -202,7 +202,7 @@
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/ratingBar8"
+                android:id="@+id/barbratingBar8"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -216,7 +216,7 @@
         <RatingBar
                 android:layout_width="235dp"
                 android:layout_height="45dp"
-                android:id="@+id/ratingBar9"
+                android:id="@+id/barbratingBar9"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -231,7 +231,7 @@
                 android:text="Bewerten"
                 android:layout_width="113dp"
                 android:layout_height="47dp"
-                android:id="@+id/button6"
+                android:id="@+id/barbbutton6"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"

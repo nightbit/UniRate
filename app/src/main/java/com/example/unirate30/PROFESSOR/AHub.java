@@ -8,7 +8,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.unirate30.ProfBewertDbHelper;
-import com.example.unirate30.ProfDbHelper;
 import com.example.unirate30.R;
 import com.example.unirate30.Username;
 
@@ -27,37 +26,36 @@ public class AHub extends AppCompatActivity implements View.OnClickListener {
         protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a_hub);
+
         db = new ProfBewertDbHelper(AHub.this);
 
-
-
-        bar = findViewById(R.id.ratingBar);
+        bar = findViewById(R.id.barbratingBar);
         bar.setVisibility(View.VISIBLE);
         bar.setIsIndicator(true);
-        bar1 = findViewById(R.id.ratingBar1);
+        bar1 = findViewById(R.id.barbratingBar1);
         bar1.setVisibility(View.INVISIBLE);
-        bar2 = findViewById(R.id.ratingBar2);
+        bar2 = findViewById(R.id.barbratingBar2);
         bar2.setVisibility(View.VISIBLE);
         bar2.setIsIndicator(true);
-        bar3 = findViewById(R.id.ratingBar3);
+        bar3 = findViewById(R.id.barbratingBar3);
         bar3.setVisibility(View.INVISIBLE);
-        bar4 = findViewById(R.id.ratingBar4);
+        bar4 = findViewById(R.id.barbratingBar4);
         bar4.setVisibility(View.VISIBLE);
         bar4.setIsIndicator(true);
-        bar5 = findViewById(R.id.ratingBar5);
+        bar5 = findViewById(R.id.barbratingBar5);
         bar5.setVisibility(View.INVISIBLE);
-        bar6 = findViewById(R.id.ratingBar6);
+        bar6 = findViewById(R.id.barbratingBar6);
         bar6.setVisibility(View.VISIBLE);
         bar6.setIsIndicator(true);
-        bar7 = findViewById(R.id.ratingBar7);
+        bar7 = findViewById(R.id.barbratingBar7);
         bar7.setVisibility(View.INVISIBLE);
-        bar8 = findViewById(R.id.ratingBar8);
+        bar8 = findViewById(R.id.barbratingBar8);
         bar8.setVisibility(View.VISIBLE);
         bar8.setIsIndicator(true);
-        bar9 = findViewById(R.id.ratingBar9);
+        bar9 = findViewById(R.id.barbratingBar9);
         bar9.setVisibility(View.INVISIBLE);
 
-        button20 = findViewById(R.id.button6);
+        button20 = findViewById(R.id.barbbutton6);
 
 
        if (firststart()) {
