@@ -22,6 +22,7 @@ public class kreko extends AppCompatActivity implements View.OnClickListener {
     RatingBar krekobar2, krekobar4;
     RatingBar krekobar3, krekobar5;
     FachBewertDBHelper db;
+    String db_name="kreko";
 
     TextInputLayout til_Prof9kreko;
     AutoCompleteTextView act_Prof9kreko;
@@ -38,7 +39,7 @@ public class kreko extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kreko);
 
-        db = new FachBewertDBHelper(kreko.this);
+        db = new FachBewertDBHelper(kreko.this,db_name);
         krekobar = findViewById(R.id.krekoratingBar1);
         krekobar.setIsIndicator(true);
         krekobar1 =findViewById(R.id.krekoratingBar2);
@@ -88,7 +89,7 @@ public class kreko extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new FachBewertDBHelper(kreko.this);
+        db = new FachBewertDBHelper(kreko.this,db_name);
 
 
         boolean wahr = db.updateData("Kreativität und Komplexität",
@@ -107,7 +108,7 @@ public class kreko extends AppCompatActivity implements View.OnClickListener {
 
     }
     public void AddData () {
-        db = new FachBewertDBHelper(kreko.this);
+        db = new FachBewertDBHelper(kreko.this,db_name);
         boolean wahr = db.insertData("Kreativität und Komplexität",
                 Username.getUsername(),
                 (int) krekobar1.getRating(),
@@ -135,7 +136,7 @@ public class kreko extends AppCompatActivity implements View.OnClickListener {
         return first;
     }
     private void ergebnisse() {
-        db =  new FachBewertDBHelper(kreko.this);
+        db =  new FachBewertDBHelper(kreko.this,db_name);
         List<Integer> list = db.getData("Kreativität und Komplexität");
         krekobar.setRating((float)list.get(0));
         krekobar2.setRating((float)list.get(1));

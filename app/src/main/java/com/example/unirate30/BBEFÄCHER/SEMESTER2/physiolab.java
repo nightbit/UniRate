@@ -21,6 +21,7 @@ public class physiolab extends AppCompatActivity implements View.OnClickListener
     RatingBar physlabbar2, physlabbar4;
     RatingBar physlabbar3, physlabbar5;
     FachBewertDBHelper db;
+    String db_name="physiolab";
 
     TextInputLayout til_Profphyslab;
     AutoCompleteTextView act_Profphyslab;
@@ -36,7 +37,7 @@ public class physiolab extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_physiolab);
 
-        db = new FachBewertDBHelper(physiolab.this);
+        db = new FachBewertDBHelper(physiolab.this,db_name);
 
         physlabbar = findViewById(R.id.physlabratingBar1);
         physlabbar.setIsIndicator(true);
@@ -102,7 +103,7 @@ public class physiolab extends AppCompatActivity implements View.OnClickListener
     {
 
 
-        db = new FachBewertDBHelper(physiolab.this);
+        db = new FachBewertDBHelper(physiolab.this,db_name);
 
 
         boolean wahr = db.updateData("physiologielab",
@@ -121,7 +122,7 @@ public class physiolab extends AppCompatActivity implements View.OnClickListener
 
     }
     public void AddData () {
-        db = new FachBewertDBHelper(physiolab.this);
+        db = new FachBewertDBHelper(physiolab.this,db_name);
         boolean wahr = db.insertData("physiologielab",
                 Username.getUsername(),
                 (int) physlabbar1.getRating(),
@@ -149,7 +150,7 @@ public class physiolab extends AppCompatActivity implements View.OnClickListener
         return first;
     }
     private void ergebnisse() {
-        db =  new FachBewertDBHelper(physiolab.this);
+        db =  new FachBewertDBHelper(physiolab.this,db_name);
         List<Integer> list = db.getData("physiologielab");
         physlabbar.setRating((float)list.get(0));
         physlabbar2.setRating((float)list.get(1));
