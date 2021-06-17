@@ -100,7 +100,7 @@ public class progaw1 extends AppCompatActivity implements View.OnClickListener{
     {
 
 
-        db = new FachBewertDBHelper(progaw1.this);
+        db = new FachBewertDBHelper(progaw1.this,fachname);
 
 
         boolean wahr = db.updateData(fachname,
@@ -120,7 +120,7 @@ public class progaw1 extends AppCompatActivity implements View.OnClickListener{
     }
 
     public void AddData () {
-        db = new FachBewertDBHelper(progaw1.this);
+        db = new FachBewertDBHelper(progaw1.this,fachname);
         boolean wahr = db.insertData(fachname,
                 Username.getUsername(),
                 (int) progaw1bar1.getRating(),
@@ -149,7 +149,7 @@ public class progaw1 extends AppCompatActivity implements View.OnClickListener{
         return first;
     }
     private void ergebnisse() {
-        db =  new FachBewertDBHelper(progaw1.this);
+        db =  new FachBewertDBHelper(progaw1.this,fachname);
         List<Integer> list = db.getData(fachname);
         progaw1bar.setRating((float)list.get(0));
         progaw1bar2.setRating((float)list.get(1));

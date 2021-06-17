@@ -24,6 +24,7 @@ public class allgchemlab extends AppCompatActivity implements View.OnClickListen
     RatingBar allglabbar5;
     RatingBar allglabbar6;
     FachBewertDBHelper db;
+    String db_name="allgchemlab";
 
     TextInputLayout til_Prof2;
     AutoCompleteTextView act_Prof2;
@@ -38,7 +39,7 @@ public class allgchemlab extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_allgchemlab);
-        db = new FachBewertDBHelper(allgchemlab.this);
+        db = new FachBewertDBHelper(allgchemlab.this,db_name);
 
         allglabbar1 = findViewById(R.id.allglabratingBar2);
         allglabbar1.setVisibility(View.INVISIBLE);
@@ -110,7 +111,7 @@ public class allgchemlab extends AppCompatActivity implements View.OnClickListen
 
     public void update ()
     {
-        db = new FachBewertDBHelper(allgchemlab.this);
+        db = new FachBewertDBHelper(allgchemlab.this,db_name);
 
         boolean wahr = db.updateData("allgchemlab",
                 Username.getUsername(),
@@ -128,7 +129,7 @@ public class allgchemlab extends AppCompatActivity implements View.OnClickListen
 
     }
     public void AddData () {
-        db = new FachBewertDBHelper(allgchemlab.this);
+        db = new FachBewertDBHelper(allgchemlab.this,db_name);
         boolean wahr = db.insertData("allgchemlab",
                 Username.getUsername(),
                 (int) allglabbar1.getRating(),
@@ -156,7 +157,7 @@ public class allgchemlab extends AppCompatActivity implements View.OnClickListen
         return first;
     }
     private void ergebnisse() {
-        db =  new FachBewertDBHelper(allgchemlab.this);
+        db =  new FachBewertDBHelper(allgchemlab.this,db_name);
         List<Integer> list = db.getData("allgchemlab");
         allglabbar4.setRating((float)list.get(0));
         allglabbar5.setRating((float)list.get(1));
