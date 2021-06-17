@@ -23,7 +23,7 @@ public class Huber extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_huber);
-        db = new ProfBewertDbHelper(Huber.this);
+        db = new ProfBewertDbHelper(Huber.this,"Huber");
 
         huberbar = findViewById(R.id.huberratingBar);
         huberbar.setVisibility(View.VISIBLE);
@@ -69,7 +69,7 @@ public class Huber extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Huber.this);
+        db = new ProfBewertDbHelper(Huber.this,"Huber");
 
 
         boolean wahr = db.updateData("Huber",
@@ -92,7 +92,7 @@ public class Huber extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Huber.this);
+        db=new ProfBewertDbHelper(Huber.this,"Huber");
         boolean wahr = db.insertData("Huber",
                 Username.getUsername(),
                 (int) huberbar.getRating(),
@@ -130,7 +130,7 @@ public class Huber extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Huber.this);
+        db =  new ProfBewertDbHelper(Huber.this,"Huber");
         List<Integer> list = db.getData("Huber");
         huberbar.setRating((float)list.get(0));
         huberbar2.setRating((float)list.get(1));

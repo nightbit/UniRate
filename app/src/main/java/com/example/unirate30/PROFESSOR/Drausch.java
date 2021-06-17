@@ -24,7 +24,7 @@ public class Drausch extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drausch);
 
-        db = new ProfBewertDbHelper(Drausch.this);
+        db = new ProfBewertDbHelper(Drausch.this,"Drausch");
 
 
 
@@ -72,7 +72,7 @@ public class Drausch extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Drausch.this);
+        db = new ProfBewertDbHelper(Drausch.this,"Drausch");
 
 
         boolean wahr = db.updateData("Drausch",
@@ -95,7 +95,7 @@ public class Drausch extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Drausch.this);
+        db=new ProfBewertDbHelper(Drausch.this,"Drausch");
         boolean wahr = db.insertData("Drausch",
                 Username.getUsername(),
                 (int) drauschbar.getRating(),
@@ -133,7 +133,7 @@ public class Drausch extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Drausch.this);
+        db =  new ProfBewertDbHelper(Drausch.this,"Drausch");
         List<Integer> list = db.getData("Drausch");
         drauschbar.setRating((float)list.get(0));
         drauschbar2.setRating((float)list.get(1));

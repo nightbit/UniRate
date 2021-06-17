@@ -24,7 +24,7 @@ public class Machacek extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_machacek);
-        db = new ProfBewertDbHelper(Machacek.this);
+        db = new ProfBewertDbHelper(Machacek.this,"Machacek");
 
         machabar = findViewById(R.id.machacekratingBar);
         machabar.setVisibility(View.VISIBLE);
@@ -70,7 +70,7 @@ public class Machacek extends AppCompatActivity implements View.OnClickListener 
     {
 
 
-        db = new ProfBewertDbHelper(Machacek.this);
+        db = new ProfBewertDbHelper(Machacek.this,"Machacek");
 
 
         boolean wahr = db.updateData("Machacek",
@@ -93,7 +93,7 @@ public class Machacek extends AppCompatActivity implements View.OnClickListener 
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Machacek.this);
+        db=new ProfBewertDbHelper(Machacek.this,"Machacek");
         boolean wahr = db.insertData("Machacek",
                 Username.getUsername(),
                 (int) machabar.getRating(),
@@ -131,7 +131,7 @@ public class Machacek extends AppCompatActivity implements View.OnClickListener 
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Machacek.this);
+        db =  new ProfBewertDbHelper(Machacek.this,"Machacek");
         List<Integer> list = db.getData("Machacek");
         machabar.setRating((float)list.get(0));
         machabar2.setRating((float)list.get(1));

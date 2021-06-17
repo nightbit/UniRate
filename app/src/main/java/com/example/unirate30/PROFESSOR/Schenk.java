@@ -32,7 +32,7 @@ public class Schenk extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schenk);
-        db = new ProfBewertDbHelper(Schenk.this);
+        db = new ProfBewertDbHelper(Schenk.this,"Schenk");
 
         schenkbar1 = findViewById(R.id.schenkratingBar1);
         schenkbar1.setVisibility(View.INVISIBLE);
@@ -76,7 +76,7 @@ public class Schenk extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Schenk.this);
+        db = new ProfBewertDbHelper(Schenk.this,"Schenk");
 
 
         boolean wahr = db.updateData("Schenk",
@@ -98,7 +98,7 @@ public class Schenk extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Schenk.this);
+        db=new ProfBewertDbHelper(Schenk.this,"Schenk");
         boolean wahr = db.insertData("Schenk",
                 Username.getUsername(),
                 (int) schenkbar1.getRating(),
@@ -136,7 +136,7 @@ public class Schenk extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Schenk.this);
+        db =  new ProfBewertDbHelper(Schenk.this,"Schenk");
         List<Integer> list = db.getData("Schenk");
         schenkbar6.setRating((float)list.get(0));
         schenkbar7.setRating((float)list.get(1));

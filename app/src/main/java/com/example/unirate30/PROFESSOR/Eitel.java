@@ -24,7 +24,7 @@ public class Eitel extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_eitel);
-        db = new ProfBewertDbHelper(Eitel.this);
+        db = new ProfBewertDbHelper(Eitel.this,"Eitel");
 
 
 
@@ -72,7 +72,7 @@ public class Eitel extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Eitel.this);
+        db = new ProfBewertDbHelper(Eitel.this,"Eitel");
 
 
         boolean wahr = db.updateData("Eitel",
@@ -95,7 +95,7 @@ public class Eitel extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Eitel.this);
+        db=new ProfBewertDbHelper(Eitel.this,"Eitel");
         boolean wahr = db.insertData("Eitel",
                 Username.getUsername(),
                 (int) eitelbar.getRating(),
@@ -133,7 +133,7 @@ public class Eitel extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Eitel.this);
+        db =  new ProfBewertDbHelper(Eitel.this,"Eitel");
         List<Integer> list = db.getData("AHub");
         eitelbar.setRating((float)list.get(0));
         eitelbar2.setRating((float)list.get(1));

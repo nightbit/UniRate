@@ -5,10 +5,7 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -17,9 +14,10 @@ import android.os.Bundle;
 
 public class loggin extends AppCompatActivity implements View.OnClickListener {
     Button buttonEinloggen, buttonRegistrieren;
+    ImageButton buttonWeiter;
     EditText mailLoggin, passwortLoggin;
     CheckBox checkLoggin;
-
+    Username username= new Username();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -28,14 +26,16 @@ public class loggin extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loggin);
 
+
         buttonEinloggen = findViewById (R.id.buttonEinloggen);
         buttonRegistrieren = findViewById(R.id.buttonRegistrieren);
         mailLoggin = findViewById((R.id.maiLoggin));
         passwortLoggin = findViewById((R.id.passwortLoggin));
         checkLoggin= findViewById((R.id.checkLoggin));
-
+        buttonWeiter = findViewById(R.id.buttonWeiter);
         buttonEinloggen.setOnClickListener(this);
         buttonRegistrieren.setOnClickListener(this);
+        buttonWeiter.setOnClickListener(this);
 
         if(firstStart()){
             creatDB();
@@ -132,13 +132,20 @@ public class loggin extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.buttonEinloggen:
-                Username username= new Username();
+
                 username.setUsername(mailLoggin.getText().toString());
                 login(mailLoggin.getText().toString(),passwortLoggin.getText().toString());
                 break;
             case R.id.buttonRegistrieren:
                 loadRegest();
                 break;
+
+            case R.id.buttonWeiter:
+
+                username.setUsername(null);
+                loadActivity();
+                break;
+
         }
     }
 

@@ -24,7 +24,7 @@ public class Forjan extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forjan);
-        db = new ProfBewertDbHelper(Forjan.this);
+        db = new ProfBewertDbHelper(Forjan.this,"Florjan");
 
         forjanbar = findViewById(R.id.forjanratingBar);
         forjanbar.setVisibility(View.VISIBLE);
@@ -70,7 +70,7 @@ public class Forjan extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Forjan.this);
+        db = new ProfBewertDbHelper(Forjan.this,"Florjan");
 
 
         boolean wahr = db.updateData("Forjan",
@@ -93,7 +93,7 @@ public class Forjan extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Forjan.this);
+        db=new ProfBewertDbHelper(Forjan.this,"Florjan");
         boolean wahr = db.insertData("Forjan",
                 Username.getUsername(),
                 (int) forjanbar.getRating(),
@@ -131,7 +131,7 @@ public class Forjan extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Forjan.this);
+        db =  new ProfBewertDbHelper(Forjan.this,"Florjan");
         List<Integer> list = db.getData("Forjan");
         forjanbar.setRating((float)list.get(0));
         forjanbar2.setRating((float)list.get(1));

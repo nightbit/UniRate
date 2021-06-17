@@ -32,7 +32,7 @@ public class Vander extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vander);
-        db = new ProfBewertDbHelper(Vander.this);
+        db = new ProfBewertDbHelper(Vander.this,"Vander");
 
         chanbar1 = findViewById(R.id.chanratingBar1);
         chanbar1.setVisibility(View.INVISIBLE);
@@ -77,7 +77,7 @@ public class Vander extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Vander.this);
+        db = new ProfBewertDbHelper(Vander.this,"Vander");
 
 
         boolean wahr = db.updateData("Vander",
@@ -99,7 +99,7 @@ public class Vander extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Vander.this);
+        db=new ProfBewertDbHelper(Vander.this,"Vander");
         boolean wahr = db.insertData("Vander",
                 Username.getUsername(),
                 (int) chanbar1.getRating(),
@@ -137,7 +137,7 @@ public class Vander extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Vander.this);
+        db =  new ProfBewertDbHelper(Vander.this,"Vander");
         List<Integer> list = db.getData("Vander");
         chanbar6.setRating((float)list.get(0));
         chanbar7.setRating((float)list.get(1));

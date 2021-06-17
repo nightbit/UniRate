@@ -32,7 +32,7 @@ public class Sauer extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sauer);
-        db = new ProfBewertDbHelper(Sauer.this);
+        db = new ProfBewertDbHelper(Sauer.this,"Sauer");
 
         sauerbar1 = findViewById(R.id.sauerratingBar1);
         sauerbar1.setVisibility(View.INVISIBLE);
@@ -76,7 +76,7 @@ public class Sauer extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Sauer.this);
+        db = new ProfBewertDbHelper(Sauer.this,"Sauer");
 
 
         boolean wahr = db.updateData("Sauer",
@@ -98,7 +98,7 @@ public class Sauer extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Sauer.this);
+        db=new ProfBewertDbHelper(Sauer.this,"Sauer");
         boolean wahr = db.insertData("Sauer",
                 Username.getUsername(),
                 (int) sauerbar1.getRating(),
@@ -136,7 +136,7 @@ public class Sauer extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Sauer.this);
+        db =  new ProfBewertDbHelper(Sauer.this,"Sauer");
         List<Integer> list = db.getData("Sauer");
         sauerbar6.setRating((float)list.get(0));
         sauerbar7.setRating((float)list.get(1));

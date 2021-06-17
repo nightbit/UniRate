@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FachBewertDBHelper extends SQLiteOpenHelper {
-    public static final String database_name = "UniRateDbFach";
+
     public static final String table_name="FachBewertung";
     public static final String col_1= "FachName";
     public static final String col_2= "Username";
@@ -18,7 +18,7 @@ public class FachBewertDBHelper extends SQLiteOpenHelper {
     public static final String col_4= "Unterlagen";
     public static final String col_5= "Stoffmenge";
 
-    public FachBewertDBHelper(Context context)
+    public FachBewertDBHelper(Context context,String database_name)
     {
         super(context,database_name,null,1);
     }

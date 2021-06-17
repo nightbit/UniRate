@@ -24,7 +24,7 @@ public class Gepp extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gepp);
-        db = new ProfBewertDbHelper(Gepp.this);
+        db = new ProfBewertDbHelper(Gepp.this,"Gepp");
 
         geppbar = findViewById(R.id.geppratingBar);
         geppbar.setVisibility(View.VISIBLE);
@@ -70,7 +70,7 @@ public class Gepp extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Gepp.this);
+        db = new ProfBewertDbHelper(Gepp.this,"Gepp");
 
 
         boolean wahr = db.updateData("Gepp",
@@ -93,7 +93,7 @@ public class Gepp extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Gepp.this);
+        db=new ProfBewertDbHelper(Gepp.this,"Gepp");
         boolean wahr = db.insertData("Gepp",
                 Username.getUsername(),
                 (int) geppbar.getRating(),
@@ -131,7 +131,7 @@ public class Gepp extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Gepp.this);
+        db =  new ProfBewertDbHelper(Gepp.this,"Gepp");
         List<Integer> list = db.getData("Gepp");
         geppbar.setRating((float)list.get(0));
         geppbar2.setRating((float)list.get(1));

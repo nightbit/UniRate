@@ -23,7 +23,7 @@ public class Praher extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_praher);
 
-        db = new ProfBewertDbHelper(Praher.this);
+        db = new ProfBewertDbHelper(Praher.this,"Praher");
 
         praherbar = findViewById(R.id.praherratingBar);
         praherbar.setVisibility(View.VISIBLE);
@@ -69,7 +69,7 @@ public class Praher extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Praher.this);
+        db = new ProfBewertDbHelper(Praher.this,"Praher");
 
 
         boolean wahr = db.updateData("Praher",
@@ -92,7 +92,7 @@ public class Praher extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Praher.this);
+        db=new ProfBewertDbHelper(Praher.this,"Praher");
         boolean wahr = db.insertData("Praher",
                 Username.getUsername(),
                 (int) praherbar.getRating(),
@@ -130,7 +130,7 @@ public class Praher extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Praher.this);
+        db =  new ProfBewertDbHelper(Praher.this,"Praher");
         List<Integer> list = db.getData("Praher");
         praherbar.setRating((float)list.get(0));
         praherbar2.setRating((float)list.get(1));

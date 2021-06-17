@@ -32,7 +32,7 @@ public class scheiben extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scheiben);
-        db = new ProfBewertDbHelper(scheiben.this);
+        db = new ProfBewertDbHelper(scheiben.this,"scheiben");
 
         scheibenbar1 = findViewById(R.id.scheibenratingBar1);
         scheibenbar1.setVisibility(View.INVISIBLE);
@@ -77,7 +77,7 @@ public class scheiben extends AppCompatActivity implements View.OnClickListener 
     {
 
 
-        db = new ProfBewertDbHelper(scheiben.this);
+        db = new ProfBewertDbHelper(scheiben.this,"scheiben");
 
 
         boolean wahr = db.updateData("scheiben",
@@ -99,7 +99,7 @@ public class scheiben extends AppCompatActivity implements View.OnClickListener 
     }
 
     public void AddData () {
-        db=new ProfBewertDbHelper(scheiben.this);
+        db=new ProfBewertDbHelper(scheiben.this,"scheiben");
         boolean wahr = db.insertData("scheiben",
                 Username.getUsername(),
                 (int) scheibenbar1.getRating(),
@@ -137,7 +137,7 @@ public class scheiben extends AppCompatActivity implements View.OnClickListener 
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(scheiben.this);
+        db =  new ProfBewertDbHelper(scheiben.this,"scheiben");
         List<Integer> list = db.getData("scheiben");
         scheibenbar6.setRating((float)list.get(0));
         scheibenbar7.setRating((float)list.get(1));

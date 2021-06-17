@@ -24,7 +24,7 @@ public class mohl extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mohl);
 
-        db = new ProfBewertDbHelper(mohl.this);
+        db = new ProfBewertDbHelper(mohl.this,"mohl");
 
         mohlbar = findViewById(R.id.mohlratingBar);
         mohlbar.setVisibility(View.VISIBLE);
@@ -70,7 +70,7 @@ public class mohl extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(mohl.this);
+        db = new ProfBewertDbHelper(mohl.this,"mohl");
 
 
         boolean wahr = db.updateData("mohl",
@@ -93,7 +93,7 @@ public class mohl extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(mohl.this);
+        db=new ProfBewertDbHelper(mohl.this,"mohl");
         boolean wahr = db.insertData("mohl",
                 Username.getUsername(),
                 (int) mohlbar.getRating(),
@@ -131,7 +131,7 @@ public class mohl extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(mohl.this);
+        db =  new ProfBewertDbHelper(mohl.this,"mohl");
         List<Integer> list = db.getData("mohl");
         mohlbar.setRating((float)list.get(0));
         mohlbar2.setRating((float)list.get(1));

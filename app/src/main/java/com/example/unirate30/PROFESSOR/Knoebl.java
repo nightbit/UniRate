@@ -23,7 +23,7 @@ public class Knoebl extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_knoebl);
 
-        db = new ProfBewertDbHelper(Knoebl.this);
+        db = new ProfBewertDbHelper(Knoebl.this,"Knoebl");
 
         knoeblbar = findViewById(R.id.knoeblratingBar);
         knoeblbar.setVisibility(View.VISIBLE);
@@ -69,7 +69,7 @@ public class Knoebl extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Knoebl.this);
+        db = new ProfBewertDbHelper(Knoebl.this,"Knoebl");
 
 
         boolean wahr = db.updateData("Knoebl",
@@ -92,7 +92,7 @@ public class Knoebl extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Knoebl.this);
+        db=new ProfBewertDbHelper(Knoebl.this,"Knoebl");
         boolean wahr = db.insertData("Knoebl",
                 Username.getUsername(),
                 (int) knoeblbar.getRating(),
@@ -130,7 +130,7 @@ public class Knoebl extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Knoebl.this);
+        db =  new ProfBewertDbHelper(Knoebl.this,"Knoebl");
         List<Integer> list = db.getData("Knoebl");
         knoeblbar.setRating((float)list.get(0));
         knoeblbar2.setRating((float)list.get(1));

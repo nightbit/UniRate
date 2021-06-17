@@ -32,7 +32,7 @@ public class Teuschel extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teuschel);
-        db = new ProfBewertDbHelper(Teuschel.this);
+        db = new ProfBewertDbHelper(Teuschel.this,"Teuschel");
 
         teuschbar1 = findViewById(R.id.teuschratingBar1);
         teuschbar1.setVisibility(View.INVISIBLE);
@@ -76,7 +76,7 @@ public class Teuschel extends AppCompatActivity implements View.OnClickListener 
     {
 
 
-        db = new ProfBewertDbHelper(Teuschel.this);
+        db = new ProfBewertDbHelper(Teuschel.this,"Teuschel");
 
 
         boolean wahr = db.updateData("Teuschel",
@@ -98,7 +98,7 @@ public class Teuschel extends AppCompatActivity implements View.OnClickListener 
     }
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Teuschel.this);
+        db=new ProfBewertDbHelper(Teuschel.this,"Teuschel");
         boolean wahr = db.insertData("Teuschel",
                 Username.getUsername(),
                 (int) teuschbar1.getRating(),
@@ -136,7 +136,7 @@ public class Teuschel extends AppCompatActivity implements View.OnClickListener 
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Teuschel.this);
+        db =  new ProfBewertDbHelper(Teuschel.this,"Teuschel");
         List<Integer> list = db.getData("Teuschel");
         teuschbar6.setRating((float)list.get(0));
         teuschbar7.setRating((float)list.get(1));

@@ -23,7 +23,7 @@ public class dreiner extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dreiner);
-        db = new ProfBewertDbHelper(dreiner.this);
+        db = new ProfBewertDbHelper(dreiner.this,"dreiner");
 
 
 
@@ -71,7 +71,7 @@ public class dreiner extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(dreiner.this);
+        db = new ProfBewertDbHelper(dreiner.this,"dreiner");
 
 
         boolean wahr = db.updateData("dreiner",
@@ -94,7 +94,7 @@ public class dreiner extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(dreiner.this);
+        db=new ProfBewertDbHelper(dreiner.this,"dreiner");
         boolean wahr = db.insertData("dreiner",
                 Username.getUsername(),
                 (int) dreinerbar.getRating(),
@@ -132,7 +132,7 @@ public class dreiner extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(dreiner.this);
+        db =  new ProfBewertDbHelper(dreiner.this,"dreiner");
         List<Integer> list = db.getData("dreiner");
         dreinerbar.setRating((float)list.get(0));
         dreinerbar2.setRating((float)list.get(1));

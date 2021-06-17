@@ -23,7 +23,7 @@ public class Jesen extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jesen);
-        db = new ProfBewertDbHelper(Jesen.this);
+        db = new ProfBewertDbHelper(Jesen.this,"Jesen");
 
         jesenbar = findViewById(R.id.jesenratingBar);
         jesenbar.setVisibility(View.VISIBLE);
@@ -69,7 +69,7 @@ public class Jesen extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Jesen.this);
+        db = new ProfBewertDbHelper(Jesen.this,"Jesen");
 
 
         boolean wahr = db.updateData("Jesen",
@@ -92,7 +92,7 @@ public class Jesen extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Jesen.this);
+        db=new ProfBewertDbHelper(Jesen.this,"Jesen");
         boolean wahr = db.insertData("Jesen",
                 Username.getUsername(),
                 (int) jesenbar.getRating(),
@@ -130,7 +130,7 @@ public class Jesen extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Jesen.this);
+        db =  new ProfBewertDbHelper(Jesen.this,"Jesen");
         List<Integer> list = db.getData("Jesen");
         jesenbar.setRating((float)list.get(0));
         jesenbar2.setRating((float)list.get(1));

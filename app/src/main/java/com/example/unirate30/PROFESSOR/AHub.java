@@ -27,7 +27,7 @@ public class AHub extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a_hub);
 
-        db = new ProfBewertDbHelper(AHub.this);
+        db = new ProfBewertDbHelper(AHub.this,"AHub");
 
         bar = findViewById(R.id.barbratingBar);
         bar.setVisibility(View.VISIBLE);
@@ -73,7 +73,7 @@ public class AHub extends AppCompatActivity implements View.OnClickListener {
         {
 
 
-            db = new ProfBewertDbHelper(AHub.this);
+            db = new ProfBewertDbHelper(AHub.this,"AHub");
 
 
             boolean wahr = db.updateData("AHub",
@@ -96,7 +96,7 @@ public class AHub extends AppCompatActivity implements View.OnClickListener {
 
 
         public void AddData () {
-            db=new ProfBewertDbHelper(AHub.this);
+            db=new ProfBewertDbHelper(AHub.this,"AHub");
             boolean wahr = db.insertData("AHub",
                         Username.getUsername(),
                         (int) bar.getRating(),
@@ -134,7 +134,7 @@ public class AHub extends AppCompatActivity implements View.OnClickListener {
         }
 
         private void ergebnisse() {
-           db =  new ProfBewertDbHelper(AHub.this);
+           db =  new ProfBewertDbHelper(AHub.this,"AHub");
             List<Integer> list = db.getData("AHub");
             bar.setRating((float)list.get(0));
             bar2.setRating((float)list.get(1));

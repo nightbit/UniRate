@@ -369,7 +369,7 @@
     <package id="167" parent="1" name="json_tree"/>
     <package id="168" parent="1" name="rtree"/>
     <package id="169" parent="1" name="rtree_i32"/>
-    <table id="170" parent="2" name="FachBewertung"/>
+    <table id="170" parent="2" name="User"/>
     <table id="171" parent="2" name="android_metadata"/>
     <table id="172" parent="2" name="sqlite_master">
       <System>1</System>
@@ -1331,58 +1331,35 @@
     <argument id="491" parent="159">
       <Position>1</Position>
     </argument>
-    <column id="492" parent="170" name="FachName">
+    <column id="492" parent="170" name="username">
       <Position>1</Position>
       <DataType>TEXT|0s</DataType>
     </column>
-    <column id="493" parent="170" name="Username">
+    <column id="493" parent="170" name="password">
       <Position>2</Position>
       <DataType>TEXT|0s</DataType>
     </column>
-    <column id="494" parent="170" name="Lehrplan">
-      <Position>3</Position>
-      <DataType>INTEGER|0s</DataType>
-    </column>
-    <column id="495" parent="170" name="Unterlagen">
-      <Position>4</Position>
-      <DataType>INTEGER|0s</DataType>
-    </column>
-    <column id="496" parent="170" name="Stoffmenge">
-      <Position>5</Position>
-      <DataType>INTEGER|0s</DataType>
-    </column>
-    <index id="497" parent="170" name="sqlite_autoindex_FachBewertung_1">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>Username</ColNames>
-      <ColumnCollations></ColumnCollations>
-      <Unique>1</Unique>
-    </index>
-    <key id="498" parent="170">
-      <ColNames>Username</ColNames>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>sqlite_autoindex_FachBewertung_1</UnderlyingIndexName>
-    </key>
-    <column id="499" parent="171" name="locale">
+    <column id="494" parent="171" name="locale">
       <Position>1</Position>
       <DataType>TEXT|0s</DataType>
     </column>
-    <column id="500" parent="172" name="type">
+    <column id="495" parent="172" name="type">
       <Position>1</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="501" parent="172" name="name">
+    <column id="496" parent="172" name="name">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="502" parent="172" name="tbl_name">
+    <column id="497" parent="172" name="tbl_name">
       <Position>3</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="503" parent="172" name="rootpage">
+    <column id="498" parent="172" name="rootpage">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="504" parent="172" name="sql">
+    <column id="499" parent="172" name="sql">
       <Position>5</Position>
       <DataType>text|0s</DataType>
     </column>

@@ -24,7 +24,7 @@ public class Costa extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_costa);
-        db = new ProfBewertDbHelper(Costa.this);
+        db = new ProfBewertDbHelper(Costa.this,"Costa");
 
 
 
@@ -72,7 +72,7 @@ public class Costa extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Costa.this);
+        db = new ProfBewertDbHelper(Costa.this,"Costa");
 
 
         boolean wahr = db.updateData("Costa",
@@ -95,7 +95,7 @@ public class Costa extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Costa.this);
+        db=new ProfBewertDbHelper(Costa.this,"Costa");
         boolean wahr = db.insertData("Costa",
                 Username.getUsername(),
                 (int) costabar.getRating(),
@@ -133,7 +133,7 @@ public class Costa extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Costa.this);
+        db =  new ProfBewertDbHelper(Costa.this,"Costa");
         List<Integer> list = db.getData("Costa");
         costabar.setRating((float)list.get(0));
         costabar2.setRating((float)list.get(1));
