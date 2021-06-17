@@ -135,6 +135,10 @@
         </activity>
         <activity android:name=".UniRating">
         </activity>
+        <activity android:name=".loggin">
+        </activity>
+        <activity android:name=".Regestrierung">
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

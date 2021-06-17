@@ -94,7 +94,7 @@ public class loggin extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void setStayLoggedIn(){
-        SharedPreferences prefStayLogged = getSharedPreferences("loggdin",MODE_PRIVATE);
+        SharedPreferences prefStayLogged = getSharedPreferences("loggedin",MODE_PRIVATE);
         SharedPreferences.Editor editor =prefStayLogged.edit();
         editor.putBoolean("loggedin",true);
         editor.commit();
@@ -132,6 +132,8 @@ public class loggin extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.buttonEinloggen:
+                Username username= new Username();
+                username.setUsername(mailLoggin.getText().toString());
                 login(mailLoggin.getText().toString(),passwortLoggin.getText().toString());
                 break;
             case R.id.buttonRegistrieren:
