@@ -17,12 +17,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.464"
-            app:layout_constraintVertical_bias="0.071"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="0.025"
             android:contentDescription="@string/allgchem"
             android:textSize="30sp"
             android:textColor="#000000"/>
-
     <RatingBar
             android:layout_width="235dp"
             android:layout_height="45dp"
@@ -168,12 +167,10 @@
                 android:padding="20dp" android:foregroundTint="#3F51B5"/>
     </com.google.android.material.textfield.TextInputLayout>
     <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_menu_send"
+            android:layout_width="52dp"
+            android:layout_height="49dp"
+            android:src="@drawable/birdwhyy"
             android:id="@+id/progaw1nextButton"
-            android:tint="#000000"
-            android:background="#3F51B5"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

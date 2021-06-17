@@ -170,10 +170,8 @@
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_menu_send"
+            android:src="@drawable/birdwhyy"
             android:id="@+id/mathe2nextButton12"
-            android:tint="#000000"
-            android:background="#3F51B5"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

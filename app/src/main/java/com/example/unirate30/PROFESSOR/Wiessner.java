@@ -139,7 +139,7 @@ public class Wiessner extends AppCompatActivity implements View.OnClickListener 
 
     private void ergebnisse() {
         db =  new ProfBewertDbHelper(Wiessner.this);
-        List<Integer> list = db.getData("Windisch");
+        List<Integer> list = db.getData("Wiessner");
         wiessbar6.setRating((float)list.get(0));
         wiessbar7.setRating((float)list.get(1));
         wiessbar8.setRating((float)list.get(2));
