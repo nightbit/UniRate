@@ -32,7 +32,7 @@ public class reif extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reif);
-        db = new ProfBewertDbHelper(reif.this);
+        db = new ProfBewertDbHelper(reif.this,"reif");
 
         reifbar1 = findViewById(R.id.reifratingBar1);
         reifbar1.setVisibility(View.INVISIBLE);
@@ -77,7 +77,7 @@ public class reif extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(reif.this);
+        db = new ProfBewertDbHelper(reif.this,"reif");
 
 
         boolean wahr = db.updateData("reif",
@@ -99,7 +99,7 @@ public class reif extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void AddData () {
-        db=new ProfBewertDbHelper(reif.this);
+        db=new ProfBewertDbHelper(reif.this,"reif");
         boolean wahr = db.insertData("reif",
                 Username.getUsername(),
                 (int) reifbar1.getRating(),
@@ -137,7 +137,7 @@ public class reif extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(reif.this);
+        db =  new ProfBewertDbHelper(reif.this,"reif");
         List<Integer> list = db.getData("reif");
         reifbar6.setRating((float)list.get(0));
         reifbar7.setRating((float)list.get(1));

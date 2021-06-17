@@ -33,7 +33,7 @@ public class Varvara extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_varvara);
-        db = new ProfBewertDbHelper(Varvara.this);
+        db = new ProfBewertDbHelper(Varvara.this,"Varvara");
 
         varvbar1 = findViewById(R.id.varvratingBar1);
         varvbar1.setVisibility(View.INVISIBLE);
@@ -78,7 +78,7 @@ public class Varvara extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Varvara.this);
+        db = new ProfBewertDbHelper(Varvara.this,"Varvara");
 
 
         boolean wahr = db.updateData("Varvara",
@@ -100,7 +100,7 @@ public class Varvara extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Varvara.this);
+        db=new ProfBewertDbHelper(Varvara.this,"Varavara");
         boolean wahr = db.insertData("Varvara",
                 Username.getUsername(),
                 (int) varvbar1.getRating(),
@@ -138,7 +138,7 @@ public class Varvara extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Varvara.this);
+        db =  new ProfBewertDbHelper(Varvara.this,"Varvara");
         List<Integer> list = db.getData("Varvara");
         varvbar6.setRating((float)list.get(0));
         varvbar7.setRating((float)list.get(1));

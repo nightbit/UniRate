@@ -32,7 +32,7 @@ public class Scherer extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scherer);
-        db = new ProfBewertDbHelper(Scherer.this);
+        db = new ProfBewertDbHelper(Scherer.this,"Scherer");
 
         scherbar1 = findViewById(R.id.schererratingBar1);
         scherbar1.setVisibility(View.INVISIBLE);
@@ -77,7 +77,7 @@ public class Scherer extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Scherer.this);
+        db = new ProfBewertDbHelper(Scherer.this,"Scherer");
 
 
         boolean wahr = db.updateData("Scherer",
@@ -99,7 +99,7 @@ public class Scherer extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Scherer.this);
+        db=new ProfBewertDbHelper(Scherer.this,"Scherer");
         boolean wahr = db.insertData("Scherer",
                 Username.getUsername(),
                 (int) scherbar1.getRating(),
@@ -137,7 +137,7 @@ public class Scherer extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Scherer.this);
+        db =  new ProfBewertDbHelper(Scherer.this,"Scherer");
         List<Integer> list = db.getData("Scherer");
         scherbar6.setRating((float)list.get(0));
         scherbar7.setRating((float)list.get(1));

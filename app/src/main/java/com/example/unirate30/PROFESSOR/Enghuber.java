@@ -24,7 +24,7 @@ public class Enghuber extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enghuber);
 
-        db = new ProfBewertDbHelper(Enghuber.this);
+        db = new ProfBewertDbHelper(Enghuber.this,"Enghuber");
 
         enghubbar = findViewById(R.id.enghuberratingBar);
         enghubbar.setVisibility(View.VISIBLE);
@@ -70,7 +70,7 @@ public class Enghuber extends AppCompatActivity implements View.OnClickListener 
     {
 
 
-        db = new ProfBewertDbHelper(Enghuber.this);
+        db = new ProfBewertDbHelper(Enghuber.this,"Enghuber");
 
 
         boolean wahr = db.updateData("AHub",
@@ -93,7 +93,7 @@ public class Enghuber extends AppCompatActivity implements View.OnClickListener 
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Enghuber.this);
+        db=new ProfBewertDbHelper(Enghuber.this,"Enghuber");
         boolean wahr = db.insertData("Enghuber",
                 Username.getUsername(),
                 (int) enghubbar.getRating(),
@@ -131,7 +131,7 @@ public class Enghuber extends AppCompatActivity implements View.OnClickListener 
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Enghuber.this);
+        db =  new ProfBewertDbHelper(Enghuber.this,"Enghuber");
         List<Integer> list = db.getData("Enghuber");
         enghubbar.setRating((float)list.get(0));
         enghubbar2.setRating((float)list.get(1));

@@ -24,7 +24,7 @@ public class pasteka extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pasteka);
-        db = new ProfBewertDbHelper(pasteka.this);
+        db = new ProfBewertDbHelper(pasteka.this,"pasteka");
 
         pastekabar = findViewById(R.id.pastekaratingBar);
         pastekabar.setVisibility(View.VISIBLE);
@@ -70,7 +70,7 @@ public class pasteka extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(pasteka.this);
+        db = new ProfBewertDbHelper(pasteka.this,"pasteka");
 
 
         boolean wahr = db.updateData("pasteka",
@@ -93,7 +93,7 @@ public class pasteka extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(pasteka.this);
+        db=new ProfBewertDbHelper(pasteka.this,"pasteka");
         boolean wahr = db.insertData("pasteka",
                 Username.getUsername(),
                 (int) pastekabar.getRating(),
@@ -131,7 +131,7 @@ public class pasteka extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(pasteka.this);
+        db =  new ProfBewertDbHelper(pasteka.this,"pasteka");
         List<Integer> list = db.getData("pasteka");
         pastekabar.setRating((float)list.get(0));
         pastekabar2.setRating((float)list.get(1));

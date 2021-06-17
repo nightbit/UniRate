@@ -26,7 +26,7 @@ public class Filler extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_filler);
 
 
-        db = new ProfBewertDbHelper(Filler.this);
+        db = new ProfBewertDbHelper(Filler.this,"Filler");
 
         fillerbar = findViewById(R.id.fillerratingBar);
         fillerbar.setVisibility(View.VISIBLE);
@@ -72,7 +72,7 @@ public class Filler extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Filler.this);
+        db = new ProfBewertDbHelper(Filler.this,"Filler");
 
 
         boolean wahr = db.updateData("Filler",
@@ -95,7 +95,7 @@ public class Filler extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Filler.this);
+        db=new ProfBewertDbHelper(Filler.this,"Filler");
         boolean wahr = db.insertData("Filler",
                 Username.getUsername(),
                 (int) fillerbar.getRating(),
@@ -133,7 +133,7 @@ public class Filler extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Filler.this);
+        db =  new ProfBewertDbHelper(Filler.this,"Filler");
         List<Integer> list = db.getData("Filler");
         fillerbar.setRating((float)list.get(0));
         fillerbar2.setRating((float)list.get(1));

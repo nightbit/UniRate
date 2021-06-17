@@ -33,7 +33,7 @@ public class Simboeck extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_simboeck);
 
-        db = new ProfBewertDbHelper(Simboeck.this);
+        db = new ProfBewertDbHelper(Simboeck.this,"Simboeck");
 
         simbar1 = findViewById(R.id.simboeckratingBar1);
         simbar1.setVisibility(View.INVISIBLE);
@@ -77,7 +77,7 @@ public class Simboeck extends AppCompatActivity implements View.OnClickListener 
     {
 
 
-        db = new ProfBewertDbHelper(Simboeck.this);
+        db = new ProfBewertDbHelper(Simboeck.this,"Simboeck");
 
 
         boolean wahr = db.updateData("Simboeck",
@@ -99,7 +99,7 @@ public class Simboeck extends AppCompatActivity implements View.OnClickListener 
     }
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Simboeck.this);
+        db=new ProfBewertDbHelper(Simboeck.this,"Simbeock");
         boolean wahr = db.insertData("Simboeck",
                 Username.getUsername(),
                 (int) simbar1.getRating(),
@@ -137,7 +137,7 @@ public class Simboeck extends AppCompatActivity implements View.OnClickListener 
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Simboeck.this);
+        db =  new ProfBewertDbHelper(Simboeck.this,"Simboeck");
         List<Integer> list = db.getData("Simboeck");
         simbar6.setRating((float)list.get(0));
         simbar7.setRating((float)list.get(1));

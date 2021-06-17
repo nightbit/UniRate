@@ -33,7 +33,7 @@ public class Wiessner extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wiessner);
-        db = new ProfBewertDbHelper(Wiessner.this);
+        db = new ProfBewertDbHelper(Wiessner.this,"Wissner");
 
 
         wiessbar1 = findViewById(R.id.wiessratingBar1);
@@ -78,7 +78,7 @@ public class Wiessner extends AppCompatActivity implements View.OnClickListener 
     {
 
 
-        db = new ProfBewertDbHelper(Wiessner.this);
+        db = new ProfBewertDbHelper(Wiessner.this,"Wissner");
 
 
         boolean wahr = db.updateData("Wiessner",
@@ -100,7 +100,7 @@ public class Wiessner extends AppCompatActivity implements View.OnClickListener 
     }
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Wiessner.this);
+        db=new ProfBewertDbHelper(Wiessner.this,"Wiessner");
         boolean wahr = db.insertData("Wiessner",
                 Username.getUsername(),
                 (int) wiessbar1.getRating(),
@@ -138,7 +138,7 @@ public class Wiessner extends AppCompatActivity implements View.OnClickListener 
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Wiessner.this);
+        db =  new ProfBewertDbHelper(Wiessner.this,"Wiessner");
         List<Integer> list = db.getData("Wiessner");
         wiessbar6.setRating((float)list.get(0));
         wiessbar7.setRating((float)list.get(1));

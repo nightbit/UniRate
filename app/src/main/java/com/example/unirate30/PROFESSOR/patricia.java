@@ -24,7 +24,7 @@ public class patricia extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patricia);
 
-        db = new ProfBewertDbHelper(patricia.this);
+        db = new ProfBewertDbHelper(patricia.this,"patricia");
 
         patriciabar = findViewById(R.id.patriciaratingBar);
         patriciabar.setVisibility(View.VISIBLE);
@@ -70,7 +70,7 @@ public class patricia extends AppCompatActivity implements View.OnClickListener 
     {
 
 
-        db = new ProfBewertDbHelper(patricia.this);
+        db = new ProfBewertDbHelper(patricia.this,"patricia");
 
 
         boolean wahr = db.updateData("patricia",
@@ -93,7 +93,7 @@ public class patricia extends AppCompatActivity implements View.OnClickListener 
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(patricia.this);
+        db=new ProfBewertDbHelper(patricia.this,"patricia");
         boolean wahr = db.insertData("patricia",
                 Username.getUsername(),
                 (int) patriciabar.getRating(),
@@ -131,7 +131,7 @@ public class patricia extends AppCompatActivity implements View.OnClickListener 
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(patricia.this);
+        db =  new ProfBewertDbHelper(patricia.this,"patricia");
         List<Integer> list = db.getData("patricia");
         patriciabar.setRating((float)list.get(0));
         patriciabar2.setRating((float)list.get(1));

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProfBewertDbHelper extends SQLiteOpenHelper {
-    public static final String database_name = "UniRateDBbewertung.db";
+
     public static final String table_name="ProfBewertung";
     public static final String col_1= "ProfName";
     public static final String col_2= "Username";
@@ -20,7 +20,7 @@ public class ProfBewertDbHelper extends SQLiteOpenHelper {
     public static final String col_6= "Erreichbarkeit";
     public static final String col_7= "Fairness";
 
-    public ProfBewertDbHelper(Context context)
+    public ProfBewertDbHelper(Context context,String database_name)
     {
         super(context, database_name, null, 1);
     }

@@ -24,7 +24,7 @@ public class Knaack extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_knaack);
 
-        db = new ProfBewertDbHelper(Knaack.this);
+        db = new ProfBewertDbHelper(Knaack.this,"Knaack");
 
         knackbar = findViewById(R.id.knaackratingBar);
         knackbar.setVisibility(View.VISIBLE);
@@ -70,7 +70,7 @@ public class Knaack extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Knaack.this);
+        db = new ProfBewertDbHelper(Knaack.this,"Knaack");
 
 
         boolean wahr = db.updateData("Knaack",
@@ -93,7 +93,7 @@ public class Knaack extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Knaack.this);
+        db=new ProfBewertDbHelper(Knaack.this,"Knaack");
         boolean wahr = db.insertData("Knaack",
                 Username.getUsername(),
                 (int) knackbar.getRating(),
@@ -131,7 +131,7 @@ public class Knaack extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Knaack.this);
+        db =  new ProfBewertDbHelper(Knaack.this,"Knaack");
         List<Integer> list = db.getData("Knaack");
         knackbar.setRating((float)list.get(0));
         knackbar2.setRating((float)list.get(1));

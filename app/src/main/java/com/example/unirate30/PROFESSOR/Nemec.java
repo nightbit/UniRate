@@ -25,7 +25,7 @@ public class Nemec extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nemec);
 
-        db = new ProfBewertDbHelper(Nemec.this);
+        db = new ProfBewertDbHelper(Nemec.this,"Nemec");
 
         nemecbar = findViewById(R.id.nemecratingBar);
         nemecbar.setVisibility(View.VISIBLE);
@@ -71,7 +71,7 @@ public class Nemec extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Nemec.this);
+        db = new ProfBewertDbHelper(Nemec.this,"Nemec");
 
 
         boolean wahr = db.updateData("Nemec",
@@ -94,7 +94,7 @@ public class Nemec extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Nemec.this);
+        db=new ProfBewertDbHelper(Nemec.this,"Nemec");
         boolean wahr = db.insertData("nemec",
                 Username.getUsername(),
                 (int) nemecbar.getRating(),
@@ -132,7 +132,7 @@ public class Nemec extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Nemec.this);
+        db =  new ProfBewertDbHelper(Nemec.this,"Nemec");
         List<Integer> list = db.getData("nemec");
         nemecbar.setRating((float)list.get(0));
         nemecbar2.setRating((float)list.get(1));

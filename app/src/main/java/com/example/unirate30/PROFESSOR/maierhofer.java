@@ -24,7 +24,7 @@ public class maierhofer extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_maierhofer);
-        db = new ProfBewertDbHelper(maierhofer.this);
+        db = new ProfBewertDbHelper(maierhofer.this,"maierhofer");
 
         mairhoferbar = findViewById(R.id.maierhoferratingBar);
         mairhoferbar.setVisibility(View.VISIBLE);
@@ -70,7 +70,7 @@ public class maierhofer extends AppCompatActivity implements View.OnClickListene
     {
 
 
-        db = new ProfBewertDbHelper(maierhofer.this);
+        db = new ProfBewertDbHelper(maierhofer.this,"maierhofer");
 
 
         boolean wahr = db.updateData("maierhofer",
@@ -93,7 +93,7 @@ public class maierhofer extends AppCompatActivity implements View.OnClickListene
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(maierhofer.this);
+        db=new ProfBewertDbHelper(maierhofer.this,"maierhofer");
         boolean wahr = db.insertData("maierhofer",
                 Username.getUsername(),
                 (int) mairhoferbar.getRating(),
@@ -131,7 +131,7 @@ public class maierhofer extends AppCompatActivity implements View.OnClickListene
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(maierhofer.this);
+        db =  new ProfBewertDbHelper(maierhofer.this,"maierhofer");
         List<Integer> list = db.getData("maierhofer");
         mairhoferbar.setRating((float)list.get(0));
         mairhoferbar2.setRating((float)list.get(1));

@@ -25,5 +25,29 @@
         </library>
       </libraries>
     </data-source>
+    <data-source source="LOCAL" name="Gepp" uuid="e0ee6469-67cd-4e77-a3ee-012219971624">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\micha\OneDrive\Documents\AndroidStudio\DeviceExplorer\emulator-5554\data\data\com.example.unirate30\databases\Gepp</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.34.0/sqlite-jdbc-3.34.0.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Wiessner" uuid="90b08387-b2a1-4b92-9b25-22be7ae2ad49">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\micha\OneDrive\Documents\AndroidStudio\DeviceExplorer\emulator-5554\data\data\com.example.unirate30\databases\Wiessner</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.34.0/sqlite-jdbc-3.34.0.jar</url>
+        </library>
+      </libraries>
+    </data-source>
   </component>
 </project>

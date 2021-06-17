@@ -34,7 +34,7 @@ public class Windisch extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_windisch);
-        db = new ProfBewertDbHelper(Windisch.this);
+        db = new ProfBewertDbHelper(Windisch.this,"Windisch");
 
         windbar1 = findViewById(R.id.windratingBar1);
         windbar1.setVisibility(View.INVISIBLE);
@@ -78,7 +78,7 @@ public class Windisch extends AppCompatActivity implements View.OnClickListener 
     {
 
 
-        db = new ProfBewertDbHelper(Windisch.this);
+        db = new ProfBewertDbHelper(Windisch.this,"Windisch");
 
 
         boolean wahr = db.updateData("Windisch",
@@ -100,7 +100,7 @@ public class Windisch extends AppCompatActivity implements View.OnClickListener 
     }
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Windisch.this);
+        db=new ProfBewertDbHelper(Windisch.this,"Windisch");
         boolean wahr = db.insertData("Windisch",
                 Username.getUsername(),
                 (int) windbar1.getRating(),
@@ -138,7 +138,7 @@ public class Windisch extends AppCompatActivity implements View.OnClickListener 
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Windisch.this);
+        db =  new ProfBewertDbHelper(Windisch.this,"Windisch");
         List<Integer> list = db.getData("Windisch");
         windbar6.setRating((float)list.get(0));
         windbar7.setRating((float)list.get(1));

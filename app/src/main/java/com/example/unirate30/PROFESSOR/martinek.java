@@ -24,7 +24,7 @@ public class martinek extends AppCompatActivity implements View.OnClickListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_martinek);
 
-        db = new ProfBewertDbHelper(martinek.this);
+        db = new ProfBewertDbHelper(martinek.this,"martinek");
 
         martinekbar = findViewById(R.id.martinekratingBar);
         martinekbar.setVisibility(View.VISIBLE);
@@ -70,7 +70,7 @@ public class martinek extends AppCompatActivity implements View.OnClickListener 
     {
 
 
-        db = new ProfBewertDbHelper(martinek.this);
+        db = new ProfBewertDbHelper(martinek.this,"martinek");
 
 
         boolean wahr = db.updateData("martinek",
@@ -93,7 +93,7 @@ public class martinek extends AppCompatActivity implements View.OnClickListener 
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(martinek.this);
+        db=new ProfBewertDbHelper(martinek.this,"martinek");
         boolean wahr = db.insertData("martinek",
                 Username.getUsername(),
                 (int) martinekbar.getRating(),
@@ -131,7 +131,7 @@ public class martinek extends AppCompatActivity implements View.OnClickListener 
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(martinek.this);
+        db =  new ProfBewertDbHelper(martinek.this,"martinek");
         List<Integer> list = db.getData("martinek");
         martinekbar.setRating((float)list.get(0));
         martinekbar2.setRating((float)list.get(1));

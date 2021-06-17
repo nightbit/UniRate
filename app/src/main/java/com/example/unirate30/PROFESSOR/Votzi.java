@@ -33,7 +33,7 @@ public class Votzi extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_votzi);
-        db = new ProfBewertDbHelper(Votzi.this);
+        db = new ProfBewertDbHelper(Votzi.this,"Votzi");
 
         votzibar1 = findViewById(R.id.votziratingBar1);
         votzibar1.setVisibility(View.INVISIBLE);
@@ -77,7 +77,7 @@ public class Votzi extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Votzi.this);
+        db = new ProfBewertDbHelper(Votzi.this,"Votzi");
 
 
         boolean wahr = db.updateData("Votzi",
@@ -99,7 +99,7 @@ public class Votzi extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Votzi.this);
+        db=new ProfBewertDbHelper(Votzi.this,"Votzi");
         boolean wahr = db.insertData("Votzi",
                 Username.getUsername(),
                 (int) votzibar1.getRating(),
@@ -137,7 +137,7 @@ public class Votzi extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Votzi.this);
+        db =  new ProfBewertDbHelper(Votzi.this,"Votzi");
         List<Integer> list = db.getData("Votzi");
         votzibar6.setRating((float)list.get(0));
         votzibar7.setRating((float)list.get(1));

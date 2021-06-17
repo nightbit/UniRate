@@ -24,7 +24,7 @@ public class brabetz extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brabetz);
 
-        db = new ProfBewertDbHelper(brabetz.this);
+        db = new ProfBewertDbHelper(brabetz.this,"brabetz");
 
 
 
@@ -72,7 +72,7 @@ public class brabetz extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(brabetz.this);
+        db = new ProfBewertDbHelper(brabetz.this,"brabetz");
 
 
         boolean wahr = db.updateData("brab",
@@ -95,7 +95,7 @@ public class brabetz extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(brabetz.this);
+        db=new ProfBewertDbHelper(brabetz.this,"brabetz");
         boolean wahr = db.insertData("brab",
                 Username.getUsername(),
                 (int) barbbar.getRating(),
@@ -133,7 +133,7 @@ public class brabetz extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(brabetz.this);
+        db =  new ProfBewertDbHelper(brabetz.this,"brabetz");
         List<Integer> list = db.getData("brab");
         barbbar.setRating((float)list.get(0));
         barbbar2.setRating((float)list.get(1));

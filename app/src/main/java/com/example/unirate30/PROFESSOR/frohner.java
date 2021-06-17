@@ -25,7 +25,7 @@ public class frohner extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_frohner);
 
-        db = new ProfBewertDbHelper(frohner.this);
+        db = new ProfBewertDbHelper(frohner.this,"frohner");
 
         frohnerbar = findViewById(R.id.frohnerratingBar);
         frohnerbar.setVisibility(View.VISIBLE);
@@ -71,7 +71,7 @@ public class frohner extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(frohner.this);
+        db = new ProfBewertDbHelper(frohner.this,"frohner");
 
 
         boolean wahr = db.updateData("frohner",
@@ -94,7 +94,7 @@ public class frohner extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(frohner.this);
+        db=new ProfBewertDbHelper(frohner.this,"frohner");
         boolean wahr = db.insertData("frohner",
                 Username.getUsername(),
                 (int) frohnerbar.getRating(),
@@ -132,7 +132,7 @@ public class frohner extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(frohner.this);
+        db =  new ProfBewertDbHelper(frohner.this,"frohner");
         List<Integer> list = db.getData("frohner");
         frohnerbar.setRating((float)list.get(0));
         frohnerbar2.setRating((float)list.get(1));

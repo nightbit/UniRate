@@ -24,7 +24,7 @@ public class Balz extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_balz);
-        db = new ProfBewertDbHelper(Balz.this);
+        db = new ProfBewertDbHelper(Balz.this,"Balz");
 
 
 
@@ -73,7 +73,7 @@ public class Balz extends AppCompatActivity implements View.OnClickListener {
     {
 
 
-        db = new ProfBewertDbHelper(Balz.this);
+        db = new ProfBewertDbHelper(Balz.this,"Balz");
 
 
         boolean wahr = db.updateData("Balz",
@@ -96,7 +96,7 @@ public class Balz extends AppCompatActivity implements View.OnClickListener {
 
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Balz.this);
+        db=new ProfBewertDbHelper(Balz.this,"Balz");
         boolean wahr = db.insertData("Balz",
                 Username.getUsername(),
                 (int) balzbar.getRating(),
@@ -134,7 +134,7 @@ public class Balz extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void ergebnisse() {
-        db =  new ProfBewertDbHelper(Balz.this);
+        db =  new ProfBewertDbHelper(Balz.this,"Balz");
         List<Integer> list = db.getData("Balz");
         balzbar.setRating((float)list.get(0));
         balzbar2.setRating((float)list.get(1));
