@@ -51,6 +51,8 @@
         </activity>
         <activity android:name=".BBEFÄCHER.SEMESTER2.physiolab">
         </activity>
+        <activity android:name=".BBEFÄCHER.SEMESTER2.kreko">
+        </activity>
         <activity android:name=".PROFESSOR.Eitel">
         </activity>
         <activity android:name=".PROFESSOR.Varvara">

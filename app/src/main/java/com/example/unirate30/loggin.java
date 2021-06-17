@@ -142,7 +142,7 @@ public class loggin extends AppCompatActivity implements View.OnClickListener {
 
             case R.id.buttonWeiter:
 
-                username.setUsername(null);
+                username.setUsername("nichterlaubt");
                 loadActivity();
                 break;
 

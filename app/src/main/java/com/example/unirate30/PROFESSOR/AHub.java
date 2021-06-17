@@ -146,7 +146,7 @@ public class AHub extends AppCompatActivity implements View.OnClickListener {
 
         @Override
           public void onClick(View view) {
-                if(button20.getText().toString().equals("Bewerten")) {
+                if(button20.getText().toString().equals("Bewerten") && Username.getUsername()!="nichterlaubt") {
                     bar1.setVisibility(View.VISIBLE);
                     bar3.setVisibility(View.VISIBLE);
                     bar5.setVisibility(View.VISIBLE);
@@ -167,6 +167,9 @@ public class AHub extends AppCompatActivity implements View.OnClickListener {
                     ergebnisse();
                     button20.setText("Bewerten");
 
+                }else
+                {
+                    Toast.makeText(getApplicationContext(),"Bitte Einloggen",Toast.LENGTH_SHORT).show();
                 }
             }
     }

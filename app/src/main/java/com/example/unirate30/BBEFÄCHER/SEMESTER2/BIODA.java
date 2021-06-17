@@ -175,7 +175,7 @@ public class BIODA extends AppCompatActivity implements View.OnClickListener {
                     biodabutton.setText("Bewerten");
                 }
                 break;
-            case R.id.angnextButton:
+            case R.id.bionextButton:
                 selected_Profbioda = act_Prof15.getText().toString();
                 if (selected_Profbioda.equals("Johannes Martinek")){
                     openMartinek();
