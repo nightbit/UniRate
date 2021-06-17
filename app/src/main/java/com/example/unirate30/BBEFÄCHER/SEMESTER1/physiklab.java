@@ -77,8 +77,8 @@ public class physiklab extends AppCompatActivity implements View.OnClickListener
             ergebnisse();
         }
 
-        phlabnextButton.setOnClickListener((View.OnClickListener) this);
-        phlabbutton.setOnClickListener((View.OnClickListener) this);
+        phlabnextButton.setOnClickListener(this);
+        phlabbutton.setOnClickListener(this);
     }
 
     public void openAHub(){
