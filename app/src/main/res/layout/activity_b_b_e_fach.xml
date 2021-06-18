@@ -60,8 +60,8 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="55dp"
+            android:layout_height="51dp"
             android:src="@drawable/birdwhyy"
             android:id="@+id/nextButton3"
             app:layout_constraintTop_toTopOf="parent"
