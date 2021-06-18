@@ -56,7 +56,7 @@ public class progaw1 extends AppCompatActivity implements View.OnClickListener{
         act_Prof7 = (AutoCompleteTextView) findViewById(R.id.act_Profprogaw1);
 
         ArrayList_Prof7 = new ArrayList<>();
-        ArrayList_Prof7.add("Phillipp Urbauer");
+        ArrayList_Prof7.add("Philipp Urbauer");
         ArrayList_Prof7.add("Matthias Frohner");
         ArrayList_Prof7.add("Johannes Martinek");
 

@@ -63,6 +63,8 @@
         </activity>
         <activity android:name=".BBEFÄCHER.SEMESTER2.angchem">
         </activity>
+        <activity android:name=".BBEFÄCHER.SEMESTER2.kreko">
+        </activity>
         <activity android:name=".PROFESSOR.AHub">
         </activity>
         <activity android:name=".BBEFÄCHER.SEMESTER1.physiklab">

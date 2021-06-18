@@ -73,7 +73,7 @@ public class Enghuber extends AppCompatActivity implements View.OnClickListener 
         db = new ProfBewertDbHelper(Enghuber.this,"Enghuber");
 
 
-        boolean wahr = db.updateData("AHub",
+        boolean wahr = db.updateData("Enghuber",
                 Username.getUsername(),
                 Math.round(enghubbar1.getRating()),
                 Math.round(enghubbar3.getRating()),
