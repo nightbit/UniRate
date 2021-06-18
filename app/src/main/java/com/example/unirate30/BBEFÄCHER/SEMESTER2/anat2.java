@@ -178,7 +178,7 @@ public class anat2 extends AppCompatActivity implements View.OnClickListener {
                 break;
             case R.id.anat2nextButton:
                 selected_Profanat2 = act_Prof14.getText().toString();
-                if (selected_Profanat2.equals("Marlies Huber")){
+                if (selected_Profanat2.equals("Marlis Huber")){
                     openHuber();
                 }if (selected_Profanat2.equals("Veronika Jesenberger")){
                 openJesen();
