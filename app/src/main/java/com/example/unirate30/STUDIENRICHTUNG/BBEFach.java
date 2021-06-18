@@ -119,7 +119,7 @@ public class BBEFach extends AppCompatActivity {
                     openanat1();
                 }if (selceted_Faecher.equals("Grundlagen der Anataomie und Physiologie")){
                     openaphys();
-                }if (selceted_Faecher.equals("Technical English mit Nutte")){
+                }if (selceted_Faecher.equals("Technical English")){
                     openeng1();
                 }if (selceted_Faecher.equals("Kompetenz und Kooperation")){
                     openkoko();
