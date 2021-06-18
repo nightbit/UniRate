@@ -161,7 +161,7 @@ public class mathe1 extends AppCompatActivity implements View.OnClickListener {
                 mathe1button.setText("Bewerten");
             }
                 break;
-            case R.id.nextButton12:
+            case R.id.mathe1nextButton:
                 selected_Profmathe1 = act_Prof5.getText().toString();
                 if (selected_Profmathe1.equals("Simon Reif")){
                     openReif();
