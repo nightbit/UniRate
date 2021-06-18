@@ -42,8 +42,10 @@ public class loggin extends AppCompatActivity implements View.OnClickListener {
         }
 
         SharedPreferences prefstayLoggedIn = getSharedPreferences("loggedin", MODE_PRIVATE);
+
         if(prefstayLoggedIn.getBoolean("loggedin", false))
         {
+            username.setUsername(prefstayLoggedIn.getString("username","nichterlaubt"));
             loadActivity();
         }
     }
@@ -97,6 +99,7 @@ public class loggin extends AppCompatActivity implements View.OnClickListener {
         SharedPreferences prefStayLogged = getSharedPreferences("loggedin",MODE_PRIVATE);
         SharedPreferences.Editor editor =prefStayLogged.edit();
         editor.putBoolean("loggedin",true);
+        editor.putString("username",mailLoggin.getText().toString());
         editor.commit();
     }
 
