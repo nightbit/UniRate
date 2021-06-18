@@ -168,8 +168,8 @@
                 android:padding="20dp" android:foregroundTint="#3F51B5"/>
     </com.google.android.material.textfield.TextInputLayout>
     <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="55dp"
+            android:layout_height="49dp"
             android:src="@drawable/birdwhyy"
             android:id="@+id/mednextButton"
             app:layout_constraintTop_toTopOf="parent"

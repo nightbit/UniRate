@@ -56,8 +56,8 @@
             android:backgroundTint="#3F51B5"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.112"
-            app:layout_constraintVertical_bias="0.919"/>
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintVertical_bias="0.92"/>
     <Button
             android:text="Einloggen"
             android:layout_width="133dp"
@@ -65,15 +65,15 @@
             android:backgroundTint="#3F51B5"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.85"
-            app:layout_constraintVertical_bias="0.919"/>
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.942"
+            app:layout_constraintVertical_bias="0.92"/>
     <ImageButton
-            android:layout_width="67dp"
-            android:layout_height="57dp" app:srcCompat="@drawable/birdwhyy" android:id="@+id/buttonWeiter"
+            android:layout_width="55dp"
+            android:layout_height="51dp" app:srcCompat="@drawable/birdwhyy" android:id="@+id/buttonWeiter"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.765"
-            app:layout_constraintVertical_bias="0.74"/>
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintVertical_bias="0.922"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
