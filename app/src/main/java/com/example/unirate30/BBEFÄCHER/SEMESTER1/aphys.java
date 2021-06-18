@@ -169,7 +169,7 @@ public class aphys extends AppCompatActivity implements View.OnClickListener{
                 break;
             case R.id.aphysnextButton:
                 selected_Profaphys = act_Prof4.getText().toString();
-                if (selected_Profaphys.equals("Katharina Wiessner")){
+                if (selected_Profaphys.equals("Christoph Mohl")){
                     openMohl();
                 }
                 break;
