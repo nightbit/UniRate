@@ -162,15 +162,14 @@ public class angchemlab extends AppCompatActivity implements View.OnClickListene
     }
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.anglabbutton:
-                if(angchemlabbutton.getText().toString().equals("Bewerten")){
+                if (angchemlabbutton.getText().toString().equals("Bewerten")) {
                     angchemlabbar1.setVisibility(View.VISIBLE);
                     angchemlabbar3.setVisibility(View.VISIBLE);
                     angchemlabbar5.setVisibility(View.VISIBLE);
                     angchemlabbutton.setText("Speichern");
-                } else if(angchemlabbutton.getText().toString().equals("Speichern"))
-                {
+                } else if (angchemlabbutton.getText().toString().equals("Speichern")) {
                     angchemlabbar1.setVisibility(View.INVISIBLE);
                     angchemlabbar3.setVisibility(View.INVISIBLE);
                     angchemlabbar5.setVisibility(View.INVISIBLE);
@@ -184,19 +183,22 @@ public class angchemlab extends AppCompatActivity implements View.OnClickListene
                 break;
             case R.id.anglabnextButton:
                 selected_Profangchemlab = act_Prof13.getText().toString();
-                if (selected_Profangchemlab.equals("Barbara Gepp")){
+                if (selected_Profangchemlab.equals("Barbara Gepp")) {
                     openGepp();
-                }if (selected_Profangchemlab.equals("Ursula Knaack")) {
-                openKnaack();
-            }
-                } if (selected_Profangchemlab.equals("Heidemarie Fuchs-Eitel")){
-                    openEitel();
                 }
-                if (selected_Profangchemlab.equals("Varvara Liousia")){
-                    openVarvara();
-                }break;
+                if (selected_Profangchemlab.equals("Ursula Knaack")) {
+                    openKnaack();
+                }
 
-
+        if (selected_Profangchemlab.equals("Heidemarie Fuchs-Eitel")) {
+            openEitel();
         }
+        if (selected_Profangchemlab.equals("Varvara Liousia")) {
+            openVarvara();
+        }
+      break;
     }
+    }
+        }
+
 
