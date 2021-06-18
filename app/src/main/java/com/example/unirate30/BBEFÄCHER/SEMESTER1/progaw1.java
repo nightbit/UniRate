@@ -185,7 +185,7 @@ public class progaw1 extends AppCompatActivity implements View.OnClickListener{
                     openFrohner();
                 }if (selected_Profprogaw1.equals("Johannes Martinek")){
                 openMartinek();
-                }if (selected_Profprogaw1.equals("Philipp Urbauer")) {
+                }if (selected_Profprogaw1.equals("Phillipp Urbauer")) {
                   openUrbauer();
                 }
                 break;

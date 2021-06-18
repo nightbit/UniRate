@@ -121,7 +121,7 @@ public class Eitel extends AppCompatActivity implements View.OnClickListener {
     private boolean firststart() {
         boolean first = false;
 
-        SharedPreferences sharedPreferences = getSharedPreferences("AHub", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("Eitel", MODE_PRIVATE);
         SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
         if (sharedPreferences.getBoolean("Eitel", false)) {
             first = true;
@@ -134,7 +134,7 @@ public class Eitel extends AppCompatActivity implements View.OnClickListener {
 
     private void ergebnisse() {
         db =  new ProfBewertDbHelper(Eitel.this,"Eitel");
-        List<Integer> list = db.getData("AHub");
+        List<Integer> list = db.getData("Eitel");
         eitelbar.setRating((float)list.get(0));
         eitelbar2.setRating((float)list.get(1));
         eitelbar4.setRating((float)list.get(2));

@@ -100,7 +100,7 @@ public class Varvara extends AppCompatActivity implements View.OnClickListener {
     }
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Varvara.this,"Varavara");
+        db=new ProfBewertDbHelper(Varvara.this,"Varvara");
         boolean wahr = db.insertData("Varvara",
                 Username.getUsername(),
                 (int) varvbar1.getRating(),

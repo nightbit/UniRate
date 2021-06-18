@@ -176,9 +176,9 @@ public class angchem extends AppCompatActivity implements View.OnClickListener {
                 break;
             case R.id.angnextButton:
                 selected_Profangchem = act_Prof12.getText().toString();
-                if (selected_Profangchem.equals("Barbera Gepp")){
+                if (selected_Profangchem.equals("Barbara Gepp")){
                     openGepp();
-                }if (selected_Profangchem.equals("Andreas Teuschel")){
+                }if (selected_Profangchem.equals("Andreas Teuschl")){
                     openTeuschel();
             }
                 break;

@@ -184,17 +184,18 @@ public class angchemlab extends AppCompatActivity implements View.OnClickListene
                 break;
             case R.id.anglabnextButton:
                 selected_Profangchemlab = act_Prof13.getText().toString();
-                if (selected_Profangchemlab.equals("Barbera Gepp")){
+                if (selected_Profangchemlab.equals("Barbara Gepp")){
                     openGepp();
-                }if (selected_Profangchemlab.equals("Ursula Knaack")){
+                }if (selected_Profangchemlab.equals("Ursula Knaack")) {
                 openKnaack();
+            }
                 if (selected_Profangchemlab.equals("Heidemarie Fuchs-Eitel")){
                     openEitel();
                 }
                 if (selected_Profangchemlab.equals("Varvara Liousia")){
                     openVarvara();
                 }
-            }
+
                 break;
         }
     }
