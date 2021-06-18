@@ -119,7 +119,7 @@ public class maierhofer extends AppCompatActivity implements View.OnClickListene
     private boolean firststart() {
         boolean first = false;
 
-        SharedPreferences sharedPreferences = getSharedPreferences("AHub", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("maierhofer", MODE_PRIVATE);
         SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
         if (sharedPreferences.getBoolean("maierhofer", false)) {
             first = true;

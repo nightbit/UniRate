@@ -177,9 +177,9 @@ public class MedPR extends AppCompatActivity implements View.OnClickListener{
             case R.id.mednextButton:
                 selected_Profmedpr = act_Profmed.getText().toString();
                 if (selected_Profmedpr.equals("Johannes Martinek")){
-                    openScherer();
-                }if (selected_Profmedpr.equals("Matthias Scherer")){
                     openMartinek();
+                }if (selected_Profmedpr.equals("Matthias Scherer")){
+                    openScherer();
                 } if (selected_Profmedpr.equals("Philipp Urbauer")) {
                     openUrbauer();
             }
