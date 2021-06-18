@@ -75,7 +75,7 @@ public class brabetz extends AppCompatActivity implements View.OnClickListener {
         db = new ProfBewertDbHelper(brabetz.this,"brabetz");
 
 
-        boolean wahr = db.updateData("brab",
+        boolean wahr = db.updateData("brabetz",
                 Username.getUsername(),
                 Math.round(barbbar1.getRating()),
                 Math.round(barbbar3.getRating()),
@@ -96,7 +96,7 @@ public class brabetz extends AppCompatActivity implements View.OnClickListener {
 
     public void AddData () {
         db=new ProfBewertDbHelper(brabetz.this,"brabetz");
-        boolean wahr = db.insertData("brab",
+        boolean wahr = db.insertData("brabetz",
                 Username.getUsername(),
                 (int) barbbar.getRating(),
                 (int) barbbar2.getRating(),
@@ -121,11 +121,11 @@ public class brabetz extends AppCompatActivity implements View.OnClickListener {
     private boolean firststart() {
         boolean first = false;
 
-        SharedPreferences sharedPreferences = getSharedPreferences("brab", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("brabetz", MODE_PRIVATE);
         SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
-        if (sharedPreferences.getBoolean("brab", false)) {
+        if (sharedPreferences.getBoolean("brabetz", false)) {
             first = true;
-            sharedPreferencesEditor.putBoolean("brab", true);
+            sharedPreferencesEditor.putBoolean("brabetz", true);
             sharedPreferencesEditor.apply();
         }
 
@@ -134,7 +134,7 @@ public class brabetz extends AppCompatActivity implements View.OnClickListener {
 
     private void ergebnisse() {
         db =  new ProfBewertDbHelper(brabetz.this,"brabetz");
-        List<Integer> list = db.getData("brab");
+        List<Integer> list = db.getData("brabetz");
         barbbar.setRating((float)list.get(0));
         barbbar2.setRating((float)list.get(1));
         barbbar4.setRating((float)list.get(2));

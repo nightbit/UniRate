@@ -189,14 +189,14 @@ public class angchemlab extends AppCompatActivity implements View.OnClickListene
                 }if (selected_Profangchemlab.equals("Ursula Knaack")) {
                 openKnaack();
             }
-                if (selected_Profangchemlab.equals("Heidemarie Fuchs-Eitel")){
+                } if (selected_Profangchemlab.equals("Heidemarie Fuchs-Eitel")){
                     openEitel();
                 }
                 if (selected_Profangchemlab.equals("Varvara Liousia")){
                     openVarvara();
-                }
+                }break;
 
-                break;
+
         }
     }
-}
+
