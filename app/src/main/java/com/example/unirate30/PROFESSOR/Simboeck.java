@@ -99,7 +99,7 @@ public class Simboeck extends AppCompatActivity implements View.OnClickListener 
     }
 
     public void AddData () {
-        db=new ProfBewertDbHelper(Simboeck.this,"Simbeock");
+        db=new ProfBewertDbHelper(Simboeck.this,"Simboeck");
         boolean wahr = db.insertData("Simboeck",
                 Username.getUsername(),
                 (int) simbar1.getRating(),
